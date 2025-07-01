@@ -1,0 +1,27 @@
+/* 공통 리셋 & 폰트 */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Noto Sans KR',sans-serif; background:#f9f9f9; color:#333; }
+a { text-decoration:none; color:inherit; }
+
+/* ── 상단 네비게이션 ── */
+.menu1 {
+  display:flex; justify-content:center; gap:2rem;
+  background:#1a2e45; padding:1rem;
+}
+.menu1 a {
+  color:#fff; font-weight:600; transition:opacity .2s;
+}
+.menu1 a:hover { opacity:0.8; }
+
+/* ── 공통 버튼 ── */
+button {
+  background:#1a2e45; color:#fff; border:none;
+  padding:.5rem 1rem; border-radius:4px; cursor:pointer;
+}
+button:hover { opacity:.9; }
+
+/* ── 반응형 ── */
+@media (max-width:768px) {
+  .menu1 { flex-wrap:wrap; }
+  .slider__wrap, .board-container, .ask-form { padding:0 1rem; }
+}
