@@ -175,3 +175,12 @@
     margin-top: 8px;
   }
 }
+/* Slider 풀스크린 오버라이드 */
+#sliderType01 .slider__wrap {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0; /* 필요 시 상/하 여백 추가 */
+}
+
