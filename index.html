@@ -1,0 +1,525 @@
+<html lang="ko"><head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>오늘 뭐하지?</title>
+  <link rel="stylesheet" href="/css/common.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+
+    .slider__wrap {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+
+    }
+
+    .slider__img {
+        aspect-ratio: 16 / 9;
+        background-color: #f0f0f0;
+        min-height : 360px;
+    }
+
+    .slider__inner {
+        display: flex;
+        width: 100%;
+    }
+
+    .slider {
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    .slider__btn button {
+        font-size: 24px;
+    }
+
+    .slider__dot .dot {
+        width: 14px;
+        height: 14px;
+        background: rgba(0,0,0,0.4);
+        border-radius: 50%;
+        text-indent: -9999px;
+        transition: background 0.3s;
+        cursor: pointer;
+    }
+
+    .slider__dot .dot.active {
+        background: rgba(255,255,255,0.9);
+    }
+  </style>
+
+  <style>
+    #weather-widget{
+        display: inilne-block
+    }
+
+    .btnSearch {
+        border: 1px solid;
+        width: 60px;
+        height: 35px;
+        font-size: 15px;
+        text-align: center;
+        background: #1a2e45;
+        color:#F9F7F7;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    #all{
+            display: flex;
+            justify-content: center;
+        }
+
+  </style>
+
+  <!--  모바일 화면 반응형 웹 적용-->
+  <style>
+    @media (max-width: 768px) {
+
+      /* 슬라이드 & 공지 섹션을 세로로 */
+      section.flex.flex-col.md\:flex-row {
+        flex-direction: column !important;
+      }
+
+      /* 슬라이더 */
+      #main {
+        width: 100% !important;
+      }
+
+      .slider__wrap {
+        max-width: 100% !important;
+        padding: 0 10px;
+      }
+
+      .slider__img {
+        min-height: auto;
+        aspect-ratio: 16 / 9;
+      }
+
+      /* 공지사항 */
+      .w-full.md\:w-1\/3 {
+        width: 100% !important;
+        padding: 10px;
+      }
+
+      .ct_weather {
+    width: 100% !important;
+    overflow-x: auto; /* 필요시 가로 스크롤 */
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+
+      .searchText {
+        width: 100% !important;
+        font-size: 14px;
+      }
+
+      .btnSearch {
+        width: 100%;
+        margin-top: 8px;
+        font-size: 14px;
+        height: 36px;
+      }
+
+      /* 인기 관광지 카드 그리드 - 2열 이하로 */
+      .grid.grid-cols-1.sm\:grid-cols-2.md\:grid-cols-3.lg\:grid-cols-5 {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+
+      .text-xl {
+        font-size: 18px !important;
+      }
+
+      .text-lg {
+        font-size: 16px !important;
+      }
+
+      .text-base {
+        font-size: 14px !important;
+      }
+
+      .p-4 {
+        padding: 1rem !important;
+      }
+
+      /* 하단 날씨 텍스트 */
+      .ct_weather div {
+    font-size: 12px !important;
+    flex-wrap: wrap;
+
+    }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.bottom-4{bottom:1rem}.left-0{left:0px}.left-1\/2{left:50%}.top-1\/2{top:50%}.z-10{z-index:10}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.block{display:block}.flex{display:flex}.grid{display:grid}.h-10{height:2.5rem}.h-48{height:12rem}.h-auto{height:auto}.h-full{height:100%}.w-10{width:2.5rem}.w-full{width:100%}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-black\/50{background-color:rgb(0 0 0 / 0.5)}.object-cover{object-fit:cover}.p-3{padding:0.75rem}.p-4{padding:1rem}.px-4{padding-left:1rem;padding-right:1rem}.text-center{text-align:center}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-semibold{font-weight:600}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 768px){.md\:w-1\/3{width:33.333333%}.md\:w-2\/3{width:66.666667%}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}}@media (min-width: 1024px){.lg\:grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}}</style></head>
+
+<body class="bg-white text-gray-800">
+
+
+<!-- 상단 네비게이션 -->
+<div class="navbar">
+    <div class="logo">
+        <a href="/what2do">
+            <img src="/img/로고1.png" alt="로고">
+        </a>
+    </div>
+
+    <nav class="menu1">
+        <a href="/todo">오늘 뭐하지?</a>
+        <a href="/lego">놀러가자!</a>
+        <a href="/listView">자유게시판</a>
+        <a href="/ask">1:1 문의하기</a>
+    </nav>
+    <div class="search-login-wrap">
+        <form action="/listTour" method="get" style="display: flex; gap: 10px; align-items: center; text-align: center;">
+            <div id="container2" style="height: 40px; position: relative; display: flex;">
+                <input type="text" name="title" id="kkk" placeholder="검색어(제목)를 입력하세요." style="border: 1px solid; border-radius: 15px; width: 280px;">
+                <button type="submit" id="zzz" style="position: absolute; right: 5px; background-color: transparent; border-radius: 20px; width: 40px; height: 40px;">
+                    <img src="/img/돋보기.webp" alt="검색" style="width: 25px; margin: auto;">
+                </button>
+            </div>
+        </form>
+
+        <div class="auth-section">
+            <div class="my">
+      
+            </div>
+            <span>
+      <a href="/login2" id="a3">
+        <button class="login-btn">로그인</button>
+      </a>
+    </span>
+        </div>
+    </div>
+</div>
+
+<div id="all">
+<!-- 슬라이드 + 공지사항 -->
+<section class="flex flex-col md:flex-row p-4 gap-4 items-start">
+
+  <!-- 슬라이드 배너 -->
+  <main id="main" class="w-full md:w-2/3">
+    <section id="sliderType01">
+      <div class="slider__wrap relative">
+        <div class="slider__img relative overflow-hidden rounded-xl shadow-lg">
+          <div class="slider__inner flex transition-all duration-500" style="transform: translateX(-689px);">
+            <div class="slider" role="group" aria-label="1/4"><img src="/img/배너1.PNG" alt="이미지1" class="w-full h-auto"></div>
+
+            <div class="slider" role="group" aria-label="2/4">
+              <a href="/lego" class="block w-full h-full relative z-10">
+                <img src="/img/배너2.PNG" alt="배너 이미지" class="w-full h-full object-cover rounded-xl">
+              </a>
+            </div>
+
+            <div class="slider" role="group" aria-label="3/4">
+              <a href="/lego" class="block w-full h-full relative z-10">
+              <img src="/img/배너3.PNG" alt="이미지3" class="w-full h-auto">
+              </a>
+            </div>
+
+            <div class="slider" role="group" aria-label="4/4">
+              <a href="/todo" class="block w-full h-full relative z-10">
+              <img src="/img/배너4.PNG" alt="이미지4" class="w-full h-auto">
+              </a>
+            </div>
+          </div>
+
+          <!-- 좌우 버튼 -->
+          <div class="slider__btn absolute top-1/2 left-0 w-full flex justify-between items-center px-4 z-10">
+            <button class="prev bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+              ❮
+            </button>
+            <button class="next bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+              ❯
+            </button>
+          </div>
+
+          <!-- 닷 버튼 -->
+          <div class="slider__dot absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10"><span class="dot" title="이미지 1"></span><span class="dot active" title="이미지 2"></span><span class="dot" title="이미지 3"></span><span class="dot" title="이미지 4"></span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- 공지사항 -->
+  <div class="w-full md:w-1/3 p-4 bg-white rounded-lg">
+    <h2 class="text-lg font-semibold mb-3"> 공지사항</h2>
+    <ul class="text-sm space-y-1">
+      <li>
+        <a class="hover:underline" href="/view?num=68">
+          • [공지사항]'What2Do' 베타테스트 오픈 안내!
+        </a>
+      </li>
+      <li>
+        <a class="hover:underline" href="/view?num=67">
+          • [공지사항]커뮤니티 이용 수칙 안내
+        </a>
+      </li>
+      <li>
+        <a class="hover:underline" href="/view?num=66">
+          • [제한사항] 개발 중인 기능 및 오류 안내
+        </a>
+      </li>
+      
+    </ul>
+    <!-- 날씨조회 -->
+    <div class="rounded-lg shadow" id="weather-widget" style="margin-top:50px;">
+      <h2 class="text-lg font-semibold mb-3"> 단기예보 조회</h2>
+      <input class="searchText" type="text" placeholder="장소입력" style="padding:5px; width:300px; border: solid 1px; border-radius: 3px;">
+      <button class="btnSearch">검색</button>
+      <div class="ct_weather" style="margin-top:15px; background: #E9ECEF; border-radius: 4px; width:370px;"></div>
+    </div>
+  </div>
+
+
+</section>
+</div>
+
+<!-- 인기 관광지 BEST 5 좋아요 기준 -->
+<section class="p-4">
+  <h2 class="text-xl font-bold mb-4"> 인기 관광지 BEST 5</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+    <div class="bg-white rounded-xl shadow hover:shadow-md transition duration-300 overflow-hidden" onclick="location.href='detail?id=1864&amp;city='">
+      <img alt="" class="w-full h-48 object-cover" src="http://tong.visitkorea.or.kr/cms/resource/27/3412427_image3_1.jpg">
+      <div class="p-3 text-center">
+        <p class="text-base font-semibold text-gray-800 truncate">경주 골굴암 마애여래좌상</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow hover:shadow-md transition duration-300 overflow-hidden" onclick="location.href='detail?id=3227&amp;city='">
+      <img alt="" class="w-full h-48 object-cover" src="http://tong.visitkorea.or.kr/cms/resource/11/3467411_image3_1.JPG">
+      <div class="p-3 text-center">
+        <p class="text-base font-semibold text-gray-800 truncate">광교 프라이부르크전망대</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow hover:shadow-md transition duration-300 overflow-hidden" onclick="location.href='detail?id=17&amp;city='">
+      <img alt="" class="w-full h-48 object-cover" src="http://tong.visitkorea.or.kr/cms/resource/54/2994054_image3_1.jpg">
+      <div class="p-3 text-center">
+        <p class="text-base font-semibold text-gray-800 truncate">가곡유황온천&amp;스파</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow hover:shadow-md transition duration-300 overflow-hidden" onclick="location.href='detail?id=9248&amp;city='">
+      <img alt="" class="w-full h-48 object-cover" src="http://tong.visitkorea.or.kr/cms/resource/43/2735043_image2_1.jpg">
+      <div class="p-3 text-center">
+        <p class="text-base font-semibold text-gray-800 truncate">더몰트하우스</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow hover:shadow-md transition duration-300 overflow-hidden" onclick="location.href='detail?id=313&amp;city='">
+      <img alt="" class="w-full h-48 object-cover" src="http://tong.visitkorea.or.kr/cms/resource/21/2654721_image2_1.jpg">
+      <div class="p-3 text-center">
+        <p class="text-base font-semibold text-gray-800 truncate">가쯔야</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- 하단 -->
+<div class="footer">
+    <div>
+        <strong>오늘 뭐하지?</strong> | 오늘의 활동을 추천해주는 플랫폼
+    </div>
+    <div style="margin: 10px 0;">
+        <a href="/">홈</a>
+        <a href="/todo">오늘 뭐하지?</a>
+        <a href="/lego">놀러가자!</a>
+        <a href="/listView">자유게시판</a>
+        <a href="/ask">1:1 문의</a>
+    </div>
+    <div>
+        ImPlanTeam(지영, 재훈, 도윤)
+    </div>
+    <div style="margin-top: 10px; ">
+        © 2025 오늘 뭐하지? 팀 프로젝트 | All rights reserved.
+    </div>
+    <div style="margin-top: 30px; width:100%; display: flex; align-items: center; gap: 15px; justify-content: center;">
+        <span>출처 | </span>
+        <img src="https://korean.visitkorea.or.kr/resources/images/common/logo_foot_api.png?v=20230601001" alt="투어api">
+        <img src="https://www.data.go.kr/images/biz/use-info/img_opencode1_m.jpg" alt="기상청api">
+        <img src="https://cdn.visitkorea.or.kr/resources/images/common/logo_foot_gg.png" alt="한국관광공사">
+<!--        <img src="" alt="공공데이터포털">-->
+    </div>
+    <footer style="font-size: 10px; text-align: center; color: gray;">
+        지도/주소 서비스 제공: Kakao Developers
+    </footer>
+    <style>
+        .footer {
+            background-color: #f1f3f5;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            margin-top: 60px;
+        }
+
+        .footer a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .footer {
+                padding: 20px;
+                font-size: 13px;
+            }
+
+            .footer a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</div>
+
+<!-- 슬라이드 스크립트 -->
+<script>
+  const sliderInner = document.querySelector(".slider__inner");
+const sliders = document.querySelectorAll(".slider");
+const sliderDot = document.querySelector(".slider__dot");
+
+let currentIndex = 0;
+const sliderCount = sliders.length;
+const sliderWidth = document.querySelector(".slider__img").offsetWidth;
+
+// 닷 메뉴 생성
+sliderDot.innerHTML = "";
+sliders.forEach((_, idx) => {
+   const dot = document.createElement("span");
+   dot.className = "dot";
+   dot.title = `이미지 ${idx + 1}`;
+   dot.addEventListener("click", () => gotoSlider(idx));
+   sliderDot.appendChild(dot);
+});
+sliderDot.children[0]?.classList.add("active");
+
+// 슬라이드 이동
+function gotoSlider(index) {
+  const sliderWidth = document.querySelector(".slider__img").offsetWidth; // 이동 시점에 계산
+  sliderInner.style.transform = `translateX(-${sliderWidth * index}px)`;
+  currentIndex = index;
+  Array.from(sliderDot.children).forEach(dot => dot.classList.remove("active"));
+  sliderDot.children[index]?.classList.add("active");
+}
+
+// 좌우 버튼 이벤트
+document.querySelector(".prev").addEventListener("click", () => {
+   const prev = (currentIndex - 1 + sliderCount) % sliderCount;
+   gotoSlider(prev);
+});
+document.querySelector(".next").addEventListener("click", () => {
+   const next = (currentIndex + 1) % sliderCount;
+   gotoSlider(next);
+});
+  setInterval(function() {
+     const next = (currentIndex + 1) % sliderCount;
+     gotoSlider(next);
+}, 5000);
+</script>
+<!--날씨조회 스크립트-->
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fca66437ffd757b4f7019de36217ec4b&amp;libraries=services"></script><script charset="UTF-8" src="https://t1.daumcdn.net/mapjsapi/js/main/4.4.19/kakao.js"></script><script charset="UTF-8" src="https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js"></script>
+<script>
+  const SERVICE_KEY = "HI4uJdHAz5JRb2JVDzardd1U0%2FYqhiVizmMqkHND%2FsE19hTvA3QhWCCbHs0FbiMc%2Bscyz1zQxWkuoreAo6ywRQ%3D%3D"; // 중기예보용 서비스 키로 교체
+const geocoder = new kakao.maps.services.Geocoder();
+const weatherBox = document.querySelector('.ct_weather');
+
+document.querySelector('.btnSearch').addEventListener('click', () => {
+  const query = document.querySelector('.searchText').value.trim();
+  if (!query) return;
+  geocoder.addressSearch(query, (result, status) => {
+    if (status === kakao.maps.services.Status.OK) {
+      const lat = parseFloat(result[0].y);
+      const lon = parseFloat(result[0].x);
+      const { x, y } = dfs_xy_conv("toXY", lat, lon);
+      getForecast(x, y);
+    } else {
+      weatherBox.innerHTML = "주소를 찾을 수 없습니다.";
+    }
+  });
+});
+
+function dfs_xy_conv(code, v1, v2) {
+  const RE = 6371.00877, GRID = 5.0, SLAT1 = 30.0, SLAT2 = 60.0, OLON = 126.0, OLAT = 38.0, XO = 43, YO = 136;
+  const DEGRAD = Math.PI / 180.0;
+  const re = RE / GRID;
+  const slat1 = SLAT1 * DEGRAD;
+  const slat2 = SLAT2 * DEGRAD;
+  const olon = OLON * DEGRAD;
+  const olat = OLAT * DEGRAD;
+  let sn = Math.tan(Math.PI * 0.25 + slat2 * 0.5) / Math.tan(Math.PI * 0.25 + slat1 * 0.5);
+  sn = Math.log(Math.cos(slat1) / Math.cos(slat2)) / Math.log(sn);
+  let sf = Math.tan(Math.PI * 0.25 + slat1 * 0.5);
+  sf = Math.pow(sf, sn) * Math.cos(slat1) / sn;
+  let ro = Math.tan(Math.PI * 0.25 + olat * 0.5);
+  ro = re * sf / Math.pow(ro, sn);
+  if (code === "toXY") {
+    let ra = Math.tan(Math.PI * 0.25 + (v1) * DEGRAD * 0.5);
+    ra = re * sf / Math.pow(ra, sn);
+    let theta = v2 * DEGRAD - olon;
+    if (theta > Math.PI) theta -= 2.0 * Math.PI;
+    if (theta < -Math.PI) theta += 2.0 * Math.PI;
+    theta *= sn;
+    return {
+      x: Math.floor(ra * Math.sin(theta) + XO + 0.5),
+      y: Math.floor(ro - ra * Math.cos(theta) + YO + 0.5)
+    };
+  }
+}
+
+function interpret(cat, val) {
+  if (cat === "SKY") return {"1":"맑음","3":"구름많음","4":"흐림"}[val] || "-";
+  if (cat === "PTY") return {"0":"없음","1":"비","2":"비/눈","3":"눈","4":"소나기"}[val] || "-";
+  return val;
+}
+
+function getForecast(x, y) {
+  const now = new Date();
+  const baseDate = now.getFullYear() + String(now.getMonth()+1).padStart(2, '0') + String(now.getDate()).padStart(2, '0');
+  const baseTime = "0200"; // 단기예보 기준 시간
+
+  const api = `https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey=${SERVICE_KEY}&pageNo=1&numOfRows=1000&dataType=JSON&base_date=${baseDate}&base_time=${baseTime}&nx=${x}&ny=${y}`;
+
+  fetch(api)
+    .then(res => res.json())
+    .then(data => {
+      const items = data.response.body.items.item;
+      const result = [];
+
+      for (let i = 0; i < 3; i++) {
+        const date = new Date();
+        date.setDate(date.getDate() + i);
+        const label = (i === 0 ? "오늘" : i === 1 ? "내일" : "모레") + ` (${date.getMonth()+1}/${date.getDate()})`;
+        const ymd = date.getFullYear() + String(date.getMonth()+1).padStart(2,'0') + String(date.getDate()).padStart(2,'0');
+
+        const amSky = items.find(it => it.fcstDate === ymd && it.fcstTime === '0900' && it.category === 'SKY');
+        const amPty = items.find(it => it.fcstDate === ymd && it.fcstTime === '0900' && it.category === 'PTY');
+
+        const pmSky = items.find(it => it.fcstDate === ymd && it.fcstTime === '1500' && it.category === 'SKY');
+        const pmPty = items.find(it => it.fcstDate === ymd && it.fcstTime === '1500' && it.category === 'PTY');
+
+        const tmn = items.find(it => it.fcstDate === ymd && it.category === 'TMN');
+        const tmx = items.find(it => it.fcstDate === ymd && it.category === 'TMX');
+
+        const textAm = interpret("PTY", amPty?.fcstValue) !== "없음" ? interpret("PTY", amPty?.fcstValue) : interpret("SKY", amSky?.fcstValue);
+        const textPm = interpret("PTY", pmPty?.fcstValue) !== "없음" ? interpret("PTY", pmPty?.fcstValue) : interpret("SKY", pmSky?.fcstValue);
+
+        result.push(`
+          <div style="width: 100px;"><strong>${label}</strong></div>
+          <div style="width: 100px;">오전 <img src="/weatherimg/${textAm}.png" alt="${textAm}" style="height:20px; vertical-align:middle;"> </div>
+          <div style="width: 100px;">오후 <img src="/weatherimg/${textPm}.png" alt="${textPm}" style="height:20px; vertical-align:middle;"> </div>
+          <div style="width: 100px;">${tmn?.fcstValue || '-'}℃ / ${tmx?.fcstValue || '-'}℃</div>
+        `);
+      }
+
+      weatherBox.innerHTML = result.map(line => `
+        <div style="display: flex; align-items: center;  margin-bottom: 4px; font-size: 13px;">
+          ${line}
+        </div>
+      `).join('');
+    })
+    .catch(err => {
+      console.error(err);
+      weatherBox.innerHTML = "날씨 정보를 불러오지 못했습니다.";
+    });
+}
+</script>
+</body></html>
