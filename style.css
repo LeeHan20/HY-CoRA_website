@@ -392,6 +392,10 @@ body {
     color: #fff;
 }
 
+.nav-button.active {
+    background-color: #34568b;
+    color: #fff;
+}
 
 /* Footer */
 .footer {
