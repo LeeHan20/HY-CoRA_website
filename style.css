@@ -177,9 +177,10 @@ body {
 .activities-nav {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 300px;
     margin-bottom: 30px;
 }
+
 
 .activities-grid {
     display: grid;
@@ -374,18 +375,20 @@ body {
 
 /* Common Button Style */
 .nav-button {
-    background-color: #e9e9e9;
+    background-color: #d9d9d9;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 40px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 1em;
-}
-
-.nav-button.active {
-    background-color: #004085;
     color: #fff;
 }
+
+.nav-button:hover {
+    background-color:#34568b;
+    color: #fff;
+}
+
 
 /* Footer */
 .footer {
