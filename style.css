@@ -46,8 +46,9 @@ body {
     font-weight: bold;
     margin: 0;
 }
+
 .logo a {
-    text-decoration: none;
+    text-decoration: none; /* 밑줄 제거 */
     color: white;
 }
 
@@ -61,7 +62,7 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: white;
+    color: #fff;
     font-weight: 500;
     padding: 5px 10px;
     border-radius: 5px;
@@ -74,7 +75,7 @@ body {
 
 /* Intro Section */
 /* .intro-section {
-    background-color: #ccc;
+    background-color: #fcfcfc;
     padding: 80px 0;
     text-align: center;
 } */
@@ -97,7 +98,6 @@ body {
 
 .intro-text h2 {
     font-size: 2.5em;
-
     margin-bottom: 20px;
 }
 
@@ -141,7 +141,6 @@ body {
 
 .club-intro p {
     line-height: 1.6;
-    /* 줄과 줄사이간격 */
     color: #555;
     max-width: 800px;
     margin: 0 auto 30px;
@@ -365,6 +364,15 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
+
+/* .event-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+} */
+
 .event-image-placeholder {
     height: 250px;
     background-color: #919191;
@@ -398,16 +406,17 @@ body {
 
 /* Common Button Style */
 .nav-button {
-    background-color: #e9e9e9;
+    background-color: #d9d9d9;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 40px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 1em;
+    color: #fff;
 }
 
-.nav-button.active {
-    background-color: #004085;
+.nav-button:hover {
+    background-color: #34568b;
     color: #fff;
 }
 
