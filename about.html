@@ -40,11 +40,11 @@
                 
                 
                 <div class="about-nav">
-                    <button class="nav-button active">동아리 소개</button>
+                    <button class="nav-button active" data-target="greeting">동아리 소개</button>
                     <button class="nav-button">활동 보기</button>
                 </div>
 
-                <div class="club-intro">
+                <div class="club-intro" id="greeting">
                     <h3>동아리 소개</h3>
                     <p>HY-CoRA는 한양대학교 ERICA 캠퍼스를 기반으로 활동하는 컴퓨터 연구 동아리입니다. 다양한 배경을 가진 학생들이 함께 모여, 개발 스터디부터 실제 프로젝트까지 함께하며 성장하고 있습니다. 실전 중심의 학습과 협업을 통해, 기술을 넘어 문제 해결 능력과 팀워크를 키우는 것을 목표로 합니다.</p>
                     <div class="intro-cards">
@@ -76,19 +76,6 @@
         </div>
     </footer>
 
-    <script>
-        const navButtons = document.querySelectorAll('.notices-nav .nav-button');
-
-        navButtons.forEach(clickedButton => {
-            clickedButton.addEventListener('click', () => {
-                // 먼저 모든 버튼에서 'active' 클래스를 제거합니다.
-                navButtons.forEach(button => {
-                    button.classList.remove('active');
-                });
-                // 그 다음 클릭된 버튼에만 'active' 클래스를 추가합니다.
-                clickedButton.classList.add('active');
-            });
-        });
-    </script>
+    <script src="js/about.js"></script>
 </body>
 </html>
