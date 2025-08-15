@@ -15,11 +15,9 @@ body {
 }
 
 .section-title {
-    font-size: 1.5em;
-    text-align: left;
-    margin-bottom: 65px;
-    margin-top: 10px;
-    color: #545454;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .section-description {
@@ -31,9 +29,7 @@ body {
 /* Header */
 .header {
     background-color: #34568b;
-
-    padding: 5px 0;
-
+    padding: 0px 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -76,44 +72,36 @@ body {
 }
 
 /* Intro Section */
-
- .intro-section {
-
+.intro-section {
     background-color: #fcfcfc;
     padding: 80px 0;
     text-align: center;
-} 
+}
 
 .intro-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 50px 0;
-    background-color: #919191;
+    background-color: #a9a9a9;
     color: #fff;
-
-    text-align: center;
-    border-radius: 2.5%;
-    height: 400px;
-    font-weight: 100;
-    margin: 100px 90px 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
 }
 
 .intro-text h2 {
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .intro-text p {
     font-size: 1.2em;
-    font-weight: 100;
     margin: 0;
 }
 
-/* .intro-image-placeholder {
+.intro-image-placeholder {
     width: 80%;
     height: 300px;
     background-color: #777;
@@ -122,7 +110,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
-} */
+}
 
 /* About Section */
 .about-section {
@@ -334,14 +322,14 @@ body {
     font-size: 0.8em;
 }
 
-.notice-tag.notice { background-color: #a8d5e5; }
-.notice-tag.event { background-color: #c3e6cb; }
-.notice-tag.recruitment { background-color: #d6b9f4; }
-.notice-tag.achievement { background-color: #ffeeba; color: #856404; }
+/* 8/15 수정 사항 Design 07 */
+.notice-tag.event { background-color: #7ed957; }
+.notice-tag.recruitment { background-color: #a8d5e5; }
+.notice-tag.etc { background-color: #ffeeba; color: #856404; }
 
 /* Past Events Section */
 .past-events-section {
-    padding: 30px 0;
+    padding: 50px 0;
 }
 
 .past-events-grid {
@@ -350,19 +338,18 @@ body {
     gap: 20px;
 }
 
-/* .event-card {
+.event-card {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 20px;
     text-align: center;
-} */
+}
 
 .event-image-placeholder {
-    height: 250px;
-    background-color: #919191;
+    height: 150px;
+    background-color: #ccc;
     margin-bottom: 15px;
-    border-radius: 2.5%;
 }
 
 /* Pagination */
@@ -412,28 +399,15 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #34568b;
+    background-color: #555;
     color: #fff;
     padding: 20px 0;
-
+    text-align: center;
 }
 
-.footer-content {
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background: #34568b;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 20px;
+.footer-content p {
+    margin: 5px 0;
 }
-
-.footer-content span {
-    white-space: nowrap;
-}
-
 
 .about-header {
     display: block;
