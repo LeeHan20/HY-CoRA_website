@@ -40,14 +40,14 @@
                 
                 
                 <div class="about-nav">
-                    <button class="nav-button active">인사말</button>
-                    <button class="nav-button">소개</button>
-                    <button class="nav-button">학습</button>
-                    <button class="nav-button">성과</button>
+                    <button class="nav-button active"  data-target="greeting">인사말</button>
+                    <button class="nav-button"  data-target="introduction">소개</button>
+                    <button class="nav-button"  data-target="greeting">학습</button>
+                    <button class="nav-button"  data-target="greeting">성과</button>
                 </div>
 
                 <div class="club-intro">
-                    <h3>인사말</h3>
+                    <h3 id="greeting">인사말</h3>
                     <p class="quote-title">❝ 학문적 성장의 장 ❞</p>
                     <p>HY-CoRA는 한양대학교 ERICA를 기반으로, 학문적 탐구와 지식 교류를 중심으로 하는 컴퓨터 연구 동아리입니다. 다양한 관점과 경험을 지닌 구성원들이 모여, 깊이 있는 토론과 연구를 통해 사고의 폭을 넓히고 전문성을 심화시킵니다.</p>
                     
@@ -60,7 +60,8 @@
                     <p class="quote-title">❝ 앞으로의 다짐 ❞</p>
                     <p>앞으로도 HY-CoRA는 학문적 성취와 인적 네트워크의 성장을 함께 이루어 나가며, 모든 구성원이 서로에게 영감을 주는 지식 공동체로 발전해 나가겠습니다.</p>
 
-                    <h3>소개</h3>
+                    <h3 id="introduction">소개</h3>
+
 
                     <div class="intro-cards">
                         <div class="card">
@@ -89,10 +90,11 @@
 
     <footer class="footer">
         <div class="container footer-content">
-            <p>경기도 안산시 상록구 한양대학로 55, (동방 주소)</p>
-            <p>hycora369@gmail.com</p>
+            <p>경기도 안산시 상록구 한양대학로 55 복지관 425호 (동방 주소)<br>hycora369@gmail.com</p>
+            <p>&nbsp;&nbsp;&nbsp;회장: 010-3552-2044<br>부회장: 010-3410-4697</p>
         </div>
     </footer>
 
+    <script src="js/about.js"></script>
 </body>
 </html>

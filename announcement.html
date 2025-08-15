@@ -41,32 +41,40 @@
                     <button class="nav-button">모집</button>
                     <button class="nav-button">기타</button>
                 </div>
+                
                 <div class="notices-list">
-                    <div class="notice-item">
-                        <p>2025 하반기 정기 총회 안내</p>
-                        <p>2025 상반기 정기 총회가 ....</p>
-                        <p>2025.xx</p>
-                        <div class="notice-tag notice">공지사항</div>
-                    </div>
-                    <div class="notice-item">
+                    <div class="notice-item event">
                         <p>2025 하반기 정기 총회 안내</p>
                         <p>2025 상반기 정기 총회가 ....</p>
                         <p>2025.xx</p>
                         <div class="notice-tag event">행사</div>
                     </div>
-                    <div class="notice-item">
-                        <p>2025 하반기 정기 총회 안내</p>
-                        <p>2025 상반기 정기 총회가 ....</p>
+                    <div class="notice-item event">
+                        <p>신입생 OT 및 동아리 설명회 개최</p>
+                        <p>OT 및 설명회 일정이 확정되었습니다...</p>
+                        <p>2025.xx</p>
+                        <div class="notice-tag event">행사</div>
+                    </div>
+                    <div class="notice-item recruitment">
+                        <p>2025년 2학기 신규 동아리원 모집</p>
+                        <p>Hy-CoRA에서 열정적인 동아리원을 모집합니다.</p>
                         <p>2025.xx</p>
                         <div class="notice-tag recruitment">모집</div>
                     </div>
-                    <div class="notice-item">
-                        <p>2025 하반기 정기 총회 안내</p>
-                        <p>2025 상반기 정기 총회가 ....</p>
+                    <div class="notice-item etc">
+                        <p>교내 해커톤 우승!</p>
+                        <p>Hy-CoRA 1팀이 교내 해커톤에서 우승했습니다.</p>
                         <p>2025.xx</p>
-                        <div class="notice-tag achievement">성과</div>
+                        <div class="notice-tag etc">기타</div>
+                    </div>
+                    <div class="notice-item etc">
+                        <p>동아리 방 정리 및 청소 안내</p>
+                        <p>쾌적한 동아리 활동을 위해...</p>
+                        <p>2025.xx</p>
+                        <div class="notice-tag etc">기타</div>
                     </div>
                 </div>
+
                 <div class="pagination">
                     <a href="#" class="active">1</a>
                     <a href="#">2</a>
@@ -78,24 +86,12 @@
 
     <footer class="footer">
         <div class="container footer-content">
-            <p>경기도 안산시 상록구 한양대학로 55, (동방 주소)</p>
-            <p>hycora369@gmail.com</p>
+            <p>경기도 안산시 상록구 한양대학로 55 복지관 425호 (동방 주소)<br>hycora369@gmail.com</p>
+            <p>&nbsp;&nbsp;&nbsp;회장: 010-3552-2044<br>부회장: 010-3410-4697</p>
         </div>
     </footer>
 
-    <script>
-        const navButtons = document.querySelectorAll('.notices-nav .nav-button');
+    <script src="js/announcement.js"></script>
 
-        navButtons.forEach(clickedButton => {
-            clickedButton.addEventListener('click', () => {
-                // 먼저 모든 버튼에서 'active' 클래스를 제거합니다.
-                navButtons.forEach(button => {
-                    button.classList.remove('active');
-                });
-                // 그 다음 클릭된 버튼에만 'active' 클래스를 추가합니다.
-                clickedButton.classList.add('active');
-            });
-        });
-    </script>
 </body>
 </html>
