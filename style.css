@@ -148,32 +148,38 @@ body {
 }
 
 /* Design #06에서 추가 */
-.highlight-title {
-    display: inline-block;
-    background-color: #919191;
-    color: white;
+.club-intro p2 {
+    line-height: 2.3;
+    margin: 0 auto 30px;
+    max-width: 900px;
+    text-align: center;
+    font-size: 1.0em;
+}
+
+/* Design #06에서 추가 */
+.quote-title {
+    font-size: 1.3rem;
     font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 6px;
+    text-align: center;
+    color: #555;
     margin: 40px 0 15px;
-    font-size: 1.2rem;
+    font-style: italic;
 }
 
 .club-intro h3 {
     margin-bottom: 15px; /* 제목과 본문 간 간격 */
     margin-top: 30px;
-    text-align: middle;
+    text-align: center;
     font-size: 2.0em;
 }
 
 .club-intro p {
     line-height: 2.3;
     margin: 0 auto 30px;
-    max-width: 950px;
+    max-width: 900px;
     text-align: left;
     font-size: 1.1em;
 }
-/* Design #06에서 수정 */
 
 .intro-cards {
     display: flex;
@@ -182,13 +188,14 @@ body {
 }
 
 .card {
-    background-color: #fff;
+    background-color: #d7d7d7;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 45px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
     width: 250px;
 }
+/* Design #06에서 수정 */
 
 .icon-container {
     width: 60px;
@@ -204,7 +211,7 @@ body {
 .icon-container.yellow { background-color: #fff3cd; }
 
 .icon {
-    font-size: 2em; /* Replace with actual icon fonts or SVGs */
+    font-size: 1.0em; /* Replace with actual icon fonts or SVGs */
 }
 
 /* Activities Section */
