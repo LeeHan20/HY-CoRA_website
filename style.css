@@ -195,24 +195,35 @@ body {
     text-align: center;
     width: 250px;
 }
-/* Design #06에서 수정 */
+
+.inner-card {
+    background-color: #d7d7d7;
+    padding: 30px;
+    border-radius: 45px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 250px;
+}
 
 .icon-container {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    padding: 20px;
+    width: 120px;
+    border-radius: 20px;
     margin: 0 auto 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .icon-container.green { background-color: #d4edda; }
 .icon-container.blue { background-color: #cce5ff; }
 .icon-container.yellow { background-color: #fff3cd; }
 
 .icon {
-    font-size: 1.0em; /* Replace with actual icon fonts or SVGs */
+    font-size: 1.0em; 
 }
+/* Design #06에서 수정 */
 
 /* Activities Section */
 .activities-section {
