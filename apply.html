@@ -58,10 +58,24 @@
 
     <footer class="footer">
         <div class="container footer-content">
-            <p>경기도 안산시 상록구 한양대학로 55, (동방 주소)</p>
-            <p>hycora369@gmail.com</p>
+            <p>경기도 안산시 상록구 한양대학로 55 복지관 425호 (동방 주소)<br>hycora369@gmail.com</p>
+            <p>&nbsp;&nbsp;&nbsp;회장: 010-3552-2044<br>부회장: 010-3410-4697</p>
         </div>
     </footer>
 
+    <script>
+        const navButtons = document.querySelectorAll('.notices-nav .nav-button');
+
+        navButtons.forEach(clickedButton => {
+            clickedButton.addEventListener('click', () => {
+                // 먼저 모든 버튼에서 'active' 클래스를 제거합니다.
+                navButtons.forEach(button => {
+                    button.classList.remove('active');
+                });
+                // 그 다음 클릭된 버튼에만 'active' 클래스를 추가합니다.
+                clickedButton.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
