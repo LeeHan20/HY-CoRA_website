@@ -426,37 +426,54 @@ body {
     margin-bottom: 30px;
 }
 
-.notices-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+/* 기존 .notices-list, .notice-item 관련 스타일을 제거하거나 수정합니다 */
+
+.notices-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.notice-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.notices-table th,
+.notices-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-.notice-item p {
-    margin: 0;
+.notices-table th {
+    background-color: #f2f2f2;
+    font-weight: 700;
 }
 
+.notices-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* 8/17 수정 */
 .notice-tag {
-    padding: 5px 10px;
+    display: inline-block;
+    padding: 4px 10px;
     border-radius: 20px;
-    color: #fff;
-    font-size: 0.8em;
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
 }
 
-/* 8/15 수정 사항 Fix #05 */
-.notice-tag.event { background-color: #7ed957; }
-.notice-tag.recruitment { background-color: #a8d5e5; }
-.notice-tag.etc { background-color: #ffeeba; color: #856404; }
+.notice-tag.event {
+    background-color: #3498db;
+}
+
+.notice-tag.recruitment {
+    background-color: #2ecc71;
+}
+
+.notice-tag.etc {
+    background-color: #95a5a6;
+}
+
+/***************************************************/
 
 /* Past Events Section */
 .past-events-section {
