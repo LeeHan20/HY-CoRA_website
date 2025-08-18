@@ -167,9 +167,9 @@ body {
 }
 
 .club-intro h3 {
-    margin-bottom: 15px; /* 제목과 본문 간 간격 */
-    margin-top: 30px;
-    text-align: center;
+    margin-bottom: 50px; /* 제목과 본문 간 간격 */
+    margin-top: 90px; /* 상단 내용과의 간격 */
+    text-align: center; /* 텍스트 정렬 방법 */
     font-size: 2.0em;
 }
 
@@ -196,15 +196,6 @@ body {
     width: 250px;
 }
 
-.inner-card {
-    background-color: #d7d7d7;
-    padding: 30px;
-    border-radius: 45px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-    width: 250px;
-}
-
 .icon-container {
     padding: 20px;
     width: 120px;
@@ -219,9 +210,187 @@ body {
 .icon-container.green { background-color: #d4edda; }
 .icon-container.blue { background-color: #cce5ff; }
 .icon-container.yellow { background-color: #fff3cd; }
+.icon-container.pink { background-color: #FADADD}
 
 .icon {
     font-size: 1.0em; 
+}
+
+.intro-history-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin: 70px auto 15px; 
+}
+
+.intro-history-card {
+  position: relative;          
+  background:#d9d9d9;
+  border-radius:36px;
+  width:86%;
+  padding:24px 24px 24px 40px;  
+  display:flex;
+  flex-direction: column;
+  gap:12px;                   
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.intro-history-line {
+  position: absolute;
+  left: 16px;
+  /* 아이콘 전체 높이(기본 120px)*/
+  top: calc(var(--icon-total-height, 120px) - 10px);
+  bottom: 24px;
+  width: 4px;
+  background: #545454;
+  border-radius: 2px;
+}
+
+.intro-history-box{
+  background:#ffffff;
+  border-radius:15px;
+  padding:15px 20px;
+  text-align:left;
+  font-size:1rem;               
+  box-sizing:border-box;
+}
+
+:root{
+  --bg: #ffffff;
+  --card-bg: #dedede;        /* 카드 배경(연한 회색) */
+  --card-radius: 28px;      /* 둥근 모서리 */
+  --avatar-size: 72px;      /* 아바타 크기 */
+  --card-padding: 28px;     /* 카드 내부 여백 */
+  --name-size: 2rem;        /* 이름 폰트 크기 */
+  --muted: #666;
+  --text: #111;
+}
+
+/* 기본 리셋 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; background: var(--bg); font-family: 'Noto Sans KR', system-ui, -apple-system, 'Segoe UI', Roboto, Arial; color: var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+
+/* 래퍼 */
+.wrap { max-width: 1100px; margin: 36px auto; padding: 0 20px; }
+
+/* 섹션 타이틀 */
+.section-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* 그리드 (반응형) */
+.leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 26px;
+  align-items: start;
+}
+
+/* 카드: grid 레이아웃으로 아바타 | 헤더 | 설명 | 버튼 배치 */
+.leader-card {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  display: grid;
+  grid-template-columns: var(--avatar-size) 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "avatar header"
+    "avatar desc"
+    "avatar buttons";
+  gap: 10px 18px;
+  align-items: start;
+  min-height: 160px; /* 카드 전체 높이(원하면 더 낮출 수 있음) */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* 아바타(왼쪽 세로 영역) */
+.leader-card .avatar {
+  grid-area: avatar;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(174,234,118,0.98), rgba(150,230,110,0.98));
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  justify-self: start; /* 좌측 정렬 (패딩 내에서) */
+  align-self: start;
+}
+
+/* 헤더(이름 + 역할) : 우측 상단 */
+.card-meta {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+/* 이름 */
+.name {
+  font-size: var(--name-size);
+  font-weight: 700;
+  color: #0b0b0b;
+  line-height: 1;
+}
+
+/* 역할(작은 텍스트) */
+.role {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* 설명 (중앙에 위치, 카드 너비를 타고 중앙 정렬) */
+.desc {
+  grid-area: desc;
+  font-size: 1rem;
+  color: #222;
+  line-height: 1.9;
+  margin-top: 8px;
+  text-align: center;      /* 가운데 정렬 (요청한 디자인) */
+  padding: 0 12px;
+  align-self: center;
+}
+
+/* 버튼 줄: 카드 하단 중앙으로 정렬 */
+.btn-row {
+  grid-area: buttons;
+  display: flex;
+  gap: 18px;
+  justify-content: center;   /* 수평 중앙 정렬 */
+  align-items: center;
+  margin-top: 6px;
+}
+
+/* pill 버튼 */
+.pill {
+  background: #fff;
+  border: none;
+  padding: 10px 44px;       /* 버튼이 널찍하게 보이도록 */
+  border-radius: 999px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+  min-width: 90px;
+}
+.pill:hover { transform: translateY(-3px); box-shadow: 0 12px 22px rgba(0,0,0,0.12); }
+
+/* 모바일에서 카드 너비가 작아지면 버튼 패딩 줄임 */
+@media (max-width: 420px) {
+  :root { --avatar-size: 56px; --card-padding: 18px; --name-size: 1.4rem; }
+  .pill { padding: 8px 20px; min-width: 70px; }
+  .leader-card { min-height: 136px; grid-template-columns: var(--avatar-size) 1fr; gap: 10px; }
+}
+
+/* 선택: 버튼 active 스타일 (토글 느낌) */
+.pill.active {
+  background: #f6f6f6;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06) inset;
 }
 /* Design #06에서 수정 */
 
