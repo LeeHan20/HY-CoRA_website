@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f5f5f5;
+    background-color: #fcfcfc;
 }
 
 .container {
@@ -34,7 +34,7 @@ body {
 
     padding: 5px 0;
 
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -78,11 +78,10 @@ body {
 /* Intro Section */
 
 .intro-section {
-
     background-color: #fcfcfc;
     padding: 80px 0;
     text-align: center;
-} 
+}
 
 .intro-container {
     display: flex;
@@ -99,7 +98,6 @@ body {
     font-weight: 100;
     margin: 100px 90px 0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-
 }
 
 .intro-text h2 {
@@ -153,7 +151,7 @@ body {
     margin: 0 auto 30px;
     max-width: 900px;
     text-align: center;
-    font-size: 1.0em;
+    font-size: 1em;
 }
 
 /* Design #06에서 추가 */
@@ -170,7 +168,7 @@ body {
     margin-bottom: 15px; /* 제목과 본문 간 간격 */
     margin-top: 30px;
     text-align: center;
-    font-size: 2.0em;
+    font-size: 2em;
 }
 
 .club-intro p {
@@ -191,7 +189,7 @@ body {
     background-color: #d7d7d7;
     padding: 30px;
     border-radius: 45px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 250px;
 }
@@ -200,7 +198,7 @@ body {
     background-color: #d7d7d7;
     padding: 30px;
     border-radius: 45px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 250px;
 }
@@ -210,18 +208,24 @@ body {
     width: 120px;
     border-radius: 20px;
     margin: 0 auto 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.icon-container.green { background-color: #d4edda; }
-.icon-container.blue { background-color: #cce5ff; }
-.icon-container.yellow { background-color: #fff3cd; }
+.icon-container.green {
+    background-color: #d4edda;
+}
+.icon-container.blue {
+    background-color: #cce5ff;
+}
+.icon-container.yellow {
+    background-color: #fff3cd;
+}
 
 .icon {
-    font-size: 1.0em; 
+    font-size: 1em;
 }
 /* Design #06에서 수정 */
 
@@ -247,7 +251,7 @@ body {
 .activity-card {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
     position: relative;
     display: flex;
@@ -265,9 +269,15 @@ body {
     font-size: 0.8em;
 }
 
-.status.ongoing { background-color: #28a745; }
-.status.recruiting { background-color: #007bff; }
-.status.scheduled { background-color: #ffc107; }
+.status.ongoing {
+    background-color: #28a745;
+}
+.status.recruiting {
+    background-color: #007bff;
+}
+.status.scheduled {
+    background-color: #ffc107;
+}
 
 .card-content h4 {
     margin-top: 0;
@@ -299,7 +309,7 @@ body {
 
 .recruitment-nav {
     display: flex;
-    flex:0 0 20px;
+    flex: 0 0 20px;
     height: 50px;
     justify-content: center;
     gap: 80px;
@@ -317,35 +327,35 @@ body {
 
 /*Design-08 모집안내 디자인 추가*/
 
-.recruitment-card{
-  position: relative;          
-  background:#d9d9d9;
-  border-radius:15px;
-  width:100%;
-  padding:24px 24px 24px 40px;  
-  display:flex;
-  flex-direction: column;
-  gap:12px;                   
-  box-sizing: border-box;
+.recruitment-card {
+    position: relative;
+    background: #d9d9d9;
+    border-radius: 15px;
+    width: 100%;
+    padding: 24px 24px 24px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-sizing: border-box;
 }
 
-.recruitment-line{
-  position:absolute;
-  left:16px;                   
-  top:24px;                     
-  bottom:24px;                  
-  width:4px;
-  background:#545454;          
-  border-radius:2px;
+.recruitment-line {
+    position: absolute;
+    left: 16px;
+    top: 24px;
+    bottom: 24px;
+    width: 4px;
+    background: #545454;
+    border-radius: 2px;
 }
 
-.recruitment-box{
-  background:#ffffff;
-  border-radius:15px;
-  padding:15px 20px;
-  text-align:left;
-  font-size:1rem;               
-  box-sizing:border-box;
+.recruitment-box {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 /*Design-08 모집안내 박스 추가*/
 
@@ -369,7 +379,7 @@ body {
     background: #d9d9d9;
     border-radius: 15px;
     padding: 10px;
-    flex: 1; 
+    flex: 1;
     box-sizing: border-box;
 }
 
@@ -400,7 +410,6 @@ body {
 }
 
 /*Design-08 하단 박스 2개 추가*/
-
 
 .apply-button {
     background-color: #004085;
@@ -537,7 +546,7 @@ body {
 }
 
 .nav-button:hover {
-    background-color:#34568b;
+    background-color: #34568b;
     color: #fff;
 }
 
@@ -551,7 +560,6 @@ body {
     background-color: #34568b;
     color: #fff;
     padding: 20px 0;
-
 }
 
 .footer-content {
@@ -570,7 +578,6 @@ body {
     white-space: nowrap;
 }
 
-
 .about-header {
     display: block;
     background-color: #6e6e6e; /* 회색 배경 */
@@ -581,7 +588,7 @@ body {
 }
 
 .about-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -591,4 +598,161 @@ body {
     margin: 0 auto;
     line-height: 1.5;
     color: #f1f1f1;
+}
+
+.quoteidx-block {
+    max-width: 1100px;
+    margin: 0px auto;
+    text-align: center;
+    padding: 0 30px;
+}
+
+.quoteidx-title {
+    position: relative;
+
+    font-weight: 200;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    font-size: clamp(30px, 5vw, 43px);
+    padding: 0px;
+    font-style: normal;
+    margin-bottom: 80px;
+}
+.quoteidx-title::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: #333;
+    width: 60%;
+    top: -40px;
+    left: 0;
+}
+
+/* 아래 선 (p 태그 밑에) */
+.quoteidx-desc::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: #333;
+    width: 60%;
+    bottom: -40px;
+    right: 0;
+}
+.quoteidx-mark {
+    font-weight: 300;
+    opacity: 0.7;
+    margin: 0 0.05em;
+}
+
+.quoteidx-desc {
+    margin-top: 28px;
+    font-size: clamp(14px, 2.2vw, 20px);
+    color: #333;
+    line-height: 1.8;
+    position: relative;
+}
+
+.core-values {
+    display: flex;
+    flex-direction: column; /* 세로 배치 */
+    align-items: center; /* 가운데 정렬 */
+    text-align: center;
+    gap: 0px;
+}
+
+.bottom-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+/* 공통 도형 */
+.shape {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* 원형 */
+.circle {
+    background: #c2dcff;
+    border-radius: 50%;
+    margin-top: 60px;
+    margin-bottom: -130px;
+    margin-left: -120px;
+}
+
+/* 사다리꼴 */
+.trapezoid {
+    background: #e8e6cf;
+    width: 350px;
+    height: 230px;
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+    margin-right: -20px;
+    margin-top: 100px;
+}
+
+/* 삼각형 */
+.triangle {
+    width: 400px;
+    height: 400px;
+    background: #6d82e5;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    text-align: center;
+    margin-left: -50px;
+}
+
+/* 가운데 로고 */
+.center-logo {
+    width: 250px;
+    height: 150px;
+    background: black;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 30px;
+    margin-right: -20px;
+
+    /* 피크 모양 */
+    clip-path: polygon(0% 50%, 85% 0%, 100% 50%, 85% 100%);
+    border-radius: 50px;
+}
+
+.core-title {
+    color: white;
+    font-size: 23px;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    padding: 0px;
+    margin: 0px;
+}
+
+.core-text {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.trapezoid-text {
+    padding-right: 40px;
+}
+
+.triangle-text {
+    padding-top: 10px;
+    scale: 0.95;
+}
+
+.own-title {
+    margin-top: 100px;
 }
