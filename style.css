@@ -85,20 +85,39 @@ body {
 }
 
 .intro-container {
+    position: relative;
+    overflow: hidden; /* 블러 가장자리 잘림 방지 */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 50px 0;
-    background-color: #919191;
-    color: #fff;
 
+    height: 600px;
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
     text-align: center;
-    border-radius: 2.5%;
-    height: 400px;
     font-weight: 100;
-    margin: 100px 90px 0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+    /* 여기엔 background 넣지 말기! */
+}
+
+/* 배경 전용 레이어 */
+.intro-container::before {
+    content: '';
+    position: absolute;
+    inset: 0; /* top/right/bottom/left: 0 */
+    background: url('images/index-background1.jpg') center / cover no-repeat;
+    filter: blur(6px);
+    transform: scale(1.05); /* 블러 가장자리 비치는 거 방지용 살짝 확대 */
+    z-index: 0; /* 음수 X */
+}
+
+/* 실제 내용은 위로 올리기 */
+.intro-container > * {
+    position: relative;
+    z-index: 1;
 }
 
 .intro-text h2 {
