@@ -1,136 +1,170 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HY-CoRA - 활동 내용</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HY-CoRA - 활동 내용</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header-container">
+                <h1 class="logo"><a href="index.html">HY-CoRA</a></h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="about.html">소개</a></li>
+                        <li><a href="activities.html">활동 내용</a></li>
+                        <li><a href="apply.html">모집 안내/가입</a></li>
+                        <li><a href="announcement.html">공지사항</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    <header class="header">
-        <div class="container header-container">
-            <h1 class="logo"><a href="index.html">HY-CoRA</a></h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="about.html">소개</a></li>
-                    <li><a href="activities.html">활동 내용</a></li>
-                    <li><a href="apply.html">모집 안내/가입</a></li>
-                    <li><a href="announcement.html">공지사항</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <main>
+            <div class="about-header">
+                <h2 class="about-title">활동 내용</h2>
+                <p class="about-subtitle">
+                    다양한 스터디, 프로젝트, 봉사활동, 친목활동을 통해 함께
+                    성장하고 있습니다.
+                </p>
+            </div>
 
-    <main>
-
-        <div class="about-header">
-            <h2 class="about-title">활동 내용</h2>
-            <p class="about-subtitle">
-                다양한 스터디, 프로젝트, 봉사활동, 친목활동을 통해 함께 성장하고 있습니다.
-            </p>
-        </div>
-
-
-        <section class="activities-section">
-            <div class="container">
-                <div class="activities-nav">
-                    <button class="nav-button active">전체 활동</button>
-                    <button class="nav-button">스터디</button>
-                    <button class="nav-button">친목 활동</button>
+            <section class="activities-section">
+                <div class="container">
+                    <div class="activities-nav">
+                        <button class="nav-button active">전체 활동</button>
+                        <button class="nav-button">스터디</button>
+                        <button class="nav-button">친목 활동</button>
+                    </div>
+                    <div class="activities-grid">
+                        <div class="activity-card">
+                            <div class="status ongoing">진행중</div>
+                            <div class="card-content">
+                                <h4>웹 개발 스터디</h4>
+                                <p>웹 개발 기초부터~~</p>
+                                <p>20xx.1.15</p>
+                                <p>19:00</p>
+                                <p>스터디룸 6</p>
+                                <p>6명 참여</p>
+                            </div>
+                            <button class="detail-button">세부 사항</button>
+                        </div>
+                        <div class="activity-card">
+                            <div class="status recruiting">모집중</div>
+                            <div class="card-content">
+                                <h4>웹 개발 스터디</h4>
+                                <p>웹 개발 기초부터~~</p>
+                                <p>20xx.1.15</p>
+                                <p>19:00</p>
+                                <p>스터디룸 6</p>
+                                <p>6명 참여</p>
+                            </div>
+                            <button class="detail-button">세부 사항</button>
+                        </div>
+                        <div class="activity-card">
+                            <div class="status scheduled">예정</div>
+                            <div class="card-content">
+                                <h4>웹 개발 스터디</h4>
+                                <p>웹 개발 기초부터~~</p>
+                                <p>20xx.1.15</p>
+                                <p>19:00</p>
+                                <p>스터디룸 6</p>
+                                <p>6명 참여</p>
+                            </div>
+                            <button class="detail-button">세부 사항</button>
+                        </div>
+                        <div class="activity-card">
+                            <div class="status ongoing">진행중</div>
+                            <div class="card-content">
+                                <h4>웹 개발 스터디</h4>
+                                <p>웹 개발 기초부터~~</p>
+                                <p>20xx.1.15</p>
+                                <p>19:00</p>
+                                <p>스터디룸 6</p>
+                                <p>6명 참여</p>
+                            </div>
+                            <button class="detail-button">세부 사항</button>
+                        </div>
+                        <div class="activity-card">
+                            <div class="status recruiting">모집중</div>
+                            <div class="card-content">
+                                <h4>웹 개발 스터디</h4>
+                                <p>웹 개발 기초부터~~</p>
+                                <p>20xx.1.15</p>
+                                <p>19:00</p>
+                                <p>스터디룸 6</p>
+                                <p>6명 참여</p>
+                            </div>
+                            <button class="detail-button">세부 사항</button>
+                        </div>
+                        <div class="activity-card">
+                            <div class="status scheduled">예정</div>
+                            <div class="card-content">
+                                <h4>웹 개발 스터디</h4>
+                                <p>웹 개발 기초부터~~</p>
+                                <p>20xx.1.15</p>
+                                <p>19:00</p>
+                                <p>스터디룸 6</p>
+                                <p>6명 참여</p>
+                            </div>
+                            <button class="detail-button">세부 사항</button>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                    </div>
                 </div>
-                <div class="activities-grid">
-                    <div class="activity-card">
-                        <div class="status ongoing">진행중</div>
-                        <div class="card-content">
-                            <h4>웹 개발 스터디</h4>
-                            <p>웹 개발 기초부터~~</p>
-                            <p>20xx.1.15</p>
-                            <p>19:00</p>
-                            <p>스터디룸 6</p>
-                            <p>6명 참여</p>
-                        </div>
-                        <button class="detail-button">세부 사항</button>
-                    </div>
-                    <div class="activity-card">
-                        <div class="status recruiting">모집중</div>
-                        <div class="card-content">
-                            <h4>웹 개발 스터디</h4>
-                            <p>웹 개발 기초부터~~</p>
-                            <p>20xx.1.15</p>
-                            <p>19:00</p>
-                            <p>스터디룸 6</p>
-                            <p>6명 참여</p>
-                        </div>
-                        <button class="detail-button">세부 사항</button>
-                    </div>
-                    <div class="activity-card">
-                        <div class="status scheduled">예정</div>
-                        <div class="card-content">
-                            <h4>웹 개발 스터디</h4>
-                            <p>웹 개발 기초부터~~</p>
-                            <p>20xx.1.15</p>
-                            <p>19:00</p>
-                            <p>스터디룸 6</p>
-                            <p>6명 참여</p>
-                        </div>
-                        <button class="detail-button">세부 사항</button>
-                    </div>
-                    <div class="activity-card">
-                        <div class="status ongoing">진행중</div>
-                        <div class="card-content">
-                            <h4>웹 개발 스터디</h4>
-                            <p>웹 개발 기초부터~~</p>
-                            <p>20xx.1.15</p>
-                            <p>19:00</p>
-                            <p>스터디룸 6</p>
-                            <p>6명 참여</p>
-                        </div>
-                        <button class="detail-button">세부 사항</button>
-                    </div>
-                    <div class="activity-card">
-                        <div class="status recruiting">모집중</div>
-                        <div class="card-content">
-                            <h4>웹 개발 스터디</h4>
-                            <p>웹 개발 기초부터~~</p>
-                            <p>20xx.1.15</p>
-                            <p>19:00</p>
-                            <p>스터디룸 6</p>
-                            <p>6명 참여</p>
-                        </div>
-                        <button class="detail-button">세부 사항</button>
-                    </div>
-                    <div class="activity-card">
-                        <div class="status scheduled">예정</div>
-                        <div class="card-content">
-                            <h4>웹 개발 스터디</h4>
-                            <p>웹 개발 기초부터~~</p>
-                            <p>20xx.1.15</p>
-                            <p>19:00</p>
-                            <p>스터디룸 6</p>
-                            <p>6명 참여</p>
-                        </div>
-                        <button class="detail-button">세부 사항</button>
-                    </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container footer-content">
+                <!-- Top: Copyright -->
+                <div class="footer-top">
+                    <p>Copyright 2025. HY-CoRA All rights reserved.</p>
+                    <a
+                        href="https://www.instagram.com/hycora_hanyang/"
+                        target="_blank"
+                        rel="noopener"
+                        class="social-icon"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
-                <div class="pagination">
-                    <a href="#" class="active">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
+
+                <!-- Divider -->
+                <div class="footer-divider" aria-hidden="true"></div>
+
+                <!-- Bottom: 좌측 주소/메일 / 우측 회장·부회장 -->
+                <div class="footer-bottom">
+                    <p class="footer-detail">
+                        <strong>Made by Hy-CoRA</strong> <br />
+                        2025 ver. Create by <strong> 팀</strong> 이한, 최관우,
+                        김현준, 박아진, 박강호, 최지민 <br /><br />
+                        경기도 안산시 상록구 한양대학로 55 복지관 425호<br />
+                        hycora369@gmail.com
+                    </p>
+                    <div class="contacts">
+                        <div class="contact-block">
+                            <h3>회장</h3>
+                            <p>이한 010-3552-2044</p>
+                        </div>
+                        <div class="contact-block">
+                            <h3>부회장</h3>
+                            <p>최관우 010-3410-4697</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </footer>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>경기도 안산시 상록구 한양대학로 55 복지관 425호 (동방 주소)<br>hycora369@gmail.com</p>
-            <p>&nbsp;&nbsp;&nbsp;회장: 010-3552-2044<br>부회장: 010-3410-4697</p>
-        </div>
-    </footer>
-
-    <script src="js/activies.js"></script>
-
-</body>
+        <script src="js/activies.js"></script>
+    </body>
 </html>
