@@ -32,7 +32,7 @@ body {
 .header {
     background-color: #34568b;
 
-    padding: 5px 0;
+    padding: 1px 0;
 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -79,25 +79,45 @@ body {
 
 .intro-section {
     background-color: #fcfcfc;
-    padding: 80px 0;
+    padding-bottom: 50px;
+    padding-top: 0px;
     text-align: center;
 }
 
 .intro-container {
+    position: relative;
+    overflow: hidden; /* 블러 가장자리 잘림 방지 */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 50px 0;
-    background-color: #919191;
-    color: #fff;
 
+    height: 600px;
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
     text-align: center;
-    border-radius: 2.5%;
-    height: 400px;
     font-weight: 100;
-    margin: 100px 90px 0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+    /* 여기엔 background 넣지 말기! */
+}
+
+/* 배경 전용 레이어 */
+.intro-container::before {
+    content: '';
+    position: absolute;
+    inset: 0; /* top/right/bottom/left: 0 */
+    background: url('images/index-background1.jpg') center / cover no-repeat;
+    filter: blur(6px);
+    transform: scale(1.05); /* 블러 가장자리 비치는 거 방지용 살짝 확대 */
+    z-index: 0; /* 음수 X */
+}
+
+/* 실제 내용은 위로 올리기 */
+.intro-container > * {
+    position: relative;
+    z-index: 1;
 }
 
 .intro-text h2 {
@@ -168,7 +188,7 @@ body {
     margin-bottom: 50px; /* 제목과 본문 간 간격 */
     margin-top: 90px; /* 상단 내용과의 간격 */
     text-align: center; /* 텍스트 정렬 방법 */
-    font-size: 2.0em;
+    font-size: 2em;
 }
 
 .club-intro p {
@@ -214,11 +234,18 @@ body {
     align-items: center;
 }
 
-
-.icon-container.green { background-color: #d4edda; }
-.icon-container.blue { background-color: #cce5ff; }
-.icon-container.yellow { background-color: #fff3cd; }
-.icon-container.pink { background-color: #FADADD}
+.icon-container.green {
+    background-color: #d4edda;
+}
+.icon-container.blue {
+    background-color: #cce5ff;
+}
+.icon-container.yellow {
+    background-color: #fff3cd;
+}
+.icon-container.pink {
+    background-color: #fadadd;
+}
 
 .icon {
     font-size: 1em;
@@ -229,115 +256,115 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    margin: 70px auto 15px; 
+    margin: 70px auto 15px;
 }
 
 .intro-history-card {
-  position: relative;          
-  background:#d9d9d9;
-  border-radius:36px;
-  width:86%;
-  padding:24px 24px 24px 40px;  
-  display:flex;
-  flex-direction: column;
-  gap:12px;                   
-  box-sizing: border-box;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    background: #d9d9d9;
+    border-radius: 36px;
+    width: 86%;
+    padding: 24px 24px 24px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .intro-history-line {
-  position: absolute;
-  left: 16px;
-  /* 아이콘 전체 높이(기본 120px)*/
-  top: calc(var(--icon-total-height, 120px) - 10px);
-  bottom: 24px;
-  width: 4px;
-  background: #545454;
-  border-radius: 2px;
+    position: absolute;
+    left: 16px;
+    /* 아이콘 전체 높이(기본 120px)*/
+    top: calc(var(--icon-total-height, 120px) - 10px);
+    bottom: 24px;
+    width: 4px;
+    background: #545454;
+    border-radius: 2px;
 }
 
-.intro-history-box{
-  background:#ffffff;
-  border-radius:15px;
-  padding:15px 20px;
-  text-align:left;
-  font-size:1rem;               
-  box-sizing:border-box;
+.intro-history-box {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
 .leaders-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
-  justify-items: center;
-  margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    justify-items: center;
+    margin-top: 40px;
 }
 
 .leader-card {
-  background-color: #d9d9d9;
-  border-radius: 25px;
-  padding: 20px;
-  width: 320px;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    background-color: #d9d9d9;
+    border-radius: 25px;
+    padding: 20px;
+    width: 320px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* 아바타 (초록 원) */
 .leader-card .avatar {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: #5fd35f;
-  flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #5fd35f;
+    flex-shrink: 0;
 }
 
 /* 카드 본문 */
 .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 /* 이름 */
 .card-body .name {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
 }
 
 /* 역할 */
 .card-body .role {
-  font-size: 0.9rem;
-  color: #333;
-  margin: 4px 0;
+    font-size: 0.9rem;
+    color: #333;
+    margin: 4px 0;
 }
 
 /* 설명 */
 .card-body .desc {
-  font-size: 0.85rem;
-  color: #333;
-  margin: 4px 0 8px;
-  line-height: 1.3;
+    font-size: 0.85rem;
+    color: #333;
+    margin: 4px 0 8px;
+    line-height: 1.3;
 }
 
 /* 버튼 행 */
 .btn-row {
-  display: flex;
-  gap: 10px;
+    display: flex;
+    gap: 10px;
 }
 
 .pill {
-  background: white;
-  border: none;
-  border-radius: 20px;
-  padding: 5px 15px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Design #06에서 수정 */
@@ -477,7 +504,6 @@ body {
     margin-bottom: 15px;
 }
 
-
 .two-cards {
     display: flex;
     gap: 20px;
@@ -544,34 +570,36 @@ body {
 /*Design-08 하단 박스 2개 추가*/
 
 .apply-card {
-    position: relative; 
-    background:#d9d9d9;
-    border-radius:15px;
-    padding:50px;
-    text-align:center;
+    position: relative;
+    background: #d9d9d9;
+    border-radius: 15px;
+    padding: 50px;
+    text-align: center;
     width: 73%;
     margin: 0 auto;
     gap: 20px;
-    margin-bottom: 80px;           
+    margin-bottom: 80px;
 }
 
 .apply-box {
     background: #d9d9d9;
     border-radius: 15px;
+
     display: flex;
     flex-direction: column;   
     gap: 24px;                
     width: 100%;
+
     margin: 0 auto;
-    padding: 24px;            
+    padding: 24px;
     box-sizing: border-box;
-    text-align: left;        
+    text-align: left;
 }
 
 .apply-row {
-    display: flex;            
-    align-items: center;      
-    gap: 20px;               
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .apply-circle {
@@ -584,7 +612,7 @@ body {
     justify-content: center;
     font-weight: 700;
     font-size: 28px;
-    flex: 0 0 100px;         
+    flex: 0 0 100px;
 }
 
 .apply-order {
@@ -594,19 +622,19 @@ body {
     box-sizing: border-box;
     flex: 1;
 
-    display: flex;                
+    display: flex;
     justify-content: space-between;
-    align-items: center;           
+    align-items: center;
     text-align: left;
 }
 
 .apply-text {
     display: flex;
-    flex-direction: column;        
+    flex-direction: column;
     gap: 4px;
 }
 
-.apply-button { 
+.apply-button {
     background: transparent;
     border: 2px solid #545454;
     border-radius: 25px;
@@ -614,6 +642,7 @@ body {
     cursor: pointer;
     font-size: 1rem;
 }
+
 
 .FAQ-box {
     background: #d9d9d9;
@@ -640,6 +669,7 @@ body {
     gap: 10px;
     margin-bottom: 10px;   
 }
+
 
 /*Desing-11 지원자격부분 추가*/
 /*Desing-13 FAQ부분 추가*/
@@ -785,20 +815,82 @@ body {
 }
 
 .footer-content {
-    font-size: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background: #34568b;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 20px;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 16px;
 }
 
-.footer-content span {
-    white-space: nowrap;
+.footer p {
+    margin: 0;
 }
+
+/* Top: copyright */
+.footer-top {
+    display: flex;
+    justify-content: space-between; /* 왼쪽 정렬 */
+    align-items: center;
+}
+
+/* Divider */
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+}
+.footer-detail {
+    line-height: 1.7;
+}
+/* 회장/부회장 블럭 */
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.contact-block h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+}
+.contact-block p {
+    margin: 0;
+    line-height: 1.6;
+}
+strong {
+    font-weight: 900;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px; /* 모서리 둥글게 */
+    background-color: #34568b; /* 푸터랑 같은 배경 */
+    color: #fff; /* 아이콘 흰색 */
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #2a446e; /* hover 시 조금 어둡게 */
+}
+
+/* .footer-content span {
+    white-space: nowrap;
+} */
 
 .about-header {
     display: block;
