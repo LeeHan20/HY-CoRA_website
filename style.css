@@ -507,11 +507,15 @@ body {
 .two-cards {
     display: flex;
     gap: 20px;
-    padding: 50px;
+    padding: 30px;
     width: 80%;
+    height: 200px;
     justify-content: center;
     margin: 0 auto;
-    margin-bottom: 50px;
+}
+
+.two-cards-1 {
+    margin-bottom: 100px;
 }
 
 .outer-card {
@@ -555,24 +559,15 @@ body {
 }
 
 .inner-card h2 {
-    margin-bottom: 10px;
+    margin: 0px;
 }
 
 .inner-card p {
-    margin-bottom: 15px;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
+
 
 /*Design-08 하단 박스 2개 추가*/
-
-.apply-button {
-    background-color: #004085;
-    color: #fff;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 5px;
-    font-size: 1.2em;
-}
 
 .apply-card {
     position: relative;
@@ -591,9 +586,10 @@ body {
     border-radius: 15px;
 
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: min(100%, 1000px);
+    flex-direction: column;   
+    gap: 24px;                
+    width: 100%;
+
     margin: 0 auto;
     padding: 24px;
     box-sizing: border-box;
@@ -647,7 +643,36 @@ body {
     font-size: 1rem;
 }
 
+
+.FAQ-box {
+    background: #d9d9d9;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;   
+    gap: 20px;                
+    width: 80%;
+    margin: 0 auto;
+    padding: 24px;            
+    box-sizing: border-box;
+    text-align: left;   
+    margin-bottom: 100px;  
+}
+
+.FAQ-card {
+    position: relative; 
+    background:#ffffff;
+    border-radius:15px;
+    padding: 20px 60px;
+    text-align:left;
+    width: 85%;
+    margin: 0 auto;
+    gap: 10px;
+    margin-bottom: 10px;   
+}
+
+
 /*Desing-11 지원자격부분 추가*/
+/*Desing-13 FAQ부분 추가*/
 
 /* Notices Section */
 .notices-section {
