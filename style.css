@@ -330,6 +330,96 @@ body {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.learning-wrap{
+  width: 100%;
+  max-width: 1200px;         /* 페이지 컨테이너 폭과 동일 */
+  margin: 0 auto 80px;
+  background: #d9d9d9;       /* 스샷의 회색 */
+  border-radius: 44px;       /* 크게 둥근 모서리 */
+  padding: 56px 48px;        /* 바깥 여백 */
+  box-sizing: border-box;
+}
+
+/* 3개 카드 배치 */
+.learning-inner{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 72px;     /* 카드 간 가로 간격 */
+  align-items: stretch;
+}
+
+/* 바깥 카드(회색 안의 흰색 캡슐 그림자 포함 영역) */
+.learning-card{
+  background: transparent;   /* 회색 배경은 부모가 담당 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;         /* 높이 고정 느낌 */
+}
+
+/* 실제 흰색 캡슐 카드 */
+.learning-card-inner{
+  width: 420px;              /* 스샷 비율에 맞춘 고정 폭 */
+  max-width: 100%;
+  background: #ffffff;
+  border-radius: 28px;       /* 안쪽 카드 모서리 */
+  padding: 36px 36px 40px;   /* 내부 여백 */
+  box-shadow: 0 0 0 0 rgba(0,0,0,0); /* 깔끔한 평면 느낌 */
+  box-sizing: border-box;
+}
+
+/* 제목 타이포(왼쪽 정렬, 진회색) */
+.learning-title{
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  font-size: 28px;           /* 스샷 대비 */
+  line-height: 1.2;
+  color: #666666;
+}
+
+/* 본문 타이포(줄바꿈 포함, 자간/행간 고정) */
+.learning-desc{
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;         /* 읽기 쉬운 행간 */
+  color: #555555;
+  word-break: keep-all;
+}
+
+/* 컨테이너 폭이 줄어드는 경우에도 1px 단위 레이아웃 유지 */
+@media (max-width: 1200px){
+  .learning-wrap{
+    padding: 48px 36px;
+  }
+  .learning-inner{
+    grid-column-gap: 48px;
+  }
+  .learning-card-inner{
+    width: 360px;
+    padding: 32px 28px 36px;
+    border-radius: 26px;
+  }
+  .learning-title{ font-size: 26px; }
+  .learning-desc{ font-size: 17px; line-height: 30px; }
+}
+
+/* 태블릿 이하에서는 정확한 비율 유지를 위해 두 단/한 단 레이아웃으로 스냅 */
+@media (max-width: 980px){
+  .learning-inner{
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 36px;
+  }
+}
+@media (max-width: 640px){
+  .learning-inner{
+    grid-template-columns: 1fr;
+  }
+  .learning-card-inner{
+    width: 100%;
+  }
+}
+
 /* Design #06에서 수정 */
 
 /* Activities Section */
