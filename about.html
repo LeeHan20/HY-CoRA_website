@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <!-- Header -->
     <header class="header">
         <div class="container header-container">
             <h1 class="logo"><a href="index.html">HY-CoRA</a></h1>
@@ -24,7 +24,7 @@
     </header>
 
     <main>
-
+        <!-- 상단 소개 배너 -->
         <div class="about-header">
             <h2 class="about-title">HY-CoRA</h2>
             <p class="about-subtitle">
@@ -32,20 +32,20 @@
                 한양대학교 ERICA의 학술 동아리입니다.
             </p>
         </div>
-
+        <!-- 본문 -->
         <section class="about-section">
             <div class="container about-content">
-
+                <!-- 섹션 내 탭 네비 -->
                 <div class="about-nav">
                     <button class="nav-button active"  data-target="greeting">인사말</button>
                     <button class="nav-button"  data-target="introduction">소개</button>
                     <button class="nav-button"  data-target="administrators">임원진</button>
                     <button class="nav-button"  data-target="learning">학습</button>
-                    <button class="nav-button"  data-target="greeting">성과</button>
+                    <button class="nav-button"  data-target="indicator">지표</button>
                 </div>
 
                 <div class="club-intro">
-
+                    <!-- 인사말 -->
                     <h3 id="greeting">인사말</h3>
                     <p class="quote-title">❝ 학문적 성장의 장 ❞</p>
                     <p>HY-CoRA는 한양대학교 ERICA를 기반으로, 학문적 탐구와 지식 교류를 중심으로 하는 컴퓨터 연구 동아리입니다. 다양한 관점과 경험을 지닌 구성원들이 모여, 깊이 있는 토론과 연구를 통해 사고의 폭을 넓히고 전문성을 심화시킵니다.</p>
@@ -58,7 +58,7 @@
 
                     <p class="quote-title">❝ 앞으로의 다짐 ❞</p>
                     <p>앞으로도 HY-CoRA는 학문적 성취와 인적 네트워크의 성장을 함께 이루어 나가며, 모든 구성원이 서로에게 영감을 주는 지식 공동체로 발전해 나가겠습니다.</p>
-
+                    <!-- 소개 -->
                     <h3 id="introduction">소개</h3>
                     <div class="intro-cards">
                         <div class="card">
@@ -82,7 +82,7 @@
                                 각 파트가 역할을 나누어 원활한 진행과 체계적인 운영을 유지합니다.</p2>
                         </div>
                     </div>
-
+                    <!-- 연혁 -->
                     <div class = "intro-history-content"> 
                         <div class = "intro-history-card"> 
                             <div class="icon-container pink">
@@ -98,145 +98,173 @@
                         </div>
 
                     </div>
-
+                    <!-- 임원진 -->
                     <h3 id="administrators">임원진</h3>
-
-
-
                     <div class="wrap">
-  <section class="leaders-grid">
+                        <section class="leaders-grid">
 
-    <article class="leader-card">
-      <div class="avatar"></div>
-      <div class="card-body">
-        <h3 class="name">이한</h3>
-        <div class="role">회장 · Club Lead</div>
-        <p class="desc">동아리 총괄, 연간 로드맵/대외 커뮤니케이션.</p>
-        <div class="btn-row">
-          <button class="pill">운영</button>
-          <button class="pill">PM</button>
-        </div>
-      </div>
+                            <article class="leader-card">
+                                <div class="avatar"></div>
+                                <div class="card-body">
+                                    <h3 class="name">이한</h3>
+                                    <div class="role">회장 · Club Lead</div>
+                                    <p class="desc">동아리 총괄, 연간 로드맵/대외 커뮤니케이션.</p>
+                                    <div class="btn-row">
+
+                                        <button class="pill">운영</button>
+                                        <button class="pill">PM</button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="leader-card">
+                                <div class="avatar"></div>
+                                <div class="card-body">
+                                    <h3 class="name">최관우</h3>
+                                    <div class="role">부회장</div>
+                                    <p class="desc">동아리 총괄, 연간 로드맵/대외 커뮤니케이션.</p>
+                                    <div class="btn-row">
+                                        <button class="pill">운영</button>
+                                        <button class="pill">PM</button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="leader-card">
+                                <div class="avatar"></div>
+                                <div class="card-body">
+                                    <h3 class="name">최재호</h3>
+                                    <div class="role">총무</div>
+                                    <p class="desc">동아리 총괄, 연간 로드맵/대외 커뮤니케이션.</p>
+                                    <div class="btn-row">
+                                        <button class="pill">운영</button>
+                                        <button class="pill">PM</button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="leader-card">
+                                <div class="avatar"></div>
+                                <div class="card-body">
+                                    <h3 class="name">김현준</h3>
+                                    <div class="role">교육</div>
+                                    <p class="desc">동아리 총괄, 연간 로드맵/대외 커뮤니케이션.</p>
+                                    <div class="btn-row">
+                                        <button class="pill">운영</button>
+                                        <button class="pill">PM</button>
+                                    </div>
+                                </div>
+                            </article>
+                            
+                            <article class="leader-card">
+                                <div class="avatar"></div>
+                                <div class="card-body">
+                                    <h3 class="name">박아진</h3>
+                                    <div class="role">홍보</div>
+                                    <p class="desc">동아리 총괄, 연간 로드맵/대외 커뮤니케이션.</p>
+                                    <div class="btn-row">
+                                        <button class="pill">운영</button>
+                                        <button class="pill">PM</button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="leader-card">
+                                <div class="avatar"></div>
+                                <div class="card-body">
+                                    <h3 class="name">박강호</h3>
+                                    <div class="role">집행</div>
+                                    <p class="desc">동아리 총괄, 연간 로드맵/대외 커뮤니케이션.</p>
+                                    <div class="btn-row">
+                                        <button class="pill">운영</button>
+                                        <button class="pill">PM</button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="leader-card">
+                                <div class="avatar"></div>
+                                <div class="card-body">
+                                    <h3 class="name">최지민</h3>
+                                    <div class="role">디자인</div>
+                                    <p class="desc">동아리 총괄, 연간 로드맵/대외 커뮤니케이션.</p>
+                                    <div class="btn-row">
+                                        <button class="pill">운영</button>
+                                        <button class="pill">PM</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                    <!-- 학습 -->
+                    <h3 id="learning">학습</h3>
+                    <section class="learning-wrap">
+                        <div class="learning-inner">
+                            <article class="learning-card">
+                                <div class="learning-card-inner">
+                                    <h4 class="learning-title">정기 스터디</h4>
+                                    <p3 class="learning-desc">파이썬, C언어, 웹 등 다양한 주제로 주 1회 세션을 진행합니다.<br/>실습과 코드리뷰를 통해 기초부터 심화까지 함께 성장합니다.</p3>
+                                </div>
+                            </article>
+
+                                <article class="learning-card">
+                                <div class="learning-card-inner">
+                                    <h4 class="learning-title">정기 스터디</h4>
+                                    <p3 class="learning-desc">파이썬, C언어, 웹 등 다양한 주제로 주 1회 세션을 진행합니다.<br/>실습과 코드리뷰를 통해 기초부터 심화까지 함께 성장합니다.</p3>
+                                </div>
+                            </article>
+
+                            <article class="learning-card">
+                                <div class="learning-card-inner">
+                                    <h4 class="learning-title">정기 스터디</h4>
+                                    <p3 class="learning-desc">파이썬, C언어, 웹 등 다양한 주제로 주 1회 세션을 진행합니다.<br/>실습과 코드리뷰를 통해 기초부터 심화까지 함께 성장합니다.</p3>
+                                </div>
+                            </article>
+
+                            <article class="learning-card">
+                                <div class="learning-card-inner">
+                                    <h4 class="learning-title">정기 스터디</h4>
+                                    <p3 class="learning-desc">파이썬, C언어, 웹 등 다양한 주제로 주 1회 세션을 진행합니다.<br/>실습과 코드리뷰를 통해 기초부터 심화까지 함께 성장합니다.</p3>
+                                </div>
+                            </article>
+
+                            <article class="learning-card">
+                                <div class="learning-card-inner">
+                                    <h4 class="learning-title">정기 스터디</h4>
+                                    <p3 class="learning-desc">파이썬, C언어, 웹 등 다양한 주제로 주 1회 세션을 진행합니다.<br/>실습과 코드리뷰를 통해 기초부터 심화까지 함께 성장합니다.</p3>
+                                </div>                                
+                            </article>
+
+                            <!-- 더 추가하면 자동으로 다음 행으로 3개씩 배치됨 -->
+                        </div>
+                    </section>
+
+
+
+
+                    <!-- 지표 -->
+                    <h3 id="indicator">지표</h3>
+                    <section class="indicator-wrap">
+
+  <div class="indicator-grid">
+    <article class="indicator-card">
+      <h4 class="indicator-title">동아리 인원</h4>
+      <p class="indicator-desc">xx명</p>
     </article>
 
-    <article class="leader-card">
-      <div class="avatar"></div>
-      <div class="card-body">
-        <h3 class="name">최관우</h3>
-        <div class="role">부회장</div>
-        <p class="desc">동아리 총괄, 연간 로드맵/대외 커뮤니케이션.</p>
-        <div class="btn-row">
-          <button class="pill">운영</button>
-          <button class="pill">PM</button>
-        </div>
-      </div>
+    <article class="indicator-card">
+      <h4 class="indicator-title">공개 자료</h4>
+      <p class="indicator-desc"><strong>xx+</strong> 문서 / 슬라이드 / 리포</p>
     </article>
 
-    <article class="leader-card">
-      <div class="avatar"></div>
-      <div class="card-body">
-        <h3 class="name">최재호</h3>
-        <div class="role">총무</div>
-        <p class="desc">동아리 총괄, 연간 로드맵/대외 커뮤니케이션.</p>
-        <div class="btn-row">
-          <button class="pill">운영</button>
-          <button class="pill">PM</button>
-        </div>
-      </div>
+    <article class="indicator-card">
+      <h4 class="indicator-title">완성 프로젝트</h4>
+      <p class="indicator-desc"><strong>xx건</strong> (올해 xx건)</p>
     </article>
 
-    <article class="leader-card">
-      <div class="avatar"></div>
-      <div class="card-body">
-        <h3 class="name">김현준</h3>
-        <div class="role">교육</div>
-        <p class="desc">동아리 총괄, 연간 로드맵/대외 커뮤니케이션.</p>
-        <div class="btn-row">
-          <button class="pill">운영</button>
-          <button class="pill">PM</button>
-        </div>
-      </div>
-    </article>
-
-    <article class="leader-card">
-      <div class="avatar"></div>
-      <div class="card-body">
-        <h3 class="name">박아진</h3>
-        <div class="role">홍보</div>
-        <p class="desc">동아리 총괄, 연간 로드맵/대외 커뮤니케이션.</p>
-        <div class="btn-row">
-          <button class="pill">운영</button>
-          <button class="pill">PM</button>
-        </div>
-      </div>
-    </article>
-
-    <article class="leader-card">
-      <div class="avatar"></div>
-      <div class="card-body">
-        <h3 class="name">박강호</h3>
-        <div class="role">집행</div>
-        <p class="desc">동아리 총괄, 연간 로드맵/대외 커뮤니케이션.</p>
-        <div class="btn-row">
-          <button class="pill">운영</button>
-          <button class="pill">PM</button>
-        </div>
-      </div>
-    </article>
-
-    <article class="leader-card">
-      <div class="avatar"></div>
-      <div class="card-body">
-        <h3 class="name">최지민</h3>
-        <div class="role">디자인</div>
-        <p class="desc">동아리 총괄, 연간 로드맵/대외 커뮤니케이션.</p>
-        <div class="btn-row">
-          <button class="pill">운영</button>
-          <button class="pill">PM</button>
-        </div>
-      </div>
-    </article>
-    
-  </section>
-</div>
-
-
-
-
-
-
-<h3 id="learning">학습</h3>
-
-<section class="learning-wrap">
-  <div class="learning-inner">
-    <article class="learning-card">
-      <div class="learning-card-inner">
-        <h4 class="learning-title">정기 스터디</h4>
-        <p class="learning-desc">
-          파이썬, C언어, 웹 등 다양한 주제로 주 1회 세션을 진행합니다.<br>
-          실습과 코드리뷰를 통해 기초부터 심화까지 함께 성장합니다.
-        </p>
-      </div>
-    </article>
-
-    <article class="learning-card">
-      <div class="learning-card-inner">
-        <h4 class="learning-title">정기 스터디</h4>
-        <p class="learning-desc">
-          파이썬, C언어, 웹 등 다양한 주제로 주 1회 세션을 진행합니다.<br>
-          실습과 코드리뷰를 통해 기초부터 심화까지 함께 성장합니다.
-        </p>
-      </div>
-    </article>
-
-    <article class="learning-card">
-      <div class="learning-card-inner">
-        <h4 class="learning-title">정기 스터디</h4>
-        <p class="learning-desc">
-          파이썬, C언어, 웹 등 다양한 주제로 주 1회 세션을 진행합니다.<br>
-          실습과 코드리뷰를 통해 기초부터 심화까지 함께 성장합니다.
-        </p>
-      </div>
+    <article class="indicator-card">
+      <h4 class="indicator-title">기타 지표</h4>
+      <p class="indicator-desc">추가 내용</p>
     </article>
   </div>
 </section>
@@ -244,8 +272,13 @@
 
 
 
+
+
+
+
                 </div>
-                    
+                
+
             </div>
         </section>
     </main>
