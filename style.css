@@ -1153,13 +1153,11 @@ strong {
 .core-title {
     color: white;
     font-size: 23px;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
     padding: 0px;
     margin: 0px;
 }
 
 .core-text {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     font-size: 23px;
     font-weight: 500;
 }
