@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "2025 하반기 정기 총회 안내",
             summary: "2025 상반기 정기 총회가 ....",
             date: "2025.08.20",
+            time: "10:00-12:00",
+            location: "복지관 425호",
         },
         {
             category: "event",
@@ -14,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "신입생 OT 및 동아리 설명회 개최",
             summary: "OT 및 설명회 일정이 확정되었습니다...",
             date: "2025.08.18",
+            time: "18:00-21:00",
+            location: "학연산클러스터 501",
         },
         {
             category: "recruitment",
@@ -54,6 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "야식사업",
             summary: "동방에서 싸이버거가?!",
             date: "2025.08.15",
+            time: "13:00-15:00",
+            location: "1공학관 304호",
         },
         {
             category: "recruitment",

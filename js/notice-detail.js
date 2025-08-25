@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
         <path fill="currentColor" d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v15a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a1 1 0 0 1 1-1h3V2Zm12 6H5v12h14V8Z"/>
       </svg>
-      <div class="notice-detail-pill-text">10:00-12:00</div>
+      <div class="notice-detail-pill-text">${esc(data.time)}</div>
     </div>
 
     <div class="notice-detail-pill">
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
         <path fill="currentColor" d="M12 2a10 10 0 1 1 0 20a10 10 0 0 1 0-20Zm1 5h-2v6l5 3l1-1.73l-4-2.27V7Z"/>
       </svg>
-      <div class="notice-detail-pill-text">2025.09.13</div>
+      <div class="notice-detail-pill-text">${esc(data.date)}</div>
     </div>
 
     <div class="notice-detail-pill">
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
         <path fill="currentColor" d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7Zm0 9.5A2.5 2.5 0 1 0 12 6a2.5 2.5 0 0 0 0 5.5Z"/>
       </svg>
-      <div class="notice-detail-pill-text">장소</div>
+      <div class="notice-detail-pill-text">${esc(data.location)}</div>
     </div>
   </div>
 
