@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
             title: '2025년 2학기 신규 동아리원 모집',
             summary: 'Hy-CoRA에서 열정적인 동아리원을 모집합니다.',
             date: '2025.08.15',
-            // 상세용 추가 필드
             badge: '정기 모집',
             qualifications: [
                 '학년/전공 무관, 웹에 관심 있는 분',
@@ -61,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
             title: '멘토모집',
             summary: '웹개발 멘토 모집',
             date: '2025.09.13',
-            // 상세용 추가 필드(각각 다르게!)
             badge: '상시 모집',
             qualifications: [
                 'JS/React 중 1개 이상 실무/프로젝트 경험',
@@ -76,14 +74,41 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     ];
 
+    // === DOM ===
     const noticesTableBody = document.querySelector('.notices-table tbody');
     const navButtons = document.querySelectorAll('.notices-nav .nav-button');
+    const paginationEl = document.getElementById('pagination');
 
-    function renderAnnouncements(items) {
+    // === 상태 ===
+    const PAGE_SIZE = 20;
+    let currentFilter = '전체'; // '전체' | '행사' | '모집' | '기타'
+    let currentPage = 1; // 1-base
+
+    // === 유틸: 필터링 ===
+    function getFilteredItems() {
+        if (currentFilter === '전체') return announcements;
+        const map = { 행사: 'event', 모집: 'recruitment', 기타: 'etc' };
+        const key = map[currentFilter];
+        return announcements.filter((item) => item.category === key);
+    }
+
+    // === 렌더: 테이블 ===
+    function renderTable(itemsSlice) {
         if (!noticesTableBody) return;
         noticesTableBody.innerHTML = '';
 
-        items.forEach((item) => {
+        if (itemsSlice.length === 0) {
+            const tr = document.createElement('tr');
+            const td = document.createElement('td');
+            td.colSpan = 4;
+            td.textContent = '표시할 공지가 없습니다.';
+            td.style.textAlign = 'center';
+            tr.appendChild(td);
+            noticesTableBody.appendChild(tr);
+            return;
+        }
+
+        itemsSlice.forEach((item) => {
             const tr = document.createElement('tr');
 
             const titleCell = document.createElement('td');
@@ -105,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
             categoryCell.appendChild(tag);
             tr.appendChild(categoryCell);
 
-            // ✅ 모집 공고일 때만 상세 페이지로 이동
+            // 상세 페이지 이동(모집만)
             if (item.category === 'recruitment') {
                 tr.style.cursor = 'pointer';
                 tr.title = '상세 보기';
@@ -124,27 +149,106 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // 필터 버튼
+    // === 렌더: 페이지네이션 ===
+    function renderPagination(totalItems, pageSize, current) {
+        if (!paginationEl) return;
+
+        const totalPages = Math.max(1, Math.ceil(totalItems / pageSize));
+        currentPage = Math.min(current, totalPages); // 범위 보정
+
+        // 버튼 만들기
+        const makeBtn = (label, page, disabled = false, aria = '') => {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'page-btn';
+            btn.textContent = label;
+            if (aria) btn.setAttribute('aria-label', aria);
+            if (disabled) {
+                btn.disabled = true;
+                btn.classList.add('disabled');
+            } else {
+                btn.addEventListener('click', () => {
+                    currentPage = page;
+                    applyAndRender(); // 페이지 이동
+                });
+            }
+            return btn;
+        };
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'pagination-inner';
+
+        // First / Prev
+        wrapper.appendChild(makeBtn('«', 1, currentPage === 1, '첫 페이지'));
+        wrapper.appendChild(
+            makeBtn(
+                '‹',
+                Math.max(1, currentPage - 1),
+                currentPage === 1,
+                '이전 페이지'
+            )
+        );
+
+        // Page numbers (간단히 1~total 모두 표시; 필요 시 윈도우링으로 바꿔도 됨)
+        for (let p = 1; p <= totalPages; p++) {
+            const btn = makeBtn(String(p), p, false, `페이지 ${p}`);
+            if (p === currentPage) btn.classList.add('active');
+            wrapper.appendChild(btn);
+        }
+
+        // Next / Last
+        wrapper.appendChild(
+            makeBtn(
+                '›',
+                Math.min(totalPages, currentPage + 1),
+                currentPage === totalPages,
+                '다음 페이지'
+            )
+        );
+        wrapper.appendChild(
+            makeBtn(
+                '»',
+                totalPages,
+                currentPage === totalPages,
+                '마지막 페이지'
+            )
+        );
+
+        // 교체 렌더
+        paginationEl.innerHTML = '';
+        paginationEl.appendChild(wrapper);
+    }
+
+    // === 적용 + 렌더 (단일 진입점) ===
+    function applyAndRender() {
+        const filtered = getFilteredItems();
+
+        const total = filtered.length;
+        const startIdx = (currentPage - 1) * PAGE_SIZE;
+        const endIdx = startIdx + PAGE_SIZE;
+        const pageItems = filtered.slice(startIdx, endIdx);
+
+        renderTable(pageItems);
+        renderPagination(total, PAGE_SIZE, currentPage);
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }
+
+    // === 필터 버튼 이벤트 ===
     navButtons.forEach((button) => {
         button.addEventListener('click', function () {
             navButtons.forEach((btn) => btn.classList.remove('active'));
             this.classList.add('active');
 
-            const filter = this.innerText.trim();
-            let filtered = announcements;
-
-            if (filter !== '전체') {
-                const map = { 행사: 'event', 모집: 'recruitment', 기타: 'etc' };
-                const key = map[filter];
-                filtered = announcements.filter(
-                    (item) => item.category === key
-                );
-            }
-
-            renderAnnouncements(filtered);
+            currentFilter = this.innerText.trim(); // '전체' | '행사' | '모집' | '기타'
+            currentPage = 1; // ✅ 필터 바꾸면 첫 페이지로
+            applyAndRender();
         });
     });
 
     // 최초 렌더
-    renderAnnouncements(announcements);
+    applyAndRender();
 });
