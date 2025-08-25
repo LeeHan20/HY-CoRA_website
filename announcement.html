@@ -1,77 +1,68 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HY-CoRA - 공지사항</title>
-    <link
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HY-CoRA - 공지사항</title>
+        <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         />
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <header class="header">
-        <div class="container header-container">
-            <h1 class="logo"><a href="index.html">HY-CoRA</a></h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="about.html">소개</a></li>
-                    <li><a href="activities.html">활동 내용</a></li>
-                    <li><a href="apply.html">모집 안내/가입</a></li>
-                    <li><a href="announcement.html">공지사항</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-
-        <div class="about-header">
-            <h2 class="about-title">공지사항</h2>
-            <p class="about-subtitle">
-                동아리의 최신 소식과 중요한 공지사항을 확인하세요.
-            </p>
-        </div>
-
-
-        <section class="notices-section">
-            <div class="container">
-                <div class="notices-nav">
-                    <button class="nav-button active">전체</button>
-                    <button class="nav-button">행사</button>
-                    <button class="nav-button">모집</button>
-                    <button class="nav-button">기타</button>
-                </div>
-                
-                <table class="notices-table">
-                    <thead>
-                        <tr>
-                            <th>제목</th>
-                            <th>내용</th>
-                            <th>일자</th>
-                            <th>분류</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        </tbody>
-                </table>
-                </div>
-
-                <div class="pagination">
-                    <a href="#" class="active">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                </div>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header-container">
+                <h1 class="logo"><a href="index.html">HY-CoRA</a></h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="about.html">소개</a></li>
+                        <li><a href="activities.html">활동 내용</a></li>
+                        <li><a href="apply.html">모집 안내/가입</a></li>
+                        <li><a href="announcement.html">공지사항</a></li>
+                    </ul>
+                </nav>
             </div>
-        </section>
-    </main>
+        </header>
 
-    <footer class="footer">
+        <main>
+            <div class="about-header">
+                <h2 class="about-title">공지사항</h2>
+                <p class="about-subtitle">
+                    동아리의 최신 소식과 중요한 공지사항을 확인하세요.
+                </p>
+            </div>
+
+            <section class="notices-section">
+                <div class="container">
+                    <div class="notices-nav">
+                        <button class="nav-button active">전체</button>
+                        <button class="nav-button">행사</button>
+                        <button class="nav-button">모집</button>
+                        <button class="nav-button">기타</button>
+                    </div>
+
+                    <table class="notices-table">
+                        <thead>
+                            <tr>
+                                <th>제목</th>
+                                <th>내용</th>
+                                <th>일자</th>
+                                <th>분류</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
             <div class="container footer-content">
-                <!-- Top: Copyright -->
                 <div class="footer-top">
                     <p>Copyright 2025. HY-CoRA All rights reserved.</p>
                     <a
@@ -83,15 +74,11 @@
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
-
-                <!-- Divider -->
                 <div class="footer-divider" aria-hidden="true"></div>
-
-                <!-- Bottom: 좌측 주소/메일 / 우측 회장·부회장 -->
                 <div class="footer-bottom">
                     <p class="footer-detail">
                         <strong>Made by HY-CoRA</strong> <br />
-                        2025 ver. Create by <strong> 팀</strong> 이한, 최관우,
+                        2025 ver. Create by <strong>팀</strong> 이한, 최관우,
                         김현준, 김혜윤, 박아진, 박강호, 최지민 <br /><br />
                         경기도 안산시 상록구 한양대학로 55 복지관 425호<br />
                         hycora369@gmail.com
@@ -110,7 +97,7 @@
             </div>
         </footer>
 
-    <script src="js/announcement.js"></script>
-
-</body>
+        <!-- 목록 스크립트 -->
+        <script src="js/announcement.js"></script>
+    </body>
 </html>
