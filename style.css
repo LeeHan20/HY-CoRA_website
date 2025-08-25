@@ -371,13 +371,16 @@ body {
 
 /* 바깥 회색 캡슐 */
 .learning-wrap {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto 80px;
-    background: #d9d9d9;
-    border-radius: 44px;
-    padding: 56px 48px; /* 좌우/상하 여백 */
-    box-sizing: border-box;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  background: #d9d9d9;
+  border-radius: 44px;
+  padding: 56px 48px;          /* 좌우/상하 여백 */
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
 }
 
 /* 정확히 3열(개수 늘면 다음 행으로) */
@@ -430,14 +433,17 @@ body {
 
 /* 바깥 회색 캡슐 */
 .indicator-wrap {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto 80px;
-    background: #d9d9d9;
-    border-radius: 44px;
-    padding: 40px 48px;
-    box-sizing: border-box;
-    position: relative;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  background: #d9d9d9;
+  border-radius: 44px;
+  padding: 40px 48px;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
 }
 
 /* 2열 그리드 */
