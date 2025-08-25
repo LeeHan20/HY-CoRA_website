@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: white;
+    background-color: #fcfcfc;
 }
 
 .container {
@@ -50,7 +50,8 @@ body {
 }
 
 .logo a {
-    text-decoration: none; /* 밑줄 제거 */
+    text-decoration: none;
+    /* 밑줄 제거 */
     color: #ffffff;
 }
 
@@ -83,7 +84,7 @@ body {
 /* Intro Section */
 
 .intro-section {
-    background-color: white;
+    background-color: #fcfcfc;
     padding-bottom: 50px;
     padding-top: 0px;
     text-align: center;
@@ -91,7 +92,8 @@ body {
 
 .intro-container {
     position: relative;
-    overflow: hidden; /* 블러 가장자리 잘림 방지 */
+    overflow: hidden;
+    /* 블러 가장자리 잘림 방지 */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,7 +102,7 @@ body {
     height: 600px;
     width: 100%;
     padding: 50px 0;
-    color: white;
+    color: #fff;
     text-align: center;
     font-weight: 100;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -112,15 +114,18 @@ body {
 .intro-container::before {
     content: '';
     position: absolute;
-    inset: 0; /* top/right/bottom/left: 0 */
+    inset: 0;
+    /* top/right/bottom/left: 0 */
     background: url('images/index-background1.jpg') center / cover no-repeat;
     filter: blur(6px);
-    transform: scale(1.05); /* 블러 가장자리 비치는 거 방지용 살짝 확대 */
-    z-index: 0; /* 음수 X */
+    transform: scale(1.05);
+    /* 블러 가장자리 비치는 거 방지용 살짝 확대 */
+    z-index: 0;
+    /* 음수 X */
 }
 
 /* 실제 내용은 위로 올리기 */
-.intro-container > * {
+.intro-container>* {
     position: relative;
     z-index: 1;
 }
@@ -166,8 +171,10 @@ body {
 
 /* Design #06에서 추가 */
 .about-nav .nav-button {
-    padding: 10px 50px; /* 버튼 크기 키우기 */
-    margin-bottom: 25px; /* nav-button 아래 여백 추가 */
+    padding: 10px 50px;
+    /* 버튼 크기 키우기 */
+    margin-bottom: 25px;
+    /* nav-button 아래 여백 추가 */
 }
 
 /* Design #06에서 추가 */
@@ -190,9 +197,12 @@ body {
 }
 
 .club-intro h3 {
-    margin-bottom: 50px; /* 제목과 본문 간 간격 */
-    margin-top: 90px; /* 상단 내용과의 간격 */
-    text-align: center; /* 텍스트 정렬 방법 */
+    margin-bottom: 50px;
+    /* 제목과 본문 간 간격 */
+    margin-top: 90px;
+    /* 상단 내용과의 간격 */
+    text-align: center;
+    /* 텍스트 정렬 방법 */
     font-size: 2em;
 }
 
@@ -242,12 +252,15 @@ body {
 .icon-container.green {
     background-color: #d4edda;
 }
+
 .icon-container.blue {
     background-color: #cce5ff;
 }
+
 .icon-container.yellow {
     background-color: #fff3cd;
 }
+
 .icon-container.pink {
     background-color: #fadadd;
 }
@@ -265,6 +278,7 @@ body {
 }
 
 .intro-history-card {
+
     position: relative;
     background: #d9d9d9;
     border-radius: 36px;
@@ -354,13 +368,15 @@ body {
     color: #333;
     margin: 4px 0 8px;
     line-height: 1.3;
-    text-align: center; /* 가운데 정렬 */
+    text-align: center;
+    /* 가운데 정렬 */
 }
 
 /* 버튼 행 */
 .btn-row {
     display: flex;
-    justify-content: center; /* 버튼들을 가운데로 */
+    justify-content: center;
+    /* 버튼들을 가운데로 */
     gap: 10px;
 }
 
@@ -381,17 +397,21 @@ body {
     margin: 0 auto 80px;
     background: #d9d9d9;
     border-radius: 44px;
+
     padding: 56px 48px; /* 좌우/상하 여백 */
     box-sizing: border-box;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 /* 정확히 3열(개수 늘면 다음 행으로) */
 .learning-inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 30px; /* 가로 간격 */
-    row-gap: 20px; /* 세로 간격 */
+    column-gap: 30px;
+    /* 가로 간격 */
+    row-gap: 20px;
+    /* 세로 간격 */
     align-items: stretch;
 }
 
@@ -445,13 +465,15 @@ body {
     box-sizing: border-box;
     position: relative;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 /* 2열 그리드 */
 .indicator-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 36px 48px; /* 행, 열 간격 */
+    gap: 36px 48px;
+    /* 행, 열 간격 */
 }
 
 /* 흰색 카드 */
@@ -478,12 +500,13 @@ body {
     line-height: 1.5;
 }
 
+
 /* Design #06에서 수정 */
 
 /* Activities Section */
 .activities-section {
     padding: 50px 0;
-    background-color: white;
+    background-color: #f0f0f0;
 }
 
 .activities-nav {
@@ -523,9 +546,11 @@ body {
 .status.ongoing {
     background-color: #28a745;
 }
+
 .status.recruiting {
     background-color: #007bff;
 }
+
 .status.scheduled {
     background-color: #ffc107;
 }
@@ -608,6 +633,7 @@ body {
     font-size: 1rem;
     box-sizing: border-box;
 }
+
 /*Design-08 모집안내 박스 추가*/
 
 .recruitment-card h3 {
@@ -676,6 +702,7 @@ body {
 .inner-card p {
     font-size: 1rem;
 }
+
 
 /*Design-08 하단 박스 2개 추가*/
 
@@ -753,6 +780,7 @@ body {
     font-size: 1rem;
 }
 
+
 .FAQ-box {
     background: #d9d9d9;
     border-radius: 15px;
@@ -779,13 +807,14 @@ body {
     margin-bottom: 10px;
 }
 
+
 /*Desing-11 지원자격부분 추가*/
 /*Desing-13 FAQ부분 추가*/
 
 /* Notices Section */
 .notices-section {
     padding: 50px 0;
-    background-color: white;
+    background-color: #f0f0f0;
 }
 
 .notices-nav {
@@ -811,7 +840,7 @@ body {
 }
 
 .notices-table th {
-    background-color: white;
+    background-color: #f2f2f2;
     font-weight: 700;
 }
 
@@ -857,23 +886,9 @@ body {
 
 .event-image-placeholder {
     height: 250px;
+    background-color: #919191;
     margin-bottom: 15px;
     border-radius: 2.5%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.event-card:nth-child(1) .event-image-placeholder {
-    background: url('images/mentoring.jpg') center / cover no-repeat;
-}
-
-.event-card:nth-child(2) .event-image-placeholder {
-    background: url('images/field_trip.jpg') center / cover no-repeat;
-}
-
-.event-card:nth-child(3) .event-image-placeholder {
-    background: url('images/mt.jpg') center / cover no-repeat;
 }
 
 /* Pagination */
@@ -944,7 +959,8 @@ body {
 /* Top: copyright */
 .footer-top {
     display: flex;
-    justify-content: space-between; /* 왼쪽 정렬 */
+    justify-content: space-between;
+    /* 왼쪽 정렬 */
     align-items: center;
 }
 
@@ -962,24 +978,29 @@ body {
     align-items: flex-start;
     gap: 24px;
 }
+
 .footer-detail {
     line-height: 1.7;
 }
+
 /* 회장/부회장 블럭 */
 .contacts {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
+
 .contact-block h3 {
     font-size: 18px;
     font-weight: bold;
     margin: 0 0 4px 0;
 }
+
 .contact-block p {
     margin: 0;
     line-height: 1.6;
 }
+
 strong {
     font-weight: 900;
 }
@@ -990,16 +1011,20 @@ strong {
     align-items: center;
     width: 40px;
     height: 40px;
-    border-radius: 8px; /* 모서리 둥글게 */
-    background-color: #34568b; /* 푸터랑 같은 배경 */
-    color: #fff; /* 아이콘 흰색 */
+    border-radius: 8px;
+    /* 모서리 둥글게 */
+    background-color: #34568b;
+    /* 푸터랑 같은 배경 */
+    color: #fff;
+    /* 아이콘 흰색 */
     font-size: 20px;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .social-icon:hover {
-    background-color: #2a446e; /* hover 시 조금 어둡게 */
+    background-color: #2a446e;
+    /* hover 시 조금 어둡게 */
 }
 
 /* .footer-content span {
@@ -1008,11 +1033,13 @@ strong {
 
 .about-header {
     display: block;
-    background-color: #6e6e6e; /* 회색 배경 */
+    background-color: #6e6e6e;
+    /* 회색 배경 */
     color: white;
     padding: 2rem 1rem;
     text-align: center;
-    border-radius: 0 0 8px 8px; /* 아래쪽 모서리 둥글게 */
+    border-radius: 0 0 8px 8px;
+    /* 아래쪽 모서리 둥글게 */
 }
 
 .about-title {
@@ -1046,6 +1073,7 @@ strong {
     font-style: normal;
     margin-bottom: 80px;
 }
+
 .quoteidx-title::before {
     content: '';
     position: absolute;
@@ -1066,6 +1094,7 @@ strong {
     bottom: -40px;
     right: 0;
 }
+
 .quoteidx-mark {
     font-weight: 300;
     opacity: 0.7;
@@ -1082,8 +1111,10 @@ strong {
 
 .core-values {
     display: flex;
-    flex-direction: column; /* 세로 배치 */
-    align-items: center; /* 가운데 정렬 */
+    flex-direction: column;
+    /* 세로 배치 */
+    align-items: center;
+    /* 가운데 정렬 */
     text-align: center;
     gap: 0px;
 }
@@ -1350,4 +1381,166 @@ strong {
 .page-btn.disabled {
     opacity: 0.45;
     cursor: not-allowed;
+
+.detail-header {
+    text-align: left;
+}
+
+.info-section {
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.info-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: left;
+    /* 제목 기본 왼쪽 */
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 x 2 레이아웃 */
+    gap: 24px;
+    grid-auto-rows: 300px;
+}
+
+.info-card {
+    background: #d9d9d9;
+    /* 연한 파랑 배경 */
+    border-radius: 16px;
+    padding: 20px;
+    text-align: left;
+    /* 제목 기본 왼쪽 */
+    height: 170px;
+}
+
+/* 제목은 왼쪽 정렬 */
+.info-card h3 {
+    margin-bottom: 16px;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #333;
+    text-align: left;
+}
+
+.second {
+    margin-bottom: -100px;
+}
+
+/* 카드 안 컨텐츠 중앙 정렬 */
+.info-subgrid,
+.info-subbox,
+.contact-flex {
+    text-align: center;
+}
+
+.info-subgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    justify-items: center;
+    align-items: stretch;
+}
+
+.info-subbox {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-subbox h4 {
+    margin-bottom: 8px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+/* 버튼형 뱃지 */
+.badge {
+    display: inline-block;
+    background: #d9d9d9;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.9em;
+}
+
+/* 리스트 스타일 */
+.custom-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    /* 리스트는 계속 왼쪽 정렬 */
+}
+
+.custom-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 28px;
+    counter-increment: item;
+}
+
+.custom-list li::before {
+    content: counter(item);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: black;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 담당자 카드 */
+.contact-flex {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+    padding: 5px;
+}
+
+.avatar {
+  width: 150px;   /* 원하는 크기 */
+  height: 150px;
+  overflow: hidden;        /* 원형 바깥 잘림 */
+  border: 2px solid #000;  /* 무난한 검정 테두리 */
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* 사진 비율 유지하면서 채우기 */
+}
+
+
+/* 준비사항 / 활동소개의 흰 박스 2개를 동일 너비로 */
+.info-subgrid,
+.info-sub {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 두 칸을 50:50 */
+  gap: 12px;
+}
+
+/* 흰 박스가 늘어나면서 같은 너비 유지 */
+.info-subgrid > .info-subbox,
+.info-sub > .info-subbox {
+  width: 100%;     /* 부모가 분배한 만큼 꽉 채우기 */
+  box-sizing: border-box;
 }
