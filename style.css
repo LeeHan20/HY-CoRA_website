@@ -884,11 +884,17 @@ body {
     gap: 20px;
 }
 
+/*Fix08 사진*/
+
 .event-image-placeholder {
     height: 250px;
     background-color: #919191;
     margin-bottom: 15px;
     border-radius: 2.5%;
+    padding: 0;
+    object-fit: fill;
+    overflow: hidden;
+    justify-content: center;
 }
 
 /* Pagination */
@@ -1612,7 +1618,6 @@ strong {
   width: 150px;   /* 원하는 크기 */
   height: 150px;
   overflow: hidden;        /* 원형 바깥 잘림 */
-  border: 2px solid #000;  /* 무난한 검정 테두리 */
   display: flex;
   align-items: left;
   justify-content: left;
