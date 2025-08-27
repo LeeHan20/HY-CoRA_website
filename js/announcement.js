@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return announcements.filter((item) => item.category === key);
     }
 
-    function renderAnnouncements(items) {
+    function renderTable(itemsSlice) {
         if (!noticesTableBody) return;
         noticesTableBody.innerHTML = "";
 
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        items.forEach((item) => {
+        itemsSlice.forEach((item) => {
             const tr = document.createElement("tr");
 
             const titleCell = document.createElement("td");
