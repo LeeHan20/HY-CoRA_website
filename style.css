@@ -884,11 +884,17 @@ body {
     gap: 20px;
 }
 
+/*Fix08 사진*/
+
 .event-image-placeholder {
     height: 250px;
     background-color: #919191;
     margin-bottom: 15px;
     border-radius: 2.5%;
+    padding: 0;
+    object-fit: fill;
+    overflow: hidden;
+    justify-content: center;
 }
 
 /* Pagination */
@@ -1273,6 +1279,101 @@ strong {
     font-size: 25px;
 }
 
+.notice-detail-card{
+  max-width: 760px;
+  margin: 24px auto;
+  padding: 22px;
+  background:white;            /* 연한 보라/블루 */
+  border-radius: 14px;
+  box-sizing: border-box;
+  font-family: system-ui, "Noto Sans KR", Arial, sans-serif;
+  color:#111;
+}
+
+/* 상단 타이틀 */
+.notice-detail-title{
+  background:#fff;
+  border-radius: 12px;
+  text-align:center;
+  padding: 14px 18px;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 6px 8px 18px;
+}
+
+/* 정보 pill 3개 */
+.notice-detail-pills{
+  display:flex;
+  gap: 22px;
+  padding: 0 8px 18px;
+}
+
+.notice-detail-pill{
+  flex: 1 1 0;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  background:#fff;
+  border-radius: 14px;
+  padding: 16px 16px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.05) inset;
+  color:#111;
+}
+
+.notice-detail-pill svg{ color:#111; flex:0 0 auto; }
+.notice-detail-pill-text{
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* 사진 영역 */
+.notice-detail-photo{
+  display:block;
+  margin: 8px;
+  background:#d3d3d3;
+  border-radius: 12px;
+  text-decoration:none;
+  color: inherit;
+}
+
+.photo-inner{
+  height: 380px;
+  border-radius: 12px;
+  background: #cfcfcf;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position: relative;
+}
+
+.photo-text{
+  text-align:center;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.photo-text small{ font-size: 14px; color:#222; }
+
+/* -------- CSS-only 모달 ( :target ) -------- */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.lightbox:target{ display:flex; }
+
+.lightbox-content{
+  max-width: min(92vw, 1100px);
+  max-height: 86vh;
+  background: white;
+  border-radius: 12px;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
 .badge-outline {
     border: 0.125em solid #a7b4ff;
     padding: 0.5em 1em;
@@ -1381,6 +1482,7 @@ strong {
 .page-btn.disabled {
     opacity: 0.45;
     cursor: not-allowed;
+}
 
 .detail-header {
     text-align: left;
@@ -1517,7 +1619,6 @@ strong {
   width: 150px;   /* 원하는 크기 */
   height: 150px;
   overflow: hidden;        /* 원형 바깥 잘림 */
-  border: 2px solid #000;  /* 무난한 검정 테두리 */
   display: flex;
   align-items: left;
   justify-content: left;
