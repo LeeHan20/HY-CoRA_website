@@ -246,6 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
         renderTable(pageItems);
         renderPagination(total, PAGE_SIZE, currentPage);
 
+        // 메뉴 선택 시 올라가게 하려면 다시 활성화
         // window.scrollTo({
         //     top: 0,
         //     behavior: "smooth",
