@@ -1489,7 +1489,7 @@ strong {
 }
 
 .info-card {
-    background: #d9d9d9;
+    background: #e1e6f6;
     /* 연한 파랑 배경 */
     border-radius: 16px;
     padding: 20px;
@@ -1544,7 +1544,7 @@ strong {
 /* 버튼형 뱃지 */
 .badge {
     display: inline-block;
-    background: #d9d9d9;
+    background: #004aad;
     color: #fff;
     padding: 6px 14px;
     border-radius: 8px;
@@ -1573,7 +1573,7 @@ strong {
     position: absolute;
     left: 0;
     top: 0;
-    background: black;
+    background: #004aad;
     color: #fff;
     border-radius: 50%;
     width: 20px;
