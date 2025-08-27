@@ -139,28 +139,106 @@ document.addEventListener("DOMContentLoaded", function () {
             noticesTableBody.appendChild(tr);
         });
     }
+    // === 렌더: 페이지네이션 ===
+    function renderPagination(totalItems, pageSize, current) {
+        if (!paginationEl) return;
 
-    // 필터 버튼
-    navButtons.forEach((button) => {
-        button.addEventListener("click", function () {
-            navButtons.forEach((btn) => btn.classList.remove("active"));
-            this.classList.add("active");
+        const totalPages = Math.max(1, Math.ceil(totalItems / pageSize));
+        currentPage = Math.min(current, totalPages); // 범위 보정
 
-            const filter = this.innerText.trim();
-            let filtered = announcements;
-
-            if (filter !== "전체") {
-                const map = { 행사: "event", 모집: "recruitment", 기타: "etc" };
-                const key = map[filter];
-                filtered = announcements.filter(
-                    (item) => item.category === key
-                );
+        // 버튼 만들기
+        const makeBtn = (label, page, disabled = false, aria = '') => {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'page-btn';
+            btn.textContent = label;
+            if (aria) btn.setAttribute('aria-label', aria);
+            if (disabled) {
+                btn.disabled = true;
+                btn.classList.add('disabled');
+            } else {
+                btn.addEventListener('click', () => {
+                    currentPage = page;
+                    applyAndRender(); // 페이지 이동
+                });
             }
+            return btn;
+        };
 
-            renderAnnouncements(filtered);
+        const wrapper = document.createElement('div');
+        wrapper.className = 'pagination-inner';
+
+        // First / Prev
+        wrapper.appendChild(makeBtn('«', 1, currentPage === 1, '첫 페이지'));
+        wrapper.appendChild(
+            makeBtn(
+                '‹',
+                Math.max(1, currentPage - 1),
+                currentPage === 1,
+                '이전 페이지'
+            )
+        );
+
+        // Page numbers (간단히 1~total 모두 표시; 필요 시 윈도우링으로 바꿔도 됨)
+        for (let p = 1; p <= totalPages; p++) {
+            const btn = makeBtn(String(p), p, false, `페이지 ${p}`);
+            if (p === currentPage) btn.classList.add('active');
+            wrapper.appendChild(btn);
+        }
+
+        // Next / Last
+        wrapper.appendChild(
+            makeBtn(
+                '›',
+                Math.min(totalPages, currentPage + 1),
+                currentPage === totalPages,
+                '다음 페이지'
+            )
+        );
+        wrapper.appendChild(
+            makeBtn(
+                '»',
+                totalPages,
+                currentPage === totalPages,
+                '마지막 페이지'
+            )
+        );
+
+        // 교체 렌더
+        paginationEl.innerHTML = '';
+        paginationEl.appendChild(wrapper);
+    }
+
+    // === 적용 + 렌더 (단일 진입점) ===
+    function applyAndRender() {
+        const filtered = getFilteredItems();
+
+        const total = filtered.length;
+        const startIdx = (currentPage - 1) * PAGE_SIZE;
+        const endIdx = startIdx + PAGE_SIZE;
+        const pageItems = filtered.slice(startIdx, endIdx);
+
+        renderTable(pageItems);
+        renderPagination(total, PAGE_SIZE, currentPage);
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }
+
+    // === 필터 버튼 이벤트 ===
+    navButtons.forEach((button) => {
+        button.addEventListener('click', function () {
+            navButtons.forEach((btn) => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            currentFilter = this.innerText.trim(); // '전체' | '행사' | '모집' | '기타'
+            currentPage = 1; // ✅ 필터 바꾸면 첫 페이지로
+            applyAndRender();
         });
     });
 
     // 최초 렌더
-    renderAnnouncements(announcements);
+    applyAndRender();
 });
