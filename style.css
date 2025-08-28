@@ -504,6 +504,16 @@ body {
     gap: 20px;
 }
 
+.activities-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    /* 가로 간격 */
+    row-gap: 1px;
+    /* 세로 간격 */
+    align-items: stretch;
+}
+
 .activity-card {
     background-color: #e1e6f6;
     border-radius: 10px;
@@ -538,6 +548,10 @@ body {
     background-color: #ffc107;
 }
 
+.status.done {
+    background-color: black;
+}
+
 .card-content h4 {
     margin-top: 0;
     font-size: 1.2em;
@@ -549,7 +563,7 @@ body {
 }
 
 .detail-button {
-    background-color: #004085;
+    background-color: #34568b;
     color: #fff;
     border: none;
     padding: 10px 0;
@@ -878,7 +892,7 @@ body {
 /* Pagination */
 .pagination {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .pagination a {
@@ -895,7 +909,7 @@ body {
 }
 
 .pagination a.active {
-    background-color: #004085;
+    background-color: #34568b;
     color: #fff;
 }
 
@@ -911,12 +925,12 @@ body {
 }
 
 .nav-button:hover {
-    background-color: #004aad;
+    background-color: #34568b;
     color: #fff;
 }
 
 .nav-button.active {
-    background-color: #004aad;
+    background-color: #34568b;
     color: #fff;
 }
 
