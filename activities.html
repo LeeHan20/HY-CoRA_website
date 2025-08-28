@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>HY-CoRA - 활동 내용</title>
+        <title>HY-CoRA - 활동내용</title>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -21,8 +21,8 @@
                 <nav class="nav">
                     <ul>
                         <li><a href="about.html">소개</a></li>
-                        <li><a href="activities.html">활동 내용</a></li>
-                        <li><a href="apply.html">모집 안내/가입</a></li>
+                        <li><a href="activities.html">활동내용</a></li>
+                        <li><a href="apply.html">모집안내/가입</a></li>
                         <li><a href="announcement.html">공지사항</a></li>
                     </ul>
                 </nav>
@@ -33,7 +33,7 @@
             <!-- 상단 소개 배너 -->
             <div class="top-header">
                 <div class="top-title">
-                    <h2>활동 내용</h2>
+                    <h2>활동내용</h2>
                 </div>
                 <div class="top-subtitle">
                     <p>
@@ -46,89 +46,17 @@
             <section class="activities-section">
                 <div class="container">
                     <div class="activities-nav">
-                        <button class="nav-button active">전체 활동</button>
-                        <button class="nav-button">스터디</button>
-                        <button class="nav-button">친목 활동</button>
+                        <button class="nav-button active">전체</button>
+                        <button class="nav-button">모집중</button>
+                        <button class="nav-button">진행중</button>
+                        <button class="nav-button">예정</button>
+                        <button class="nav-button">완료</button>
                     </div>
-                    <div class="activities-grid">
-                        <div class="activity-card">
-                            <div class="status ongoing">진행중</div>
-                            <div class="card-content">
-                                <h4>웹 개발 스터디</h4>
-                                <p>웹 개발 기초부터~~</p>
-                                <p>20xx.1.15</p>
-                                <p>19:00</p>
-                                <p>스터디룸 6</p>
-                                <p>6명 참여</p>
-                            </div>
-                            <button class="detail-button">세부 사항</button>
-                        </div>
-                        <div class="activity-card">
-                            <div class="status recruiting">모집중</div>
-                            <div class="card-content">
-                                <h4>웹 개발 스터디</h4>
-                                <p>웹 개발 기초부터~~</p>
-                                <p>20xx.1.15</p>
-                                <p>19:00</p>
-                                <p>스터디룸 6</p>
-                                <p>6명 참여</p>
-                            </div>
-                            <button class="detail-button">세부 사항</button>
-                        </div>
-                        <div class="activity-card">
-                            <div class="status scheduled">예정</div>
-                            <div class="card-content">
-                                <h4>웹 개발 스터디</h4>
-                                <p>웹 개발 기초부터~~</p>
-                                <p>20xx.1.15</p>
-                                <p>19:00</p>
-                                <p>스터디룸 6</p>
-                                <p>6명 참여</p>
-                            </div>
-                            <button class="detail-button">세부 사항</button>
-                        </div>
-                        <div class="activity-card">
-                            <div class="status ongoing">진행중</div>
-                            <div class="card-content">
-                                <h4>웹 개발 스터디</h4>
-                                <p>웹 개발 기초부터~~</p>
-                                <p>20xx.1.15</p>
-                                <p>19:00</p>
-                                <p>스터디룸 6</p>
-                                <p>6명 참여</p>
-                            </div>
-                            <button class="detail-button">세부 사항</button>
-                        </div>
-                        <div class="activity-card">
-                            <div class="status recruiting">모집중</div>
-                            <div class="card-content">
-                                <h4>웹 개발 스터디</h4>
-                                <p>웹 개발 기초부터~~</p>
-                                <p>20xx.1.15</p>
-                                <p>19:00</p>
-                                <p>스터디룸 6</p>
-                                <p>6명 참여</p>
-                            </div>
-                            <button class="detail-button">세부 사항</button>
-                        </div>
-                        <div class="activity-card">
-                            <div class="status scheduled">예정</div>
-                            <div class="card-content">
-                                <h4>웹 개발 스터디</h4>
-                                <p>웹 개발 기초부터~~</p>
-                                <p>20xx.1.15</p>
-                                <p>19:00</p>
-                                <p>스터디룸 6</p>
-                                <p>6명 참여</p>
-                            </div>
-                            <button class="detail-button">세부 사항</button>
-                        </div>
+
+                    <div class="activities-container">
+                        <!-- JS가 activity-card들을 자동으로 채워 넣음 -->
                     </div>
-                    <div class="pagination">
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                    </div>
+                    <div id="pagination" class="pagination"></div>
                 </div>
             </section>
         </main>
@@ -174,7 +102,7 @@
             </div>
         </footer>
 
-        <script src="js/activies.js"></script>
+        <script src="js/activities.js"></script>
         <script src="js/nav.js"></script>
     </body>
 </html>
