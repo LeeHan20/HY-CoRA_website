@@ -504,6 +504,16 @@ body {
     gap: 20px;
 }
 
+.activities-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    /* 가로 간격 */
+    row-gap: 1px;
+    /* 세로 간격 */
+    align-items: stretch;
+}
+
 .activity-card {
     background-color: #e1e6f6;
     border-radius: 10px;
@@ -513,6 +523,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 40px;
 }
 
 .status {
@@ -537,6 +548,10 @@ body {
     background-color: #ffc107;
 }
 
+.status.done {
+    background-color: black;
+}
+
 .card-content h4 {
     margin-top: 0;
     font-size: 1.2em;
@@ -548,7 +563,7 @@ body {
 }
 
 .detail-button {
-    background-color: #004085;
+    background-color: #34568b;
     color: #fff;
     border: none;
     padding: 10px 0;
@@ -877,7 +892,7 @@ body {
 /* Pagination */
 .pagination {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .pagination a {
@@ -894,7 +909,7 @@ body {
 }
 
 .pagination a.active {
-    background-color: #004085;
+    background-color: #34568b;
     color: #fff;
 }
 
@@ -910,12 +925,12 @@ body {
 }
 
 .nav-button:hover {
-    background-color: #004aad;
+    background-color: #34568b;
     color: #fff;
 }
 
 .nav-button.active {
-    background-color: #004aad;
+    background-color: #34568b;
     color: #fff;
 }
 
@@ -1015,28 +1030,53 @@ strong {
 } */
 
 .top-header {
-    display: block;
-    background-color: #e1e6f6;
+    position: relative;   /* ::before 기준 */
+    overflow: hidden;     /* 블러된 배경이 밖으로 삐져나오는 것 방지 */
+    /* display: block;
+    background-color: #e1e6f6; */
     color: black;
-    padding: 2rem 1rem;
+    padding: 6rem 3rem;
     text-align: center;
     border-radius: 0 0 8px 8px;
     /* 아래쪽 모서리 둥글게 */
+    height: 250px;      /* 세로 길이 고정 */
+    justify-content: center; /* 글씨를 수직 중앙 정렬 */
+}
+
+/*Design-18 이미지 넣기*/
+.top-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* top/right/bottom/left: 0 */
+    background: url('images/index-background2.jpg') center / cover no-repeat;
+    filter: blur(6px);
+    transform: scale(1.05);
+    /* 블러 가장자리 비치는 거 방지용 살짝 확대 */
+    z-index: 0;
+    /* 음수 X */
+}
+
+/* 자식 요소를 위로 올리기 */
+.top-header > * {
+  position: relative;
+  z-index: 1;
 }
 
 /*Design-14 색수정*/
 
-.about-title {
+.top-title {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    color: white;
 }
 
-.about-subtitle {
+.top-subtitle {
     font-size: 1rem;
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.5;
-    color: black;
+    color: white;
 }
 
 .quoteidx-block {
@@ -1489,7 +1529,7 @@ strong {
 }
 
 .info-card {
-    background: #d9d9d9;
+    background: #e1e6f6;
     /* 연한 파랑 배경 */
     border-radius: 16px;
     padding: 20px;
@@ -1544,7 +1584,7 @@ strong {
 /* 버튼형 뱃지 */
 .badge {
     display: inline-block;
-    background: #d9d9d9;
+    background: #004aad;
     color: #fff;
     padding: 6px 14px;
     border-radius: 8px;
@@ -1573,7 +1613,7 @@ strong {
     position: absolute;
     left: 0;
     top: 0;
-    background: black;
+    background: #004aad;
     color: #fff;
     border-radius: 50%;
     width: 20px;

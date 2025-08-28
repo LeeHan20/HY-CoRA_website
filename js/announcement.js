@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function () {
         paginationEl.appendChild(wrapper);
     }
 
-    // === 적용 + 렌더 (단일 진입점) ===
+    //=== 적용 + 렌더 (단일 진입점) ===
     function applyAndRender() {
         const filtered = getFilteredItems();
 
@@ -246,10 +246,11 @@ document.addEventListener("DOMContentLoaded", function () {
         renderTable(pageItems);
         renderPagination(total, PAGE_SIZE, currentPage);
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
+        // 메뉴 선택 시 올라가게 하려면 다시 활성화
+        // window.scrollTo({
+        //     top: 0,
+        //     behavior: "smooth",
+        // });
     }
 
     // === 필터 버튼 이벤트 ===
