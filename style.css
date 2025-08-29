@@ -10,7 +10,7 @@ body {
 .container {
     width: 80%;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 0px auto;
     padding: 20px 0;
 }
 
@@ -1018,9 +1018,12 @@ strong {
     transition: background-color 0.3s ease;
 }
 
-.social-icon:hover {
-    background-color: #2a446e;
-    /* hover 시 조금 어둡게 */
+
+.social-icon-leader {
+    background-color: #ffffff;
+    color: black;
+    width: 20px;
+    height: 19px;
 }
 
 /* .footer-content span {
