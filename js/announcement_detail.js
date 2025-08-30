@@ -10,12 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const data = JSON.parse(raw);
 
-    // 모집 공고만 보여주기
-    if (data.category !== "recruitment") {
-        container.innerHTML = emptyHTML("모집 공고가 아닙니다.");
-        return;
-    }
-
     // 안전 이스케이프
     const esc = escapeHTML;
 
@@ -35,49 +29,62 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     <section class="notices-section">
-      <div class="container">
-
-        <div class="recruit-meta">
-          <div class="deadline">
-            <!-- 달력 아이콘 -->
-            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
-              <path d="M7 2v2M17 2v2M3 9h18M5 6h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      <div class="notice-detail-card">
+        <div class="notice-detail-pills">
+          <div class="notice-detail-pill">
+            <!-- calendar icon -->
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v15a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a1 1 0 0 1 1-1h3V2Zm12 6H5v12h14V8Z"/>
             </svg>
-            <span>마감: ${esc(data.date)}</span>
+            <div class="notice-detail-pill-text">${esc(data.date)}</div>
           </div>
 
-          <button type="button" class="badge-outline">
-            ${esc(data.badge ?? "모집")}
-          </button>
+          <div class="notice-detail-pill">
+            <!-- clock icon -->
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3
+        -3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0
+        3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0
+        2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8
+        0c-.29 0-.62.02-.97.05 1.16.84 1.97
+        1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+            </svg>
+            <div class="notice-detail-pill-text">${esc(data.time)}</div>
+          </div>
+
+          <div class="notice-detail-pill">
+            <!-- pin icon -->
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7Zm0 9.5A2.5 2.5 0 1 0 12 6a2.5 2.5 0 0 0 0 5.5Z"/>
+            </svg>
+            <div class="notice-detail-pill-text">${esc(data.location)}</div>
+          </div>
+
+          <div class="notice-detail-pill">
+            <!-- clock icon -->
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M3 17.25V21h3.75l11.06-11.06a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0L3 17.25ZM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83Z"/>
+            </svg>
+            <div class="notice-detail-pill-text">${esc(data.lastModified)}</div>
+          </div>
+
         </div>
 
-        <div class="recruit-body">
-          <div class="recruit-col">
-            <h4>지원 자격</h4>
-            <ul class="list list-check">
-              ${
-                  (data.qualifications ?? [])
-                      .map((li) => `<li>${esc(li)}</li>`)
-                      .join("") ||
-                  "<li>자세한 내용은 공지 본문을 참고하세요.</li>"
-              }
-            </ul>
+        <!-- ✅ pills와 같은 좌우 여백을 쓰는 래퍼 -->
+        <div class="notice-detail-body">
+        <article class="notice-paper" aria-label="공지 본문">
+          <div class="np-header">
+            <div class="np-title">${esc(data.title || "공지사항")}</div>
+            <div class="np-meta">${esc(data.department || "HY-CoRA")}</div>
           </div>
-        <div class="recruit-col">
-          <h4>활동 혜택</h4>
-          <ul class="list list-star">
-            ${
-                (data.benefits ?? [])
-                    .map((li) => `<li>${esc(li)}</li>`)
-                    .join("") ||
-                "<li>자세한 내용은 공지 본문을 참고하세요.</li>"
-            }
-          </ul>
-        </div>
+
+          ${renderBodyHTML(data)}
+        </article>
       </div>
-    </div>
-  </section>
+      
+      </div>
+
+    </section>
   `;
 
     container.innerHTML = "";
@@ -102,4 +109,33 @@ function escapeHTML(s) {
         .replaceAll(">", "&gt;")
         .replaceAll('"', "&quot;")
         .replaceAll("'", "&#39;");
+}
+
+// 본문 렌더링 유틸: 문자열/배열/리치텍스트 다 대응
+function renderBodyHTML(data) {
+    const esc = escapeHTML;
+
+    // 우선순위: data.contentHTML(이미 안전한 HTML) > data.content(문자열) > data.paragraphs(배열) > data.summary
+    if (data.contentHTML) {
+        // 신뢰 가능한 사내/내부 생성 HTML이라면 그대로 사용 (외부 입력이면 XSS 주의)
+        return data.contentHTML;
+    }
+
+    if (typeof data.content === "string" && data.content.trim()) {
+        // 개행 유지
+        return `<div class="nd-paragraph">${esc(data.content)}</div>`;
+    }
+
+    if (Array.isArray(data.paragraphs) && data.paragraphs.length) {
+        return data.paragraphs
+            .map((p) => `<p class="nd-paragraph">${esc(p)}</p>`)
+            .join("");
+    }
+
+    if (data.summary) {
+        return `<p class="nd-paragraph">${esc(data.summary)}</p>`;
+    }
+
+    // 아무것도 없을 때 기본 문구
+    return `<p class="nd-paragraph">상세 내용은 추후 업데이트될 예정입니다.</p>`;
 }

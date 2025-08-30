@@ -1377,6 +1377,77 @@ strong {
   margin: 6px 0;
 }
 
+/* --- 공지 본문 래퍼(좌우 5px로 pills와 일치) --- */
+.notice-detail-body {
+    width: 100%;
+    margin: 0 auto;          /* ✅ pills의 padding 좌우 5px과 일치 */
+}
+
+/* --- 공지문(포멀) 스타일 --- */
+.notice-paper {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  line-height: 1.9;
+  color: #222;
+  text-align: left;
+  font-size: 15.5px;
+}
+
+/* 제목/머리말 */
+.notice-paper .np-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #eceff4;
+  padding-bottom: 8px;
+}
+.notice-paper .np-title {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+.notice-paper .np-meta {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* 본문 타이틀/문단 */
+.notice-paper h3,
+.notice-paper h4 {
+  margin: 20px 0 10px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.notice-paper p {
+  margin: 0 0 12px;
+}
+
+/* 리스트 */
+.notice-paper ul,
+.notice-paper ol {
+  margin: 10px 0 12px 20px;
+}
+.notice-paper li {
+  margin: 6px 0;
+}
+
+/* 바닥글(문의/담당) */
+.notice-paper .np-footer {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px dashed #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
 /* -------- CSS-only 모달 ( :target ) -------- */
 .lightbox{
   position: fixed;
@@ -1668,75 +1739,4 @@ strong {
 .info-sub > .info-subbox {
   width: 100%;     /* 부모가 분배한 만큼 꽉 채우기 */
   box-sizing: border-box;
-}
-
-/* --- 공지 본문 래퍼(좌우 5px로 pills와 일치) --- */
-.notice-detail-body {
-    width: 100%;
-    margin: 0 auto;          /* ✅ pills의 padding 좌우 5px과 일치 */
-}
-
-/* --- 공지문(포멀) 스타일 --- */
-.notice-paper {
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 20px 22px;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-  line-height: 1.9;
-  color: #222;
-  text-align: left;
-  font-size: 15.5px;
-}
-
-/* 제목/머리말 */
-.notice-paper .np-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 14px;
-  border-bottom: 1px solid #eceff4;
-  padding-bottom: 8px;
-}
-.notice-paper .np-title {
-  font-weight: 800;
-  font-size: 18px;
-  letter-spacing: 0.2px;
-}
-.notice-paper .np-meta {
-  font-size: 13px;
-  color: #6b7280;
-}
-
-/* 본문 타이틀/문단 */
-.notice-paper h3,
-.notice-paper h4 {
-  margin: 20px 0 10px;
-  font-weight: 700;
-  line-height: 1.5;
-}
-.notice-paper p {
-  margin: 0 0 12px;
-}
-
-/* 리스트 */
-.notice-paper ul,
-.notice-paper ol {
-  margin: 10px 0 12px 20px;
-}
-.notice-paper li {
-  margin: 6px 0;
-}
-
-/* 바닥글(문의/담당) */
-.notice-paper .np-footer {
-  margin-top: 18px;
-  padding-top: 12px;
-  border-top: 1px dashed #e5e7eb;
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  font-size: 14px;
-  color: #4b5563;
 }

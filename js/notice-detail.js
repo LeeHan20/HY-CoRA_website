@@ -10,12 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const data = JSON.parse(raw);
 
-    // 모집 공고만 보여주기
-    if (data.category !== "event") {
-        container.innerHTML = emptyHTML("행사 공고가 아닙니다.");
-        return;
-    }
-
     // 안전 이스케이프
     const esc = escapeHTML;
 
