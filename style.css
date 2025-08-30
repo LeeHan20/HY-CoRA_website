@@ -230,6 +230,11 @@ body {
     width: 250px;
 }
 
+.inner-card {
+    background-color: #d7d7d7;
+    padding: 30px;
+    border-radius: 45px;
+  
 .icon-container {
     padding: 20px;
     width: 120px;
@@ -441,7 +446,6 @@ body {
     box-sizing: border-box;
     position: relative;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
 /* 2열 그리드 */
 .indicator-grid {
@@ -450,7 +454,7 @@ body {
     gap: 36px 48px;
     /* 행, 열 간격 */
 }
-
+  
 /* 흰색 카드 */
 .indicator-card {
     background: #ffffff;
@@ -657,14 +661,13 @@ body {
 .outer-card {
     background: #e1e6f6;
     border-radius: 15px;
-    padding: 10px 10px;
+    padding: 10px 10px; /*feat05 수정*/
     flex: 1;
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex; /* feat 05 추가*/
     flex-direction: column; /* feat 05 추가 */
-    align-items: flex-start;
-}
+    align-items: flex-start; /* feat 05 추가 */
 
 .card-label {
     background: white;
@@ -692,7 +695,6 @@ body {
     width: 100%;
     box-sizing: border-box;
     flex-grow: 1; /* feat 05 추가 */
-}
 
 .inner-card h4 {
     margin: 0px;
@@ -792,9 +794,6 @@ body {
     margin: 0 auto;
     margin-bottom: 20px;
 
-}
-
-
 /*Desing-11 지원자격부분 추가*/
 /*Desing-13 FAQ부분 추가*/
 
@@ -845,7 +844,6 @@ body {
     color: white;
     text-align: center;
     white-space: nowrap; /*feat 05 추가*/
-}
 
 .notice-tag.event {
     background-color: #3498db;
@@ -919,6 +917,17 @@ body {
     font-size: 1em;
     color: black;
     white-space: nowrap;
+}
+
+/* Common Button Style */
+.nav-button {
+    background-color: #e1e6f6;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    color: black;
 }
 
 .nav-button:hover {
@@ -1000,7 +1009,6 @@ body {
 strong {
     font-weight: 900;
 }
-
 .social-icon {
     display: flex;
     justify-content: center;
@@ -1067,7 +1075,6 @@ strong {
     position: relative;
     z-index: 1;
 }
-
 /*Design-14 색수정*/
 
 .top-title {
