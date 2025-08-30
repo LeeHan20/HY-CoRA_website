@@ -1018,12 +1018,9 @@ strong {
     transition: background-color 0.3s ease;
 }
 
-
-.social-icon-leader {
-    background-color: #ffffff;
-    color: black;
-    width: 20px;
-    height: 19px;
+.social-icon:hover {
+    background-color: #2a446e;
+    /* hover 시 조금 어둡게 */
 }
 
 /* .footer-content span {
@@ -1544,14 +1541,14 @@ strong {
 
 .info-box {
     background: #ffffff;
-    border-radius: 16px;
+    border-radius: 20px;
     padding: 20px;
-    text-align: left;
+    text-align: center;
+    width: 1000px;
     /* 제목 기본 왼쪽 */
 }
 
 .info-grid {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     /* 2 x 2 레이아웃 */
     gap: 24px;
@@ -1563,7 +1560,9 @@ strong {
     /* 연한 파랑 배경 */
     border-radius: 16px;
     padding: 20px;
-    text-align: left;
+    padding-top: 50px;
+    padding-left: 80px;
+    text-align: center;
     /* 제목 기본 왼쪽 */
     height: 170px;
 }
@@ -1598,7 +1597,7 @@ strong {
 
 .info-subbox {
     background: #fff;
-    border-radius: 12px;
+    border-radius: 15px;
     padding: 16px;
     text-align: center;
     display: flex;
@@ -1658,25 +1657,24 @@ strong {
 .contact-flex {
     display: flex;
     align-items: center;
-    justify-content: left;
-    gap: 20px;
+    justify-content: center;
+    gap: 100px;
     padding: 5px;
 }
 
-.avatar {
-    width: 150px;
+.avatar-mentor {
+    width: 90px;
     /* 원하는 크기 */
-    height: 150px;
-    overflow: hidden;
+    height: 90px;
     /* 원형 바깥 잘림 */
     display: flex;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: center;
 }
 
 .avatar img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     object-fit: cover;
     /* 사진 비율 유지하면서 채우기 */
 }
@@ -1697,4 +1695,45 @@ strong {
     width: 100%;
     /* 부모가 분배한 만큼 꽉 채우기 */
     box-sizing: border-box;
+}
+
+/* info-card 안에 대표 이미지가 들어올 때 박스 크기에 맞게 */
+.info-box.gallery .info-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* 부모 info-box 높이에 맞춤 */
+    padding: 0;
+    /* 여백 제거 */
+    overflow: hidden;
+    /* 넘치는 부분 잘라내기 */
+}
+
+.info-box.gallery .info-card .event-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 비율 유지하며 꽉 채우기 */
+    border-radius: 16px;
+    /* info-card와 동일 라운드 */
+    display: block;
+}
+
+/* 대표 이미지 상자(큰 사진) */
+.event-cover-wrap {
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.event-cover {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* 필요시 4/3, 21/9로 바꿔도 됨 */
+    object-fit: cover;
+    /* 박스에 꽉 차게 */
+    cursor: zoom-in;
+    /* 확대 가능 표시 */
 }
