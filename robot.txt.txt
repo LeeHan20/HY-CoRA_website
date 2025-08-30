@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hycora.co.kr/sitemap.xml
