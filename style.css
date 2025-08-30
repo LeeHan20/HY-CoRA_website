@@ -1448,23 +1448,21 @@ strong {
   color: #4b5563;
 }
 
-/* pill 내부 작은 버튼 */
-.notice-detail-pill-btn {
-  display: inline-block;
-  flex: 0 0 auto;
-  padding: 6px 10px;
-  border-radius: 10px;
-  border: 1px solid white;
-  background: white;
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: none;
-  color: black;
-  line-height: 1;
+/* pill 안 링크를 '그냥 텍스트'처럼 보이게 */
+.notice-detail-pill .pill-link {
+  flex: 1 1 auto;
+  min-width: 0;
+  color: inherit;               /* pill의 글자색 따라감 */
+  text-decoration: none;        /* 기본은 밑줄 없음 */
+  overflow: hidden;             /* 너무 길면 말줄임 */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;              /* 손가락 커서 */
 }
-.notice-detail-pill-btn:hover {
-  border-color: white;
-  background: white;
+
+/* 호버 시만 살짝 강조(선택 사항) */
+.notice-detail-pill .pill-link:hover {
+  text-decoration: underline;
 }
 
 /* -------- CSS-only 모달 ( :target ) -------- */

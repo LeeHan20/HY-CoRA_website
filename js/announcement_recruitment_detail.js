@@ -67,10 +67,13 @@ document.addEventListener("DOMContentLoaded", () => {
               <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
               <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
             </svg>
-            
-            <a class="notice-detail-pill-btn" href="${escURL(
+
+            <!-- ✅ 텍스트처럼 보이는 앵커 -->
+            <a class="pill-link" href="${escURL(
                 data.link
-            )}" target="_blank" rel="noopener">지원하기</a>
+            )}" target="_blank" rel="noopener" title="지원하기"> 
+              ${esc(data.link)}
+            </a>
           </div>
 
           <div class="notice-detail-pill">
