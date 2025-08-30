@@ -165,7 +165,7 @@ body {
 .about-nav {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     margin-bottom: 30px;
 }
 
@@ -175,6 +175,7 @@ body {
     /* 버튼 크기 키우기 */
     margin-bottom: 25px;
     /* nav-button 아래 여백 추가 */
+    white-space: nowrap;
 }
 
 /* Design #06에서 추가 */
@@ -233,10 +234,8 @@ body {
     background-color: #d7d7d7;
     padding: 30px;
     border-radius: 45px;
-    text-align: center;
-    width: 250px;
 }
-
+  
 .icon-container {
     padding: 20px;
     width: 120px;
@@ -457,7 +456,7 @@ body {
     gap: 36px 48px;
     /* 행, 열 간격 */
 }
-
+  
 /* 흰색 카드 */
 .indicator-card {
     background: #ffffff;
@@ -664,11 +663,13 @@ body {
 .outer-card {
     background: #e1e6f6;
     border-radius: 15px;
-    padding: 35px 40px;
+    padding: 10px 10px; /*feat05 수정*/
     flex: 1;
-    box-sizing: border-box;
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* feat 05 추가*/
+    flex-direction: column; /* feat 05 추가 */
+    align-items: flex-start; /* feat 05 추가 */
 }
 
 .card-label {
@@ -692,10 +693,11 @@ body {
 .inner-card {
     background: white;
     border-radius: 20px;
-    padding: 20px 20px 30px;
+    padding: 20px 20px;
     text-align: left;
-    height: 100px;
-    width: 93%;
+    width: 100%;
+    box-sizing: border-box;
+    flex-grow: 1; /* feat 05 추가 */
 }
 
 .inner-card h4 {
@@ -797,7 +799,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 /*Desing-11 지원자격부분 추가*/
 /*Desing-13 FAQ부분 추가*/
 
@@ -847,6 +848,7 @@ body {
     font-weight: 700;
     color: white;
     text-align: center;
+    white-space: nowrap; /*feat 05 추가*/
 }
 
 .notice-tag.event {
@@ -909,6 +911,18 @@ body {
 .pagination a.active {
     background-color: #34568b;
     color: #fff;
+}
+
+/* Common Button Style */
+.nav-button {
+    background-color: #e1e6f6;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    color: black;
+    white-space: nowrap;
 }
 
 /* Common Button Style */
@@ -995,12 +1009,12 @@ body {
 .contact-block p {
     margin: 0;
     line-height: 1.6;
+    white-space: nowrap;
 }
 
 strong {
     font-weight: 900;
 }
-
 .social-icon {
     display: flex;
     justify-content: center;
@@ -1064,7 +1078,6 @@ strong {
     position: relative;
     z-index: 1;
 }
-
 /*Design-14 색수정*/
 
 .top-title {
