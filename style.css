@@ -1448,6 +1448,25 @@ strong {
   color: #4b5563;
 }
 
+/* pill 내부 작은 버튼 */
+.notice-detail-pill-btn {
+  display: inline-block;
+  flex: 0 0 auto;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background: white;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  line-height: 1;
+}
+.notice-detail-pill-btn:hover {
+  border-color: white;
+  background: white;
+}
+
 /* -------- CSS-only 모달 ( :target ) -------- */
 .lightbox{
   position: fixed;

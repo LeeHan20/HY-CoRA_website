@@ -30,45 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <section class="notices-section">
       <div class="notice-detail-card">
-        <div class="notice-detail-pills">
-          <div class="notice-detail-pill">
-            <!-- calendar icon -->
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <path fill="currentColor" d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v15a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a1 1 0 0 1 1-1h3V2Zm12 6H5v12h14V8Z"/>
-            </svg>
-            <div class="notice-detail-pill-text">${esc(data.date)}</div>
-          </div>
-
-          <div class="notice-detail-pill">
-            <!-- clock icon -->
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <path fill="currentColor" d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3
-        -3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0
-        3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0
-        2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8
-        0c-.29 0-.62.02-.97.05 1.16.84 1.97
-        1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
-            </svg>
-            <div class="notice-detail-pill-text">${esc(data.time)}</div>
-          </div>
-
-          <div class="notice-detail-pill">
-            <!-- pin icon -->
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <path fill="currentColor" d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7Zm0 9.5A2.5 2.5 0 1 0 12 6a2.5 2.5 0 0 0 0 5.5Z"/>
-            </svg>
-            <div class="notice-detail-pill-text">${esc(data.location)}</div>
-          </div>
-
-          <div class="notice-detail-pill">
-            <!-- clock icon -->
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <path fill="currentColor" d="M3 17.25V21h3.75l11.06-11.06a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0L3 17.25ZM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83Z"/>
-            </svg>
-            <div class="notice-detail-pill-text">${esc(data.lastModified)}</div>
-          </div>
-
-        </div>
 
         <!-- ✅ pills와 같은 좌우 여백을 쓰는 래퍼 -->
         <div class="notice-detail-body">

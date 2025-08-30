@@ -30,20 +30,11 @@ document.addEventListener("DOMContentLoaded", function () {
             category_ko: "모집",
             title: "2025년 2학기 신규 동아리원 모집",
             summary: "Hy-CoRA에서 열정적인 동아리원을 모집합니다.",
-            date: "2025.08.15",
+            date: "2025.08.15 ~ 2025.09.12",
             lastModified: "2025.08.30",
             // 상세용 추가 필드
-            badge: "정기 모집",
-            qualifications: [
-                "학년/전공 무관, 웹에 관심 있는 분",
-                "주 1회 정기 모임 참여 가능자",
-                "HTML/CSS/JS 기초 지식(우대)",
-            ],
-            benefits: [
-                "실무형 팀 프로젝트 경험",
-                "세미나/스터디 자료 제공",
-                "활동 증명서 발급 및 네트워킹",
-            ],
+            capacity: "3명",
+            link: "https://forms.gle/8z8JUwfnd78wJjTJ8",
         },
         {
             category: "etc",
@@ -78,20 +69,11 @@ document.addEventListener("DOMContentLoaded", function () {
             category_ko: "모집",
             title: "멘토모집",
             summary: "웹개발 멘토 모집",
-            date: "2025.09.13",
-            lastModified: "2025.08.30",
+            date: "2025.09.13 ~ 2025.10.03",
+            lastModified: "2025.08.12",
             // 상세용 추가 필드(각각 다르게!)
-            badge: "상시 모집",
-            qualifications: [
-                "JS/React 중 1개 이상 실무/프로젝트 경험",
-                "멘티 코드리뷰/세션 진행 가능자",
-                "주 1회 온라인 멘토링 가능자",
-            ],
-            benefits: [
-                "멘토 수당(내규에 따름)",
-                "커리큘럼/자료 제공",
-                "포트폴리오/추천서 지원",
-            ],
+            capacity: "0명",
+            link: "https://forms.gle/8z8JUwfnd78wJjTJ8",
         },
     ];
 
@@ -158,7 +140,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         "announcement.current",
                         JSON.stringify(item)
                     );
-                    window.location.href = "announcement_detail.html";
+                    window.location.href =
+                        "announcement_recruitment_detail.html";
                 });
             } else if (item.category === "event") {
                 tr.style.cursor = "pointer";
@@ -168,7 +151,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         "announcement.current",
                         JSON.stringify(item)
                     );
-                    window.location.href = "notice-detail.html";
+                    window.location.href = "announcement_notice_detail.html";
+                });
+            } else if (item.category === "etc") {
+                tr.style.cursor = "pointer";
+                tr.title = "상세 보기";
+                tr.addEventListener("click", () => {
+                    sessionStorage.setItem(
+                        "announcement.current",
+                        JSON.stringify(item)
+                    );
+                    window.location.href = "announcement_etc_detail.html";
                 });
             } else {
                 tr.style.cursor = "default";
