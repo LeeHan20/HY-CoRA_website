@@ -598,7 +598,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 40px;
+    gap: 20px;
     border-radius: 36px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 40px auto 0px;
@@ -659,7 +659,6 @@ body {
     padding: 0px 40px 40px;
 }
 
-
 .outer-card {
     background: #e1e6f6;
     border-radius: 15px;
@@ -698,6 +697,10 @@ body {
     width: 100%;
     box-sizing: border-box;
     flex-grow: 1; /* feat 05 추가 */
+}
+
+.inner-card h2 {
+    margin: 0px;
 }
 
 .inner-card h4 {
@@ -805,7 +808,7 @@ body {
 /* Notices Section */
 .notices-section {
     padding: 50px 0;
-    background-color: #ffffff;
+    background-color: white;
 }
 
 .notices-nav {
@@ -1015,6 +1018,7 @@ body {
 strong {
     font-weight: 900;
 }
+
 .social-icon {
     display: flex;
     justify-content: center;
@@ -1031,7 +1035,6 @@ strong {
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
-
 
 .social-icon-leader {
     background-color: #ffffff;
@@ -1262,24 +1265,19 @@ strong {
     --text: #222;
     --muted: #6b7280;
     --white: #fff;
-    --radius: 1em;
-    /* px 대신 em */
+    --radius: 1em; /* px 대신 em */
     --radius-sm: 0.75em;
     --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    --page-pad: 40px;
-    /* 화면 가장자리 여백 */
+    --page-pad: 40px; /* 화면 가장자리 여백 */
 }
 
 /* 카드 전체 */
 .recruit-card {
     background: var(--bg-soft);
     border-radius: var(--radius);
-    box-sizing: border-box;
-    /* 패딩 포함 폭 계산 */
-    width: min(calc(100% - 80px), 1200px);
-    /* 좌우 40px 여백 유지 */
-    min-height: calc(100vh - 80px);
-    /* 위아래 40px 여백 유지 */
+    box-sizing: border-box; /* 패딩 포함 폭 계산 */
+    width: min(calc(100% - 80px), 1200px); /* 좌우 40px 여백 유지 */
+    min-height: calc(100vh - 80px); /* 위아래 40px 여백 유지 */
     margin: var(--page-pad) auto;
     box-shadow: var(--shadow);
     text-align: center;
@@ -1294,8 +1292,7 @@ strong {
 /* 상단 타이틀 (하얀 알약모양) */
 .recruit-title {
     display: inline-block;
-    margin: -0.5em auto 2em;
-    /* 살짝 위로 당기고 아래 여백 */
+    margin: -0.5em auto 2em; /* 살짝 위로 당기고 아래 여백 */
     background: #fff;
     color: #000;
     padding: 0.6em 1.4em;
@@ -1322,16 +1319,15 @@ strong {
     font-size: 25px;
 }
 
-.notice-detail-card {
-    max-width: 760px;
-    margin: 24px auto;
-    padding: 22px;
-    background: white;
-    /* 연한 보라/블루 */
+.notice-detail-card{
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 50px;
+    background:white;            
     border-radius: 14px;
     box-sizing: border-box;
     font-family: system-ui, "Noto Sans KR", Arial, sans-serif;
-    color: #111;
+    color:#111;
 }
 
 /* 상단 타이틀 */
@@ -1346,22 +1342,25 @@ strong {
 }
 
 /* 정보 pill 3개 */
-.notice-detail-pills {
-    display: flex;
-    gap: 22px;
-    padding: 0 8px 18px;
+.notice-detail-pills{
+  display:flex;
+  gap: 10px;
+  padding: 0 5px 10px;
+  margin-bottom: 30px;
 }
 
-.notice-detail-pill {
-    flex: 1 1 0;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: #fff;
-    border-radius: 14px;
-    padding: 16px 16px;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, .05) inset;
-    color: #111;
+.notice-detail-pill{
+  flex: 1 1 25%;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  background:white;
+  border-radius: 14px;
+  padding: 10px 12px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.05) inset;
+  color:black;
+  width: 50px;
+  height: 20px;
 }
 
 .notice-detail-pill svg {
@@ -1374,35 +1373,122 @@ strong {
     font-weight: 600;
 }
 
-/* 사진 영역 */
-.notice-detail-photo {
-    display: block;
-    margin: 8px;
-    background: #d3d3d3;
-    border-radius: 12px;
-    text-decoration: none;
-    color: inherit;
+.notice-detail-content {
+  padding: 8px 10px 2px;
+  line-height: 1.8;
+  color: #222;
+  font-size: 16px;
+  text-align: left;
+  white-space: pre-wrap; /* content 문자열의 개행 유지 */
 }
 
-.photo-inner {
-    height: 380px;
-    border-radius: 12px;
-    background: #cfcfcf;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+.notice-detail-content .nd-paragraph {
+  margin: 0 0 12px;
 }
 
-.photo-text {
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.7;
+.notice-detail-content h3,
+.notice-detail-content h4 {
+  margin: 20px 0 10px;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
-.photo-text small {
-    font-size: 14px;
-    color: #222;
+.notice-detail-content ul,
+.notice-detail-content ol {
+  padding-left: 20px;
+  margin: 10px 0 12px;
+}
+
+.notice-detail-content li {
+  margin: 6px 0;
+}
+
+/* --- 공지 본문 래퍼(좌우 5px로 pills와 일치) --- */
+.notice-detail-body {
+    width: 100%;
+    margin: 0 auto;          /* ✅ pills의 padding 좌우 5px과 일치 */
+}
+
+/* --- 공지문(포멀) 스타일 --- */
+.notice-paper {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  line-height: 1.9;
+  color: #222;
+  text-align: left;
+  font-size: 15.5px;
+}
+
+/* 제목/머리말 */
+.notice-paper .np-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #eceff4;
+  padding-bottom: 8px;
+}
+.notice-paper .np-title {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+.notice-paper .np-meta {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* 본문 타이틀/문단 */
+.notice-paper h3,
+.notice-paper h4 {
+  margin: 20px 0 10px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.notice-paper p {
+  margin: 0 0 12px;
+}
+
+/* 리스트 */
+.notice-paper ul,
+.notice-paper ol {
+  margin: 10px 0 12px 20px;
+}
+.notice-paper li {
+  margin: 6px 0;
+}
+
+/* 바닥글(문의/담당) */
+.notice-paper .np-footer {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px dashed #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* pill 안 링크를 '그냥 텍스트'처럼 보이게 */
+.notice-detail-pill .pill-link {
+  flex: 1 1 auto;
+  min-width: 0;
+  color: inherit;               /* pill의 글자색 따라감 */
+  text-decoration: none;        /* 기본은 밑줄 없음 */
+  overflow: hidden;             /* 너무 길면 말줄임 */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;              /* 손가락 커서 */
+}
+
+/* 호버 시만 살짝 강조(선택 사항) */
+.notice-detail-pill .pill-link:hover {
+  text-decoration: underline;
 }
 
 /* -------- CSS-only 모달 ( :target ) -------- */
@@ -1677,11 +1763,9 @@ strong {
 }
 
 .avatar {
-    width: 150px;
-    /* 원하는 크기 */
+    width: 150px; /* 원하는 크기 */
     height: 150px;
-    overflow: hidden;
-    /* 원형 바깥 잘림 */
+    overflow: hidden; /* 원형 바깥 잘림 */
     display: flex;
     align-items: left;
     justify-content: left;
@@ -1690,8 +1774,7 @@ strong {
 .avatar img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    /* 사진 비율 유지하면서 채우기 */
+    object-fit: cover; /* 사진 비율 유지하면서 채우기 */
 }
 
 
@@ -1699,15 +1782,13 @@ strong {
 .info-subgrid,
 .info-sub {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* 두 칸을 50:50 */
+    grid-template-columns: repeat(2, 1fr); /* 두 칸을 50:50 */
     gap: 12px;
 }
 
 /* 흰 박스가 늘어나면서 같은 너비 유지 */
-.info-subgrid>.info-subbox,
-.info-sub>.info-subbox {
-    width: 100%;
-    /* 부모가 분배한 만큼 꽉 채우기 */
-    box-sizing: border-box;
+.info-subgrid > .info-subbox,
+.info-sub > .info-subbox {
+  width: 100%;     /* 부모가 분배한 만큼 꽉 채우기 */
+  box-sizing: border-box;
 }
