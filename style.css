@@ -234,6 +234,7 @@ body {
     background-color: #d7d7d7;
     padding: 30px;
     border-radius: 45px;
+}
   
 .icon-container {
     padding: 20px;
@@ -446,6 +447,7 @@ body {
     box-sizing: border-box;
     position: relative;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 /* 2열 그리드 */
 .indicator-grid {
@@ -668,6 +670,7 @@ body {
     display: flex; /* feat 05 추가*/
     flex-direction: column; /* feat 05 추가 */
     align-items: flex-start; /* feat 05 추가 */
+}
 
 .card-label {
     background: white;
@@ -695,6 +698,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     flex-grow: 1; /* feat 05 추가 */
+}
 
 .inner-card h4 {
     margin: 0px;
@@ -793,6 +797,7 @@ body {
     width: 85%;
     margin: 0 auto;
     margin-bottom: 20px;
+}
 
 /*Desing-11 지원자격부분 추가*/
 /*Desing-13 FAQ부분 추가*/
@@ -844,6 +849,7 @@ body {
     color: white;
     text-align: center;
     white-space: nowrap; /*feat 05 추가*/
+}
 
 .notice-tag.event {
     background-color: #3498db;
