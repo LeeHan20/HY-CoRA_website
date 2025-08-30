@@ -1,68 +1,299 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HY-CoRA - 모집/가입 안내</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <header class="header">
-        <div class="container header-container">
-            <h1 class="logo"><a href="index.html">HY-CoRA</a></h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="about.html">소개</a></li>
-                    <li><a href="activities.html">활동 내용</a></li>
-                    <li><a href="apply.html">모집 안내/가입</a></li>
-                    <li><a href="announcement.html">공지사항</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-
-        <div class="about-header">
-            <h2 class="about-title">모집 안내</h2>
-            <p class="about-subtitle">
-                HY-CoRA 동아리에서 함께 성장할 새로운 멤버를 모집합니다.
-            </p>
-        </div>
-
-
-        <section class="recruitment-section">
-            <div class="container">
-                <div class="recruitment-nav">
-                    <button class="nav-button active">지원 자격</button>
-                    <button class="nav-button">활동 내용</button>
-                    <button class="nav-button">문의</button>
-                </div>
-                <div class="recruitment-content">
-                    <div class="recruitment-card">
-                        <h3>지원 자격</h3>
-                        <p>한양대학교 ERICA 학부생 누구나</p>
-                        <p>컴퓨터에 대한 경험과 전공 무관</p>
-                    </div>
-                    <div class="recruitment-card">
-                        <h3>모집 일정</h3>
-                        <p>2025.xx -</p>
-                    </div>
-                </div>
-                <button class="apply-button">지원하기</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=1024">
+        <title>HY-CoRA - 모집/가입안내</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header-container">
+                <h1 class="logo"><a href="index.html">HY-CoRA</a></h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="about.html">소개</a></li>
+                        <li><a href="activities.html">활동내용</a></li>
+                        <li><a href="apply.html">모집안내/가입</a></li>
+                        <li><a href="announcement.html">공지사항</a></li>
+                    </ul>
+                </nav>
             </div>
-        </section>
-    </main>
+        </header>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>경기도 안산시 상록구 한양대학로 55 복지관 425호 (동방 주소)<br>hycora369@gmail.com</p>
-            <p>&nbsp;&nbsp;&nbsp;회장: 010-3552-2044<br>부회장: 010-3410-4697</p>
-        </div>
-    </footer>
+        <main>
+            <!-- 상단 소개 배너 -->
+            <div class="top-header">
+                <div class="top-title">
+                    <h3>모집안내</h3>
+                </div>
+                <div class="top-subtitle">
+                    <p>HY-CoRA에서 함께 성장할 새로운 맴버를 모집합니다.</p>
+                </div>
+            </div>
+            <section class="recruitment-section">
+                <div class="container">
+                    <div class="about-nav">
+                        <button
+                            class="nav-button active"
+                            data-target="Schedule"
+                        >
+                            모집일정
+                        </button>
+                        <button class="nav-button" data-target="Eligibility">
+                            지원자격
+                        </button>
+                        <button class="nav-button" data-target="Process">
+                            지원절차
+                        </button>
+                        <button class="nav-button" data-target="faq">
+                            FAQ
+                        </button>
+                        <button class="nav-button" data-target="contact">
+                            문의
+                        </button>
+                    </div>
+                    <h3 id="Schedule">모집 일정</h3>
+                    <div class="recruitment-content">
+                        <div class="recruitment-card">
+                            <div class="recruitment-line"></div>
+                            <div class="recruitment-box">
+                                2000.00.00 ~ 2000.00.00: 사전 안내 공개
+                            </div>
+                            <div class="recruitment-box">
+                                2000.00.00 ~ 2000.00.00: 사전 안내 공개
+                            </div>
+                            <div class="recruitment-box">
+                                2000.00.00 ~ 2000.00.00: 사전 안내 공개
+                            </div>
+                            <div class="recruitment-box">
+                                2000.00.00 ~ 2000.00.00: 사전 안내 공개
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="two-cards two-cards-1">
+                    <div class="outer-card">
+                        <div class="card-label">지원 방법</div>
+                        <div class="inner-card">
+                            <h4>제출 & 확인</h4>
+                            <p>지원 기간에 꼭 제출 -> 안내 메일/문자 확인</p>
+                        </div>
+                    </div>
+                    <div class="outer-card">
+                        <div class="card-label">바로 가기</div>
+                        <div class="inner-card">
+                            <h4>지원 자격 / FAQ / 문의</h4>
+                            <p>
+                                <b>지원자격</b> · <b>FAQ</b> ·
+                                <b>문의</b> 페이지에서 자세히 확인하세요.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <h3 id="Eligibility">지원자격</h3>
 
-    <script src="js/apply.js"></script>
-</body>
+                <div class="apply-card">
+                    <p>
+                        학년·전공 무관. 배우고 협업할 의지가 있다면 누구나
+                        지원할 수 있습니다.
+                    </p>
+                </div>
+
+                <div><h3>기본 요건</h3></div>
+                <div class="two-cards two-cards-1">
+                    <div class="outer-card">
+                        <div class="card-label card-label-1">의지</div>
+                        <div class="inner-card">
+                            <h4>학습 의지</h4>
+                            <p>기초부터 차근히 배우고 팀으로 협업할 마음</p>
+                        </div>
+                    </div>
+                    <div class="outer-card">
+                        <div class="card-label card-label-1">참여</div>
+                        <div class="inner-card">
+                            <h4>스터디 참여</h4>
+                            <p>
+                                개인 일정에 맞춰 참여 가능한 트랙을 자유롭게
+                                선택 신청하세요.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <h3 id="Process">지원 절차</h3>
+
+                <div class="container">
+                    <div class="apply-box">
+                        <div class="apply-row">
+                            <div class="apply-circle"><h2>1</h2></div>
+                            <div class="apply-order">
+                                <div class="apply-text">
+                                    <h3>지원서 제출</h3>
+                                    <p>모집 기간에 폼 제출</p>
+                                </div>
+                                <button class="apply-button">
+                                    지원 폼 열기
+                                </button>
+                            </div>
+                        </div>
+                        <div class="apply-row">
+                            <div class="apply-circle"><h2>2</h2></div>
+                            <div class="apply-order">
+                                <div class="apply-text">
+                                    <h3>지원서 제출</h3>
+                                    <p>모집 기간에 폼 제출</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="two-cards two-cards-1">
+                    <div class="outer-card">
+                        <div class="card-label">바로가기</div>
+                        <div class="inner-card">
+                            <h4>모집 일정 확인</h4>
+                            <p>
+                                <b>모집 일정</b>에서 학기별 타임라인을
+                                확인하세요.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="outer-card">
+                        <div class="card-label">문의</div>
+                        <div class="inner-card">
+                            <h4>질문이 있다면</h4>
+                            <p><b>문의</b>로 연락주세요.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 id="faq">FAQ</h3>
+                <div class="learning-wrap">
+                    <div class="FAQ-card">
+                        <b>▼ 전공/학년 제한이 있나요?</b>
+                        <p>
+                            없습니다. 배우고 협업하려는 마음이 있으면 누구나
+                            환영합니다.
+                        </p>
+                    </div>
+                    <div class="FAQ-card">
+                        <b>▼ 신입이라 실력이 많이 부족한데 지원해도 되나요?</b>
+                        <p>
+                            네. 기본 스터디 트랙부터 시작하며, 코드리뷰와 페어로
+                            빠르게 성장할 수 있게 도와드립니다.
+                        </p>
+                    </div>
+                    <div class="FAQ-card">
+                        <b>▼ 회비가 있나요?</b>
+                        <p>
+                            운영비와 행사비 일부를 위해 학기별 소정의 회비가
+                            있을 수 있으며, OT에서 투명하게 안내합니다.
+                        </p>
+                    </div>
+                    <div class="FAQ-card">
+                        <b>▼ 전공/학년 제한이 있나요?</b>
+                        <p>
+                            없습니다. 배우고 협업하려는 마음이 있으면 누구나
+                            환영합니다.
+                        </p>
+                    </div>
+                </div>
+                <h3 id="contact">문의</h3>
+                <div class="two-cards">
+                    <div class="outer-card">
+                        <div class="card-label">이메일</div>
+                        <div class="inner-card">
+                            <h4>공식 메일</h4>
+                            <p>hycora369@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="outer-card">
+                        <div class="card-label">연락처</div>
+                        <div class="inner-card">
+                            <h4>전화번호</h4>
+                            <p>
+                                회장 이 한: 010-3552-2044 <br />부회장 최관우:
+                                010-3410-4697
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="two-cards two-cards-1">
+                    <div class="outer-card">
+                        <div class="card-label">방문</div>
+                        <div class="inner-card">
+                            <h4>오프라인</h4>
+                            <p>
+                                경기도 안산시 상록구 한양대학로 55 복지관 425호
+                            </p>
+                        </div>
+                    </div>
+                    <div class="outer-card">
+                        <div class="card-label">가이드</div>
+                        <div class="inner-card">
+                            <h4>답변을 빨리 받는 팁</h4>
+                            <p>
+                                재촉은 삼가고, 알고 싶은 핵심과 원하시는 답을 한
+                                문장으로 간단히 남겨 주시면 더 빠르게 답변드릴
+                                수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container footer-content">
+                <!-- Top: Copyright -->
+                <div class="footer-top">
+                    <p>Copyright 2025. HY-CoRA All rights reserved.</p>
+                    <a
+                        href="https://www.instagram.com/hycora_hanyang/"
+                        target="_blank"
+                        rel="noopener"
+                        class="social-icon"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+
+                <!-- Divider -->
+                <div class="footer-divider" aria-hidden="true"></div>
+
+                <!-- Bottom: 좌측 주소/메일 / 우측 회장·부회장 -->
+                <div class="footer-bottom">
+                    <p class="footer-detail">
+                        <strong>Made by HY-CoRA</strong> <br />
+                        2025 ver. Create by <strong> 팀</strong> 이한, 최관우,
+                        김현준, 김혜윤, 박아진, 박강호, 최지민 <br /><br />
+                        경기도 안산시 상록구 한양대학로 55 복지관 425호<br />
+                        hycora369@gmail.com
+                    </p>
+                    <div class="contacts">
+                        <div class="contact-block">
+                            <h3>회장</h3>
+                            <p>이한 010-3552-2044</p>
+                        </div>
+                        <div class="contact-block">
+                            <h3>부회장</h3>
+                            <p>최관우 010-3410-4697</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/apply.js"></script>
+        <script src="js/nav.js"></script>
+    </body>
 </html>

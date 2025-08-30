@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=1024">
-        <title>HY-CoRA - 공지사항</title>
+        <title>HY-CoRA - 활동내용</title>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -14,6 +14,7 @@
             rel="stylesheet"
         />
     </head>
+
     <body>
         <header class="header">
             <div class="container header-container">
@@ -30,45 +31,12 @@
         </header>
 
         <main>
-            <!-- 상단 소개 배너 -->
-            <div class="top-header">
-                <div class="top-title">
-                    <h2>공지사항</h2>
-                </div>
-                <div class="top-subtitle">
-                    <p>동아리의 최신 소식과 중요한 공지사항을 확인하세요.</p>
-                </div>
-            </div>
-
-            <section class="notices-section">
-                <div class="container">
-                    <div class="notices-nav">
-                        <button class="nav-button active">전체</button>
-                        <button class="nav-button">행사</button>
-                        <button class="nav-button">모집</button>
-                        <button class="nav-button">기타</button>
-                    </div>
-
-                    <table class="notices-table">
-                        <thead>
-                            <tr>
-                                <th>제목</th>
-                                <th>내용</th>
-                                <th>일자</th>
-                                <th>분류</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-
-                    <!-- ✅ 이게 반드시 있어야 버튼이 보임 -->
-                    <div id="pagination" class="pagination"></div>
-                </div>
-            </section>
+            <!-- js/activities_detail.js 가 여기에 내용을 주입 -->
         </main>
 
         <footer class="footer">
             <div class="container footer-content">
+                <!-- Top: Copyright -->
                 <div class="footer-top">
                     <p>Copyright 2025. HY-CoRA All rights reserved.</p>
                     <a
@@ -80,11 +48,15 @@
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
+
+                <!-- Divider -->
                 <div class="footer-divider" aria-hidden="true"></div>
+
+                <!-- Bottom: 좌측 주소/메일 / 우측 회장·부회장 -->
                 <div class="footer-bottom">
                     <p class="footer-detail">
                         <strong>Made by HY-CoRA</strong> <br />
-                        2025 ver. Create by <strong>팀</strong> 이한, 최관우,
+                        2025 ver. Create by <strong> 팀</strong> 이한, 최관우,
                         김현준, 김혜윤, 박아진, 박강호, 최지민 <br /><br />
                         경기도 안산시 상록구 한양대학로 55 복지관 425호<br />
                         hycora369@gmail.com
@@ -103,8 +75,6 @@
             </div>
         </footer>
 
-        <!-- 목록 스크립트 -->
-        <script src="js/announcement.js"></script>
-        <script src="js/nav.js"></script>
+        <script src="js/activities_detail.js"></script>
     </body>
 </html>
