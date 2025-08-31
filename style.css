@@ -1646,7 +1646,8 @@ strong {
     border-radius: 20px;
     padding: 20px;
     text-align: center;
-    width: 1000px;
+    width: 100%; /* Fix-14 */
+    box-sizing: border-box; /* Fix-14 */
     /* 제목 기본 왼쪽 */
 }
 
@@ -1661,9 +1662,10 @@ strong {
     background: #e1e6f6;
     /* 연한 파랑 배경 */
     border-radius: 16px;
-    padding: 20px;
+    padding-right: 80px;
     padding-top: 50px;
     padding-left: 80px;
+    padding-bottom: 20px;
     text-align: center;
     /* 제목 기본 왼쪽 */
     height: 170px;
@@ -1806,6 +1808,7 @@ strong {
     /* 여백 제거 */
     overflow: hidden;
     /* 넘치는 부분 잘라내기 */
+    box-sizing: border-box;
 }
 
 .info-box.gallery .info-card .event-cover {
@@ -1816,6 +1819,7 @@ strong {
     border-radius: 16px;
     /* info-card와 동일 라운드 */
     display: block;
+    box-sizing: border-box;
 }
 
 /* 대표 이미지 상자(큰 사진) */
