@@ -84,7 +84,10 @@ function renderBodyHTML(data) {
 
     if (typeof data.content === "string" && data.content.trim()) {
         // 개행 유지
-        return `<div class="nd-paragraph">${esc(data.content)}</div>`;
+        return `<div class="nd-paragraph">${esc(data.content).replace(
+            /\n/g,
+            "<br>"
+        )}</div>`;
     }
 
     if (Array.isArray(data.paragraphs) && data.paragraphs.length) {

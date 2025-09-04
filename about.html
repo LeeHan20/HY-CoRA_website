@@ -1,449 +1,588 @@
 <!DOCTYPE html>
 <html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=1024" />
+        <meta
+            name="description"
+            content="HY-CoRA는 한양대 ERICA 유일의 컴퓨터 연구 동아리입니다. C언어, 파이썬 등 기초 스터디부터 웹/앱 프로젝트, 알고리즘, 데이터 분석까지 폭넓게 다룹니다."
+        />
+        <meta
+            name="keywords"
+            content="하이코라 동아리 소개, 스터디, 웹 개발, 알고리즘, 자료구조, 데이터, 동아리방"
+        />
+        <title>HY-CoRA - 동아리소개</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1024">
-    <meta name="description" content="HY-CoRA는 한양대 ERICA 유일의 컴퓨터 연구 동아리입니다. C언어, 파이썬 등 기초 스터디부터 웹/앱 프로젝트, 알고리즘, 데이터 분석까지 폭넓게 다룹니다.">
-    <meta name="keywords" content="하이코라 동아리 소개, 스터디, 웹 개발, 알고리즘, 자료구조, 데이터, 동아리방">
-    <title>HY-CoRA - 동아리소개</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
-</head>
-
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container header-container">
-            <h1 class="logo"><a href="index.html">HY-CoRA</a></h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="about.html">소개</a></li>
-                    <li><a href="activities.html">활동내용</a></li>
-                    <li><a href="apply.html">모집안내/가입</a></li>
-                    <li><a href="announcement.html">공지사항</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <!-- 상단 소개 배너 -->
-        <div class="top-header">
-            <div class="top-title">
-                <h2>HY-CoRA</h2>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="container header-container">
+                <h1 class="logo"><a href="index.html">HY-CoRA</a></h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="about.html">소개</a></li>
+                        <li><a href="activities.html">활동내용</a></li>
+                        <li><a href="apply.html">모집안내/가입</a></li>
+                        <li><a href="announcement.html">공지사항</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="top-subtitle">
-                <p>
-                    HY-CoRA는 컴퓨터 기술을 공부하고 협업 프로젝트를 통해
-                    함께 성장하는 <br />한양대학교 ERICA의 학술
-                    동아리입니다.
-                </p>
-            </div>
-        </div>
-        <!-- 본문 -->
-        <section class="about-section">
-            <div class="container about-content">
-                <!-- 섹션 내 탭 네비 -->
-                <div class="about-nav">
-                    <button class="nav-button active" data-target="greeting">
-                        인사말
-                    </button>
-                    <button class="nav-button" data-target="introduction">
-                        소개
-                    </button>
-                    <button class="nav-button" data-target="administrators">
-                        임원진
-                    </button>
-                    <button class="nav-button" data-target="learning">
-                        학습
-                    </button>
-                    <button class="nav-button" data-target="indicator">
-                        지표
-                    </button>
+        </header>
+
+        <main>
+            <!-- 상단 소개 배너 -->
+            <div class="top-header">
+                <div class="top-title">
+                    <h2>HY-CoRA</h2>
                 </div>
-
-                <div class="club-intro">
-                    <!-- 인사말 -->
-                    <h3 id="greeting">인사말</h3>
-                    <p class="quote-title">❝ 학문적 성장의 장 ❞</p>
+                <div class="top-subtitle">
                     <p>
-                        HY-CoRA는 한양대학교 ERICA를 기반으로, 학문적 탐구와
-                        지식 교류를 중심으로 하는 컴퓨터 연구 동아리입니다.
-                        다양한 관점과 경험을 지닌 구성원들이 모여, 깊이 있는
-                        토론과 연구를 통해 사고의 폭을 넓히고 전문성을
-                        심화시킵니다.
+                        HY-CoRA는 컴퓨터 기술을 공부하고 협업 프로젝트를 통해
+                        함께 성장하는 <br />한양대학교 ERICA의 학술
+                        동아리입니다.
                     </p>
-
-                    <p class="quote-title">❝ 앞으로의 다짐 ❞</p>
-                    <p>
-                        앞으로도 HY-CoRA는 학문적 성취와 인적 네트워크의
-                        성장을 함께 이루어 나가며, 모든 구성원이 서로에게
-                        영감을 주는 지식 공동체로 발전해 나가겠습니다.
-                    </p>
-                    <!-- 소개 -->
-                    <h3 id="introduction">소개</h3>
-                    <div class="intro-cards">
-                        <div class="card">
-                            <div class="icon-container">
-                                <span class="icon"> 동아리 개요</span>
-                            </div>
-                            <p2>Hy-CoRA는 컴퓨터 기술을 배우고 협업
-                                프로젝트를 통해 함께 성장하는 한양대학교
-                                ERICA의 학술 동아리입니다. <br />
-                                다양한 전공의 학생들이 모여 실무 중심의
-                                경험과 지식을 쌓고 있습니다.</p2>
-                        </div>
-                        <div class="card">
-                            <div class="icon-container">
-                                <span class="icon"> 활동 분야</span>
-                            </div>
-                            <p2>웹·앱 개발, 알고리즘, UI/UX 등 다양한
-                                주제로 정기 스터디와 실습을 진행합니다.
-                                <br />
-                                학기 중에는 주간 세션, 방학에는 집중
-                                프로젝트로 역량을 확장합니다.
-                            </p2>
-                        </div>
-                        <div class="card">
-                            <div class="icon-container">
-                                <span class="icon"> 운영진 </span>
-                            </div>
-                            <p2>회장, 부회장, 교육·프로젝트·운영 파트
-                                리드로 구성되어 효율적인 활동을 지원합니다.
-                                <br />
-                                각 파트가 역할을 나누어 원활한 진행과
-                                체계적인 운영을 유지합니다.
-                            </p2>
-                        </div>
+                </div>
+            </div>
+            <!-- 본문 -->
+            <section class="about-section">
+                <div class="container about-content">
+                    <!-- 섹션 내 탭 네비 -->
+                    <div class="about-nav">
+                        <button
+                            class="nav-button active"
+                            data-target="greeting"
+                        >
+                            인사말
+                        </button>
+                        <button class="nav-button" data-target="introduction">
+                            소개
+                        </button>
+                        <button class="nav-button" data-target="administrators">
+                            임원진
+                        </button>
+                        <button class="nav-button" data-target="learning">
+                            학습
+                        </button>
+                        <button class="nav-button" data-target="indicator">
+                            지표
+                        </button>
                     </div>
 
-                    <!-- 연혁 -->
-                    <div class="intro-history-content">
-                        <div class="intro-history-card">
-                            <div class="icon-container">
-                                <span class="icon"> 주요 연혁 </span>
+                    <div class="club-intro">
+                        <!-- 인사말 -->
+                        <h3 id="greeting">
+                            『From Solid Foundation to Passionate Pursuit』
+                        </h3>
+                        <p class="quote-title">❝ 깊은 역사와 전통 ❞</p>
+                        <p>
+                            하이코라는 1979년 설립되어 지금까지 그 명맥을
+                            이어오고 있는 한양대학교 ERICA의 대표
+                            중앙동아리입니다. 2025년 현재, 46기 활동을 이어가며
+                            선후배 간의 끈끈한 유대와 학문적 교류를 통해 풍부한
+                            역사를 쌓아왔습니다.
+                        </p>
+
+                        <p class="quote-title">❝ 열정적인 탐구와 성장 ❞</p>
+                        <p>
+                            HY-CoRA는 단순한 학습의 공간을 넘어, 지식을 나누고
+                            탐구하는 학문 공동체입니다. 서로의 아이디어를
+                            존중하며 협력 속에서 성장하고, 도전적인 문제 해결
+                            과정을 통해 논리적 사고와 창의적 역량을 함께
+                            길러갑니다. 이는 동아리원 모두가 전문성과 인문적
+                            교양을 겸비한 인재로 발전해 나가는 원동력이 됩니다.
+                        </p>
+                        <p class="quote-title">❝ 기초와 기반 ❞</p>
+                        <p>
+                            HY-CoRA는 무엇보다 전통적인 학습 기반을 충실히
+                            다지는 것을 중시합니다. 기초 문법, 알고리즘,
+                            자료구조 등 필수적인 내용을 확실히 이해하고 익히는
+                            과정을 통해, 앞으로의 더 높은 수준의 연구와 실무
+                            경험을 쌓을 수 있는 튼튼한 토대를 마련합니다.
+                        </p>
+                        <p class="quote-title">❝ 앞으로의 방향성 ❞</p>
+                        <p>
+                            앞으로도 HY-CoRA는 학문적 성취와 인적 네트워크의
+                            성장을 함께 이루어 나가며, 모든 구성원이 서로에게
+                            영감을 주는 지식 공동체로 자리매김할 것입니다.
+                        </p>
+                        <!-- 소개 -->
+                        <h3 id="introduction">소개</h3>
+                        <div class="intro-cards">
+                            <div class="card">
+                                <div class="icon-container">
+                                    <span class="icon"> 동아리 개요</span>
+                                </div>
+                                <p2
+                                    >Hy-CoRA는 컴퓨터 기술을 배우고 협업
+                                    프로젝트를 통해 함께 성장하는 한양대학교
+                                    ERICA의 학술 동아리입니다. <br />
+                                    다양한 전공의 학생들이 모여 실무 중심의
+                                    경험과 지식을 쌓고 있습니다.</p2
+                                >
                             </div>
-                            <div class="intro-history-line"></div>
-                            <div class="intro-history-box">
-                                20xx.xx.xx: 외부 협력 프로젝트 기여 시작
+                            <div class="card">
+                                <div class="icon-container">
+                                    <span class="icon"> 활동 분야</span>
+                                </div>
+                                <p2
+                                    >웹·앱 개발, 알고리즘, UI/UX 등 다양한
+                                    주제로 정기 스터디와 실습을 진행합니다.
+                                    <br />
+                                    학기 중에는 주간 세션, 방학에는 집중
+                                    프로젝트로 역량을 확장합니다.
+                                </p2>
                             </div>
-                            <div class="intro-history-box">
-                                20xx.xx.xx: 동아리 웹 리뉴얼, 내부 아카이브
-                                구축
-                            </div>
-                            <div class="intro-history-box">
-                                20xx.xx.xx: 회사 견학
-                            </div>
-                            <div class="intro-history-box">
-                                20xx.xx.xx: 동아리 아카이브 플랫폼 구축
-                            </div>
-                            <div class="intro-history-box">
-                                20xx.xx.xx:웹·앱 개발 스터디 커리큘럼 정식
-                                도입
-                            </div>
-                            <div class="intro-history-box">
-                                20xx.xx.xx: 동아리 설립
+                            <div class="card">
+                                <div class="icon-container">
+                                    <span class="icon"> 운영진 </span>
+                                </div>
+                                <p2
+                                    >회장, 부회장, 교육·프로젝트·운영 파트
+                                    리드로 구성되어 효율적인 활동을 지원합니다.
+                                    <br />
+                                    각 파트가 역할을 나누어 원활한 진행과
+                                    체계적인 운영을 유지합니다.
+                                </p2>
                             </div>
                         </div>
-                    </div>
-                    <!-- 임원진 -->
-                    <h3 id="administrators">임원진</h3>
-                    <div class="wrap">
-                        <section class="leaders-grid">
-                            <article class="leader-card">
-                                <div class="avatar"></div>
-                                <div class="card-body">
-                                    <h3 class="name">이한</h3>
-                                    <div class="role">회장 · Club Lead</div>
-                                    <p class="desc">
-                                        동아리 총괄, 연간 로드맵/대외
-                                        커뮤니케이션.
-                                    </p>
-                                    <div class="btn-row">
-                                        <button class="pill"> <a href="https://www.instagram.com/hycora_hanyang/"
-                                                target="_blank" rel="noopener" class="social-icon social-icon-leader">
-                                                <i class="fab fa-instagram"></i></a></button>
-                                        <button class="pill">
-                                            <a href="https://github.com/LeeHan20/HY-CoRA_website" target="_blank"
-                                                rel="noopener" class="social-icon social-icon-leader">
-                                                <i class="fab fa-github"></i></a>
-                                        </button>
-                                    </div>
-                                </div>
-                            </article>
 
-                            <article class="leader-card">
-                                <div class="avatar"></div>
-                                <div class="card-body">
-                                    <h3 class="name">최관우</h3>
-                                    <div class="role">
-                                        부회장 · Vice Lead
-                                    </div>
-                                    <p class="desc">
-                                        동아리 총괄, 연간 로드맵/대외
-                                        커뮤니케이션.
-                                    </p>
-                                    <div class="btn-row">
-                                        <button class="pill"> <a href="https://www.instagram.com/hycora_hanyang/"
-                                                target="_blank" rel="noopener" class="social-icon social-icon-leader">
-                                                <i class="fab fa-instagram"></i></a></button>
-                                        <button class="pill">
-                                            <a href="https://github.com/LeeHan20/HY-CoRA_website" target="_blank"
-                                                rel="noopener" class="social-icon social-icon-leader">
-                                                <i class="fab fa-github"></i></a>
-                                        </button>
-                                    </div>
+                        <!-- 연혁 -->
+                        <div class="intro-history-content">
+                            <div class="intro-history-card">
+                                <div class="icon-container">
+                                    <span class="icon"> 주요 연혁 </span>
                                 </div>
-                            </article>
+                                <div class="intro-history-line"></div>
+                                <div class="intro-history-box">
+                                    20xx.xx.xx: 외부 협력 프로젝트 기여 시작
+                                </div>
+                                <div class="intro-history-box">
+                                    20xx.xx.xx: 동아리 웹 리뉴얼, 내부 아카이브
+                                    구축
+                                </div>
+                                <div class="intro-history-box">
+                                    20xx.xx.xx: 회사 견학
+                                </div>
+                                <div class="intro-history-box">
+                                    20xx.xx.xx: 동아리 아카이브 플랫폼 구축
+                                </div>
+                                <div class="intro-history-box">
+                                    20xx.xx.xx:웹·앱 개발 스터디 커리큘럼 정식
+                                    도입
+                                </div>
+                                <div class="intro-history-box">
+                                    20xx.xx.xx: 동아리 설립
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 임원진 -->
+                        <h3 id="administrators">임원진</h3>
+                        <div class="wrap">
+                            <section class="leaders-grid">
+                                <article class="leader-card">
+                                    <div class="avatar"></div>
+                                    <div class="card-body">
+                                        <h3 class="name">이한</h3>
+                                        <div class="role">회장 · Club Lead</div>
+                                        <p class="desc">
+                                            동아리 총괄, 연간 로드맵/대외
+                                            커뮤니케이션.
+                                        </p>
+                                        <div class="btn-row">
+                                            <button class="pill">
+                                                <a
+                                                    href="https://www.instagram.com/han83i/"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    class="social-icon social-icon-leader"
+                                                >
+                                                    <i
+                                                        class="fab fa-instagram"
+                                                    ></i
+                                                ></a>
+                                            </button>
+                                            <button class="pill">
+                                                <a
+                                                    href="https://github.com/LeeHan20"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    class="social-icon social-icon-leader"
+                                                >
+                                                    <i class="fab fa-github"></i
+                                                ></a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
 
-                            <article class="leader-card">
-                                <div class="avatar"></div>
-                                <div class="card-body">
-                                    <h3 class="name">최재호</h3>
-                                    <div class="role">
-                                        총무 · Finance Management
+                                <article class="leader-card">
+                                    <div class="avatar"></div>
+                                    <div class="card-body">
+                                        <h3 class="name">최관우</h3>
+                                        <div class="role">
+                                            부회장 · Vice Lead
+                                        </div>
+                                        <p class="desc">
+                                            동아리 부총괄, 1인자가 되고싶은
+                                            2인자
+                                        </p>
+                                        <div class="btn-row">
+                                            <button class="pill">
+                                                <a
+                                                    href="https://www.instagram.com/kwan_0308/"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    class="social-icon social-icon-leader"
+                                                >
+                                                    <i
+                                                        class="fab fa-instagram"
+                                                    ></i
+                                                ></a>
+                                            </button>
+                                            <button class="pill">
+                                                <a
+                                                    href="https://github.com/Choi-kwan-u"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    class="social-icon social-icon-leader"
+                                                >
+                                                    <i class="fab fa-github"></i
+                                                ></a>
+                                            </button>
+                                        </div>
                                     </div>
-                                    <p class="desc">
-                                        동아리 총괄, 연간 로드맵/대외
-                                        커뮤니케이션.
-                                    </p>
-                                    <div class="btn-row">
-                                        <button class="pill"> <a href="https://www.instagram.com/hycora_hanyang/"
-                                                target="_blank" rel="noopener" class="social-icon social-icon-leader">
-                                                <i class="fab fa-instagram"></i></a></button>
-                                        <button class="pill"><a href="https://github.com/LeeHan20/HY-CoRA_website"
-                                                target="_blank" rel="noopener" class="social-icon social-icon-leader">
-                                                <i class="fab fa-github"></i></a></button>
-                                    </div>
-                                </div>
-                            </article>
+                                </article>
 
-                            <article class="leader-card">
-                                <div class="avatar"></div>
-                                <div class="card-body">
-                                    <h3 class="name">김현준</h3>
-                                    <div class="role">교육 · Education</div>
-                                    <p class="desc">
-                                        동아리 총괄, 연간 로드맵/대외
-                                        커뮤니케이션.
-                                    </p>
-                                    <div class="btn-row">
-                                        <button class="pill"> <a href="https://www.instagram.com/hycora_hanyang/"
-                                                target="_blank" rel="noopener" class="social-icon social-icon-leader">
-                                                <i class="fab fa-instagram"></i></a></button>
-                                        <button class="pill"><a href="https://github.com/LeeHan20/HY-CoRA_website"
-                                                target="_blank" rel="noopener" class="social-icon social-icon-leader">
-                                                <i class="fab fa-github"></i></a></button>
+                                <article class="leader-card">
+                                    <div class="avatar"></div>
+                                    <div class="card-body">
+                                        <h3 class="name">최재호</h3>
+                                        <div class="role">
+                                            총무 · Finance Management
+                                        </div>
+                                        <p class="desc">
+                                            회장의 지갑을 담당하고 있는
+                                            최재호입니다.
+                                        </p>
+                                        <div class="btn-row">
+                                            <button class="pill">
+                                                <a
+                                                    href="https://www.instagram.com/hojae_04/"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    class="social-icon social-icon-leader"
+                                                >
+                                                    <i
+                                                        class="fab fa-instagram"
+                                                    ></i
+                                                ></a>
+                                            </button>
+                                            <button class="pill">
+                                                <a
+                                                    href="https://github.com/LeeHan20/HY-CoRA_website"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    class="social-icon social-icon-leader"
+                                                >
+                                                    <i class="fab fa-github"></i
+                                                ></a>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-                            </article>
+                                </article>
 
-                            <article class="leader-card">
-                                <div class="avatar"></div>
-                                <div class="card-body">
-                                    <h3 class="name">박아진</h3>
-                                    <div class="role">
-                                        홍보 · Public Relations
+                                <article class="leader-card">
+                                    <div class="avatar"></div>
+                                    <div class="card-body">
+                                        <h3 class="name">김현준</h3>
+                                        <div class="role">교육 · Education</div>
+                                        <p class="desc">멘토링 총괄</p>
+                                        <div class="btn-row">
+                                            <button class="pill">
+                                                <a
+                                                    href="https://www.instagram.com/h._.j128/"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    class="social-icon social-icon-leader"
+                                                >
+                                                    <i
+                                                        class="fab fa-instagram"
+                                                    ></i
+                                                ></a>
+                                            </button>
+                                            <button class="pill">
+                                                <a
+                                                    href="https://github.com/HyunJun128"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    class="social-icon social-icon-leader"
+                                                >
+                                                    <i class="fab fa-github"></i
+                                                ></a>
+                                            </button>
+                                        </div>
                                     </div>
-                                    <p class="desc">
-                                        동아리 총괄, 연간 로드맵/대외
-                                        커뮤니케이션.
-                                    </p>
-                                    <div class="btn-row">
-                                        <button class="pill"> <a href="https://www.instagram.com/hycora_hanyang/"
-                                                target="_blank" rel="noopener" class="social-icon social-icon-leader">
-                                                <i class="fab fa-instagram"></i></a></button>
-                                        <button class="pill"><a href="https://github.com/LeeHan20/HY-CoRA_website"
-                                                target="_blank" rel="noopener" class="social-icon social-icon-leader">
-                                                <i class="fab fa-github"></i></a></button>
-                                    </div>
-                                </div>
-                            </article>
+                                </article>
 
-                            <article class="leader-card">
-                                <div class="avatar"></div>
-                                <div class="card-body">
-                                    <h3 class="name">박강호</h3>
-                                    <div class="role">집행 · Execution</div>
-                                    <p class="desc">
-                                        동아리 총괄, 연간 로드맵/대외
-                                        커뮤니케이션.
-                                    </p>
-                                    <div class="btn-row">
-                                        <button class="pill"> <a href="https://www.instagram.com/hycora_hanyang/"
-                                                target="_blank" rel="noopener" class="social-icon social-icon-leader">
-                                                <i class="fab fa-instagram"></i></a></button>
-                                        <button class="pill"><a href="https://github.com/LeeHan20/HY-CoRA_website"
-                                                target="_blank" rel="noopener" class="social-icon social-icon-leader">
-                                                <i class="fab fa-github"></i></a></button>
+                                <article class="leader-card">
+                                    <div class="avatar"></div>
+                                    <div class="card-body">
+                                        <h3 class="name">박아진</h3>
+                                        <div class="role">
+                                            홍보 · Public Relations
+                                        </div>
+                                        <p class="desc">릴스 메이커</p>
+                                        <div class="btn-row">
+                                            <button class="pill">
+                                                <a
+                                                    href="https://www.instagram.com/uij_tw.sx/"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    class="social-icon social-icon-leader"
+                                                >
+                                                    <i
+                                                        class="fab fa-instagram"
+                                                    ></i
+                                                ></a>
+                                            </button>
+                                            <button class="pill">
+                                                <a
+                                                    href="https://github.com/LeeHan20/HY-CoRA_website"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    class="social-icon social-icon-leader"
+                                                >
+                                                    <i class="fab fa-github"></i
+                                                ></a>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-                            </article>
+                                </article>
 
-                            <article class="leader-card">
-                                <div class="avatar"></div>
-                                <div class="card-body">
-                                    <h3 class="name">최지민</h3>
-                                    <div class="role">디자인 · Design</div>
-                                    <p class="desc">
-                                        동아리 총괄, 연간 로드맵/대외
-                                        커뮤니케이션.
-                                    </p>
-                                    <div class="btn-row">
-                                        <button class="pill"> <a href="https://www.instagram.com/hycora_hanyang/"
-                                                target="_blank" rel="noopener" class="social-icon social-icon-leader">
-                                                <i class="fab fa-instagram"></i></a></button>
-                                        <button class="pill"><a href="https://github.com/LeeHan20/HY-CoRA_website"
-                                                target="_blank" rel="noopener" class="social-icon social-icon-leader">
-                                                <i class="fab fa-github"></i></a></button>
+                                <article class="leader-card">
+                                    <div class="avatar"></div>
+                                    <div class="card-body">
+                                        <h3 class="name">박강호</h3>
+                                        <div class="role">집행 · Execution</div>
+                                        <p class="desc">
+                                            행동대장 <br />
+                                            (두목이나 간부의 지시를 받아 직접
+                                            행동을 수행)
+                                        </p>
+                                        <div class="btn-row">
+                                            <button class="pill">
+                                                <a
+                                                    href="https://www.instagram.com/ohgnakrap9290/"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    class="social-icon social-icon-leader"
+                                                >
+                                                    <i
+                                                        class="fab fa-instagram"
+                                                    ></i
+                                                ></a>
+                                            </button>
+                                            <button class="pill">
+                                                <a
+                                                    href="https://github.com/ohgnakrap9290"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    class="social-icon social-icon-leader"
+                                                >
+                                                    <i class="fab fa-github"></i
+                                                ></a>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-                            </article>
+                                </article>
+
+                                <article class="leader-card">
+                                    <div class="avatar"></div>
+                                    <div class="card-body">
+                                        <h3 class="name">최지민</h3>
+                                        <div class="role">디자인 · Design</div>
+                                        <p class="desc">발표 자료 노예</p>
+                                        <div class="btn-row">
+                                            <button class="pill">
+                                                <a
+                                                    href="https://www.instagram.com/510.72/"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    class="social-icon social-icon-leader"
+                                                >
+                                                    <i
+                                                        class="fab fa-instagram"
+                                                    ></i
+                                                ></a>
+                                            </button>
+                                            <button class="pill">
+                                                <a
+                                                    href="https://github.com/LeeHan20/HY-CoRA_website"
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    class="social-icon social-icon-leader"
+                                                >
+                                                    <i class="fab fa-github"></i
+                                                ></a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                            </section>
+                        </div>
+                        <!-- 학습 -->
+                        <h3 id="learning">학습</h3>
+                        <section class="learning-wrap">
+                            <div class="learning-inner">
+                                <article class="learning-card">
+                                    <div class="learning-card-inner">
+                                        <h4 class="learning-title">
+                                            파이썬 교양반
+                                        </h4>
+                                        <p3 class="learning-desc"
+                                            >필수교양에서 배우는 파이썬을
+                                            배웁니다. <br />
+                                        </p3>
+                                    </div>
+                                </article>
+
+                                <article class="learning-card">
+                                    <div class="learning-card-inner">
+                                        <h4 class="learning-title">
+                                            파이썬 백준반
+                                        </h4>
+                                        <p3 class="learning-desc"
+                                            >백준을 통해 프로그래밍 언어로서의
+                                            파이썬을 배웁니다. <br
+                                        /></p3>
+                                    </div>
+                                </article>
+
+                                <article class="learning-card">
+                                    <div class="learning-card-inner">
+                                        <h4 class="learning-title">
+                                            데이터 분석 기초반
+                                        </h4>
+                                        <p3 class="learning-desc"
+                                            >데이터 처리 기초를 배웁니다.</p3
+                                        >
+                                    </div>
+                                </article>
+
+                                <article class="learning-card">
+                                    <div class="learning-card-inner">
+                                        <h4 class="learning-title">
+                                            c++ 기초반
+                                        </h4>
+                                        <p3 class="learning-desc"
+                                            >c++ 기초를 배웁니다</p3
+                                        >
+                                    </div>
+                                </article>
+
+                                <article class="learning-card">
+                                    <div class="learning-card-inner">
+                                        <h4 class="learning-title">
+                                            자료구조반
+                                        </h4>
+                                        <p3 class="learning-desc"
+                                            >자료구조를 통해 보다 효율적인 처리
+                                            방법을 배웁니다.</p3
+                                        >
+                                    </div>
+                                </article>
+                                <!-- 더 추가하면 자동으로 다음 행으로 3개씩 배치됨 -->
+                            </div>
+                        </section>
+                        <!-- 지표 -->
+                        <h3 id="indicator">지표</h3>
+                        <section class="indicator-wrap">
+                            <div class="indicator-grid">
+                                <article class="indicator-card">
+                                    <h4 class="indicator-title">동아리 인원</h4>
+                                    <p class="indicator-desc">xx명</p>
+                                </article>
+
+                                <article class="indicator-card">
+                                    <h4 class="indicator-title">공개 자료</h4>
+                                    <p class="indicator-desc">
+                                        <strong>xx+</strong> 문서 / 슬라이드 /
+                                        리포
+                                    </p>
+                                </article>
+
+                                <article class="indicator-card">
+                                    <h4 class="indicator-title">
+                                        완성 프로젝트
+                                    </h4>
+                                    <p class="indicator-desc">
+                                        <strong>xx건</strong> (올해 xx건)
+                                    </p>
+                                </article>
+
+                                <article class="indicator-card">
+                                    <h4 class="indicator-title">기타 지표</h4>
+                                    <p class="indicator-desc">추가 내용</p>
+                                </article>
+                            </div>
                         </section>
                     </div>
-                    <!-- 학습 -->
-                    <h3 id="learning">학습</h3>
-                    <section class="learning-wrap">
-                        <div class="learning-inner">
-                            <article class="learning-card">
-                                <div class="learning-card-inner">
-                                    <h4 class="learning-title">
-                                        정기 스터디
-                                    </h4>
-                                    <p3 class="learning-desc">파이썬, C언어, 웹 등 다양한 주제로
-                                        주 1회 세션을 진행합니다.<br />실습과
-                                        코드리뷰를 통해 기초부터 심화까지
-                                        함께 성장합니다.</p3>
-                                </div>
-                            </article>
-
-                            <article class="learning-card">
-                                <div class="learning-card-inner">
-                                    <h4 class="learning-title">
-                                        정기 스터디
-                                    </h4>
-                                    <p3 class="learning-desc">파이썬, C언어, 웹 등 다양한 주제로
-                                        주 1회 세션을 진행합니다.<br />실습과
-                                        코드리뷰를 통해 기초부터 심화까지
-                                        함께 성장합니다.</p3>
-                                </div>
-                            </article>
-
-                            <article class="learning-card">
-                                <div class="learning-card-inner">
-                                    <h4 class="learning-title">
-                                        정기 스터디
-                                    </h4>
-                                    <p3 class="learning-desc">파이썬, C언어, 웹 등 다양한 주제로
-                                        주 1회 세션을 진행합니다.<br />실습과
-                                        코드리뷰를 통해 기초부터 심화까지
-                                        함께 성장합니다.</p3>
-                                </div>
-                            </article>
-
-                            <article class="learning-card">
-                                <div class="learning-card-inner">
-                                    <h4 class="learning-title">
-                                        정기 스터디
-                                    </h4>
-                                    <p3 class="learning-desc">파이썬, C언어, 웹 등 다양한 주제로
-                                        주 1회 세션을 진행합니다.<br />실습과
-                                        코드리뷰를 통해 기초부터 심화까지
-                                        함께 성장합니다.</p3>
-                                </div>
-                            </article>
-
-                            <article class="learning-card">
-                                <div class="learning-card-inner">
-                                    <h4 class="learning-title">
-                                        정기 스터디
-                                    </h4>
-                                    <p3 class="learning-desc">파이썬, C언어, 웹 등 다양한 주제로
-                                        주 1회 세션을 진행합니다.<br />실습과
-                                        코드리뷰를 통해 기초부터 심화까지
-                                        함께 성장합니다.</p3>
-                                </div>
-                            </article>
-                            <!-- 더 추가하면 자동으로 다음 행으로 3개씩 배치됨 -->
-                        </div>
-                    </section>
-                    <!-- 지표 -->
-                    <h3 id="indicator">지표</h3>
-                    <section class="indicator-wrap">
-                        <div class="indicator-grid">
-                            <article class="indicator-card">
-                                <h4 class="indicator-title">동아리 인원</h4>
-                                <p class="indicator-desc">xx명</p>
-                            </article>
-
-                            <article class="indicator-card">
-                                <h4 class="indicator-title">공개 자료</h4>
-                                <p class="indicator-desc">
-                                    <strong>xx+</strong> 문서 / 슬라이드 /
-                                    리포
-                                </p>
-                            </article>
-
-                            <article class="indicator-card">
-                                <h4 class="indicator-title">
-                                    완성 프로젝트
-                                </h4>
-                                <p class="indicator-desc">
-                                    <strong>xx건</strong> (올해 xx건)
-                                </p>
-                            </article>
-
-                            <article class="indicator-card">
-                                <h4 class="indicator-title">기타 지표</h4>
-                                <p class="indicator-desc">추가 내용</p>
-                            </article>
-                        </div>
-                    </section>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <!-- Top: Copyright -->
-            <div class="footer-top">
-                <p>Copyright 2025. HY-CoRA All rights reserved.</p>
-                <a href="https://www.instagram.com/hycora_hanyang/" target="_blank" rel="noopener" class="social-icon">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
+        <footer class="footer">
+            <div class="container footer-content">
+                <!-- Top: Copyright -->
+                <div class="footer-top">
+                    <p>Copyright 2025. HY-CoRA All rights reserved.</p>
+                    <a
+                        href="https://www.instagram.com/hycora_hanyang/"
+                        target="_blank"
+                        rel="noopener"
+                        class="social-icon"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
 
-            <!-- Divider -->
-            <div class="footer-divider" aria-hidden="true"></div>
+                <!-- Divider -->
+                <div class="footer-divider" aria-hidden="true"></div>
 
-            <!-- Bottom: 좌측 주소/메일 / 우측 회장·부회장 -->
-            <div class="footer-bottom">
-                <p class="footer-detail">
-                    <strong>Made by HY-CoRA</strong> <br />
-                    2025 ver. Create by <strong> 팀</strong> 이한, 최관우,
-                    김현준, 김혜윤, 박아진, 박강호, 최지민 <br /><br />
-                    경기도 안산시 상록구 한양대학로 55 복지관 425호<br />
-                    hycora369@gmail.com
-                </p>
-                <div class="contacts">
-                    <div class="contact-block">
-                        <h3>회장</h3>
-                        <p>이한 010-3552-2044</p>
-                    </div>
-                    <div class="contact-block">
-                        <h3>부회장</h3>
-                        <p>최관우 010-3410-4697</p>
+                <!-- Bottom: 좌측 주소/메일 / 우측 회장·부회장 -->
+                <div class="footer-bottom">
+                    <p class="footer-detail">
+                        <strong>Made by HY-CoRA</strong> <br />
+                        2025 ver. Create by <strong> 팀</strong> 이한, 최관우,
+                        김현준, 김혜윤, 박아진, 박강호, 최지민 <br /><br />
+                        경기도 안산시 상록구 한양대학로 55 복지관 425호<br />
+                        hycora369@gmail.com
+                    </p>
+                    <div class="contacts">
+                        <div class="contact-block">
+                            <h3>회장</h3>
+                            <p>이한 010-3552-2044</p>
+                        </div>
+                        <div class="contact-block">
+                            <h3>부회장</h3>
+                            <p>최관우 010-3410-4697</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script src="js/about.js"></script>
-    <script src="js/nav.js"></script>
-</body>
-
+        <script src="js/about.js"></script>
+        <script src="js/nav.js"></script>
+    </body>
 </html>
