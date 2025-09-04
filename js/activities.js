@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             participants: "30명 참여",
             images: ["images/mt.jpg"],
             intro: "이번 MT는 팀빌딩과 교류를 위한 프로그램으로 진행됩니다.",
-            schedule: ["출발", "바베큐", "게임", "정리"],
+            schedule: ["출발", "저녁식사", "레크레이션", "술게임", "정리"],
             mentorImg: "images/mentoring.jpg",
             mentor: "최관우",
             role: "멘토",
