@@ -30,7 +30,7 @@ body {
 
 /* Header */
 .header {
-    background-color: #34568b;
+    background-color: #0E4A84;
 
     padding: 1px 0;
 
@@ -560,7 +560,7 @@ body {
 }
 
 .detail-button {
-    background-color: #34568b;
+    background-color: #0E4A84;
     color: #fff;
     border: none;
     padding: 10px 0;
@@ -911,7 +911,7 @@ body {
 }
 
 .pagination a.active {
-    background-color: #34568b;
+    background-color: #0E4A84;
     color: #fff;
 }
 
@@ -939,18 +939,18 @@ body {
 }
 
 .nav-button:hover {
-    background-color: #34568b;
+    background-color: #0E4A84;
     color: #fff;
 }
 
 .nav-button.active {
-    background-color: #34568b;
+    background-color: #0E4A84;
     color: #fff;
 }
 
 /* Footer */
 .footer {
-    background-color: #34568b;
+    background-color: #0E4A84;
     color: #fff;
     padding: 20px 0;
 }
@@ -1026,7 +1026,7 @@ strong {
     height: 40px;
     border-radius: 8px;
     /* 모서리 둥글게 */
-    background-color: #34568b;
+    background-color: #0E4A84;
     /* 푸터랑 같은 배경 */
     color: #fff;
     /* 아이콘 흰색 */
@@ -1259,7 +1259,7 @@ strong {
 }
 
 :root {
-    --brand: #34568b;
+    --brand: #0E4A84;
     --bg-soft: #e1e6f6;
     --text: #222;
     --muted: #6b7280;
@@ -1373,16 +1373,17 @@ strong {
 }
 
 .notice-detail-content {
-    padding: 8px 10px 2px;
-    line-height: 1.8;
-    color: #222;
-    font-size: 16px;
-    text-align: left;
-    white-space: pre-wrap; /* content 문자열의 개행 유지 */
+  padding: 8px 10px 2px;
+  line-height: 1.8;
+  color: #222;
+  font-size: 16px;
+  text-align: left;
+  white-space: pre-line;
 }
 
 .notice-detail-content .nd-paragraph {
-    margin: 0 0 12px;
+  margin: 0 0 12px;
+  white-space: pre-line;  /* 줄바꿈(\n)을 <br>처럼 표시 */
 }
 
 .notice-detail-content h3,
@@ -1616,13 +1617,13 @@ strong {
 }
 
 .page-btn:hover {
-    border-color: #34568b;
+    border-color: #0E4A84;
 }
 
 .page-btn.active {
-    background: #34568b;
+    background: #0E4A84;
     color: #fff;
-    border-color: #34568b;
+    border-color: #0E4A84;
 }
 
 .page-btn.disabled {
