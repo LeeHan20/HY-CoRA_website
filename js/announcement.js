@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
             category_ko: "모집",
             title: "2025년 2학기 신규 동아리원 모집",
             summary: "Hy-CoRA에서 열정적인 동아리원을 모집합니다.",
-            date: "2025.09.09 ~ 상시모집",
+            date: "2025.09.09 ~ 2025.12.31",
             lastModified: "2025.09.04",
             // 상세용 추가 필드
-            capacity: "제한없음",
+            capacity: "0명",
             link: "https://forms.gle/8z8JUwfnd78wJjTJ8",
         },
         // Design #21 일단 안 보이게 해놓음
@@ -42,14 +42,14 @@ document.addEventListener("DOMContentLoaded", function () {
         //     content:
         //         "Q1. 2025 해피무브 지원 동기어릴 적부터 지역사회에서 진행된 소규모 봉사활동에 참여하며, 봉사가 개인의 삶뿐 아니라 공동체 전반에 미치는 영향을 관찰해 왔습니다. 대학 재학 중에는 주기적으로 환경정화 및 학습 멘토링 활동에 참여하며 나눔의 가치를 내면화했습니다. 해피무브는 다양한 문화권의 현장에서 CSR 프로젝트를 기획·실행함으로써, 봉사의 의미를 한층 심화할 수 있는 기회를 제공합니다. 특히 현지 전문가와의 협업 과정을 통해 현실적인 문제 해결 방안을 탐색하고, 이를 문서화하여 정책 제안으로 발전시키는 경험은 장기적으로 사회공헌 역량을 제고하는 기반이 될 것입니다.",
         // },
-        {
-            category: "etc",
-            category_ko: "기타",
-            title: "교내 해커톤 우승!",
-            summary: "Hy-CoRA 1팀이 교내 해커톤에서 우승했습니다.",
-            date: "2025.08.10",
-            lastModified: "2025.08.30",
-        },
+        // {
+        //     category: "etc",
+        //     category_ko: "기타",
+        //     title: "교내 해커톤 우승!",
+        //     summary: "Hy-CoRA 1팀이 교내 해커톤에서 우승했습니다.",
+        //     date: "2025.08.10",
+        //     lastModified: "2025.08.30",
+        // },
         // {
         //     category: "etc",
         //     category_ko: "기타",
