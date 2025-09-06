@@ -897,14 +897,21 @@ body {
 /*Fix08 사진*/
 
 .event-image-placeholder {
-    height: 250px;
-    background-color: #e1e6f6;
-    margin-bottom: 15px;
-    border-radius: 2.5%;
-    padding: 0;
-    object-fit: fill;
-    overflow: hidden;
-    justify-content: center;
+  width: 100%;
+  height: 250px;
+  background-color: #e1e6f6;
+  margin-bottom: 15px;
+  border-radius: 2.5%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지를 잘라내며 꽉 채우기 */
 }
 
 /* Pagination */
