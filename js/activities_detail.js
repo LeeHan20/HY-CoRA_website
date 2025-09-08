@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const secIntro = byH2("활동소개") || byH2("활동 소개");
     if (secIntro) {
         const p = q(".info-card > p", secIntro);
-        if (p) p.textContent = data.intro || data.desc || "";
+        if (p) p.textContent = data.intro || "소개 미등록";
         const durBadge = q(".info-subbox:nth-of-type(2) .badge", secIntro);
         if (durBadge && data.duration)
             durBadge.textContent = esc(data.duration);
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // === 담당자 (멘토 사진 있으면 사진, 없거나 로드 실패면 아이콘) ===
+    // === 담당자 (멘토 사진 있으면 사진, 없거나 로드 실패면 아이콘) === check
     (function renderMentor() {
         const secMentor = byH2("담당자 정보") || byH2("담당자정보");
         if (!secMentor) return;
@@ -81,9 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
             secMentor
         );
 
-        const mentor = (data.mentor ?? "").trim();
+        const mentor = (data.mentor ?? "담당자 정보 미등록").trim();
         const role = (data.role ?? "").trim();
-        const phone = (data.phone ?? "").trim();
+        const phone = (data.phone ?? "연락처 미등록").trim();
         const mentorImg = (data.mentorImg || data.avatarUrl || "").trim();
 
         // 아이콘 인라인 SVG (Lucide circle-user-round)
