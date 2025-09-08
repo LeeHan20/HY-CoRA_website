@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
             category: "recruitment",
             category_ko: "모집",
             title: "2025년 2학기 신규 동아리원 모집",
-            summary: "Hy-CoRA에서 열정적인 동아리원을 모집합니다.",
+            summary: "HY-CoRA에서 열정적인 동아리원을 모집합니다.",
             date: "2025.09.09 ~ 2025.12.31",
             lastModified: "2025.09.04",
             // 상세용 추가 필드
             capacity: "0명",
-            link: "https://forms.gle/8z8JUwfnd78wJjTJ8",
+            link: "https://forms.gle/VNBfTQnM1K67MSbH8",
         },
         // Design #21 일단 안 보이게 해놓음
         // {
