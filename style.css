@@ -833,6 +833,28 @@ body {
     margin-bottom: 30px;
 }
 
+.notices-sort {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sort-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.sort-button.active {
+    background-color: #0E4A84;
+    color: #fff;
+    border-color: #0E4A84;
+}
+
 /* 기존 .notices-list, .notice-item 관련 스타일을 제거하거나 수정합니다 */
 
 .notices-table {
