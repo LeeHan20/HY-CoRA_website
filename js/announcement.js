@@ -85,19 +85,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const noticesTableBody = document.querySelector(".notices-table tbody");
     const navButtons = document.querySelectorAll(".notices-nav .nav-button");
+    const sortButtons = document.querySelectorAll(".notices-sort .sort-button");
     const paginationEl = document.getElementById("pagination");
 
     // === 상태 ===
     const PAGE_SIZE = 20;
     let currentFilter = "전체"; // '전체' | '행사' | '모집' | '기타'
+    let currentSortOrder = "desc"; // 'asc' | 'desc'
     let currentPage = 1; // 1-base
 
-    // === 유틸: 필터링 ===
+    // === 유틸: 필터링 및 정렬 ===
     function getFilteredItems() {
         if (currentFilter === "전체") return announcements;
         const map = { 행사: "event", 모집: "recruitment", 기타: "etc" };
         const key = map[currentFilter];
         return announcements.filter((item) => item.category === key);
+    }
+
+    function getSortedItems(items) {
+        return [...items].sort((a, b) => {
+            const dateA = new Date(a.lastModified);
+            const dateB = new Date(b.lastModified);
+            if (currentSortOrder === "asc") {
+                return dateA - dateB;
+            } else {
+                return dateB - dateA;
+            }
+        });
     }
 
     function renderTable(itemsSlice) {
@@ -249,11 +263,12 @@ document.addEventListener("DOMContentLoaded", function () {
     //=== 적용 + 렌더 (단일 진입점) ===
     function applyAndRender() {
         const filtered = getFilteredItems();
+        const sorted = getSortedItems(filtered);
 
-        const total = filtered.length;
+        const total = sorted.length;
         const startIdx = (currentPage - 1) * PAGE_SIZE;
         const endIdx = startIdx + PAGE_SIZE;
-        const pageItems = filtered.slice(startIdx, endIdx);
+        const pageItems = sorted.slice(startIdx, endIdx);
 
         renderTable(pageItems);
         renderPagination(total, PAGE_SIZE, currentPage);
@@ -271,8 +286,20 @@ document.addEventListener("DOMContentLoaded", function () {
             navButtons.forEach((btn) => btn.classList.remove("active"));
             this.classList.add("active");
 
-            currentFilter = this.innerText.trim(); // '전체' | '행사' | '모집' | '기타'
+            currentFilter = this.dataset.filter;
             currentPage = 1; // ✅ 필터 바꾸면 첫 페이지로
+            applyAndRender();
+        });
+    });
+
+    // === 정렬 버튼 이벤트 ===
+    sortButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            sortButtons.forEach((btn) => btn.classList.remove("active"));
+            this.classList.add("active");
+
+            currentSortOrder = this.dataset.sort;
+            currentPage = 1;
             applyAndRender();
         });
     });
