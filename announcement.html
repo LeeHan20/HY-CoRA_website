@@ -1,110 +1,114 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=1024">
-        <title>HY-CoRA - 공지사항</title>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        />
-        <link rel="stylesheet" href="style.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <header class="header">
-            <div class="container header-container">
-                <h1 class="logo"><a href="index.html">HY-CoRA</a></h1>
-                <nav class="nav">
-                    <ul>
-                        <li><a href="about.html">소개</a></li>
-                        <li><a href="activities.html">활동내용</a></li>
-                        <li><a href="apply.html">모집안내/가입</a></li>
-                        <li><a href="announcement.html">공지사항</a></li>
-                    </ul>
-                </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1024" />
+    <title>HY-CoRA - 공지사항</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <h1 class="logo"><a href="index.html">HY-CoRA</a></h1>
+        <nav class="nav">
+          <ul>
+            <li><a href="about.html">소개</a></li>
+            <li><a href="activities.html">활동내용</a></li>
+            <li><a href="apply.html">모집안내/가입</a></li>
+            <li><a href="announcement.html">공지사항</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- 상단 소개 배너 -->
+      <div class="top-header">
+        <div class="top-title">
+          <h2>공지사항</h2>
+        </div>
+        <div class="top-subtitle">
+          <p>동아리의 최신 소식과 중요한 공지사항을 확인하세요.</p>
+        </div>
+      </div>
+
+      <section class="notices-section">
+        <div class="container">
+          <div class="notices-nav">
+            <button class="nav-button active" data-filter="전체">전체</button>
+            <button class="nav-button" data-filter="행사">행사</button>
+            <button class="nav-button" data-filter="모집">모집</button>
+            <button class="nav-button" data-filter="기타">기타</button>
+          </div>
+          <div class="notices-sort">
+            <button class="sort-button" data-sort="asc">오랜된순</button>
+            <button class="sort-button active" data-sort="desc">최신순</button>
+          </div>
+
+          <table class="notices-table">
+            <thead>
+              <tr>
+                <th>제목</th>
+                <th>내용</th>
+                <th>일자</th>
+                <th>분류</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+
+          <!-- ✅ 이게 반드시 있어야 버튼이 보임 -->
+          <div id="pagination" class="pagination"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-top">
+          <p>Copyright 2025. HY-CoRA All rights reserved.</p>
+          <a
+            href="https://www.instagram.com/hycora_hanyang/"
+            target="_blank"
+            rel="noopener"
+            class="social-icon"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <div class="footer-divider" aria-hidden="true"></div>
+        <div class="footer-bottom">
+          <p class="footer-detail">
+            <strong>Made by HY-CoRA</strong> <br />
+            2025 ver. Create by <strong>팀</strong> 이한, 최관우, 김현준,
+            김혜윤, 박아진, 박강호, 최지민 <br /><br />
+            경기도 안산시 상록구 한양대학로 55 복지관 425호<br />
+            hycora369@gmail.com
+          </p>
+          <div class="contacts">
+            <div class="contact-block">
+              <h3>회장</h3>
+              <p>이한 010-3552-2044</p>
             </div>
-        </header>
-
-        <main>
-            <!-- 상단 소개 배너 -->
-            <div class="top-header">
-                <div class="top-title">
-                    <h2>공지사항</h2>
-                </div>
-                <div class="top-subtitle">
-                    <p>동아리의 최신 소식과 중요한 공지사항을 확인하세요.</p>
-                </div>
+            <div class="contact-block">
+              <h3>부회장</h3>
+              <p>최관우 010-3410-4697</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-            <section class="notices-section">
-                <div class="container">
-                    <div class="notices-nav">
-                        <button class="nav-button active">전체</button>
-                        <button class="nav-button">행사</button>
-                        <button class="nav-button">모집</button>
-                        <button class="nav-button">기타</button>
-                    </div>
-
-                    <table class="notices-table">
-                        <thead>
-                            <tr>
-                                <th>제목</th>
-                                <th>내용</th>
-                                <th>일자</th>
-                                <th>분류</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-
-                    <!-- ✅ 이게 반드시 있어야 버튼이 보임 -->
-                    <div id="pagination" class="pagination"></div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="container footer-content">
-                <div class="footer-top">
-                    <p>Copyright 2025. HY-CoRA All rights reserved.</p>
-                    <a
-                        href="https://www.instagram.com/hycora_hanyang/"
-                        target="_blank"
-                        rel="noopener"
-                        class="social-icon"
-                    >
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-                <div class="footer-divider" aria-hidden="true"></div>
-                <div class="footer-bottom">
-                    <p class="footer-detail">
-                        <strong>Made by HY-CoRA</strong> <br />
-                        2025 ver. Create by <strong>팀</strong> 이한, 최관우,
-                        김현준, 김혜윤, 박아진, 박강호, 최지민 <br /><br />
-                        경기도 안산시 상록구 한양대학로 55 복지관 425호<br />
-                        hycora369@gmail.com
-                    </p>
-                    <div class="contacts">
-                        <div class="contact-block">
-                            <h3>회장</h3>
-                            <p>이한 010-3552-2044</p>
-                        </div>
-                        <div class="contact-block">
-                            <h3>부회장</h3>
-                            <p>최관우 010-3410-4697</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <!-- 목록 스크립트 -->
-        <script src="js/announcement.js"></script>
-        <script src="js/nav.js"></script>
-    </body>
+    <!-- 목록 스크립트 -->
+    <script src="js/announcement.js"></script>
+    <script src="js/nav.js"></script>
+  </body>
 </html>
