@@ -6,11 +6,35 @@ document.addEventListener("DOMContentLoaded", function () {
             category_ko: "모집",
             title: "2025년 2학기 신규 동아리원 모집",
             summary: "HY-CoRA에서 열정적인 동아리원을 모집합니다.",
+            content: "# 2025-2 HY-CoRA 등록 안내
+                📌  회비: 20,000원
+        📌  총무 계좌: 3333340325822 카카오뱅크 (최재호)
+
+2학기에는 다음과 같은 활동이 예정되어 있습니다.
+📌  파이썬, 데이터분석, c/c++, 자료구조 스터디
+📌  asv 부스 활동
+📌  열공단 활동
+📌  회사 방문 프로그램
+📌  웹사이트 제작 프로젝트 활동
+
+많은 참여 부탁드립니다!
+감사합니다."
             date: "2025.09.09 ~ 2025.12.31",
             lastModified: "2025.09.04",
             // 상세용 추가 필드
             capacity: "0명",
             link: "https://forms.gle/VNBfTQnM1K67MSbH8",
+        },
+        {
+            category: "recruitment",
+            category_ko: "모집",
+            title: "2025년 2학기 신규 동아리원 모집",
+            summary: "HY-CoRA에서 열정적인 동아리원을 모집합니다.",
+            date: "2025.09.12 ~ 2025.12.17",
+            lastModified: "2025.09.12",
+            // 상세용 추가 필드
+            capacity: "0명",
+            link: "공지글 참고",
         },
         // Design #21 일단 안 보이게 해놓음
         // {
