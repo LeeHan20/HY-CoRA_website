@@ -43,7 +43,7 @@ c++ 기초반 신청 : https://forms.gle/uDKBSqKEvPQ4tkum8
 
 자료구조반 신청 : https://forms.gle/Q9Xut5cRmmBaUe2a8
 `,
-            date: "2025.09.12 ~ 2025.12.17",
+            date: "2025.09.12 ~ 2025.09.17",
             lastModified: "2025.09.12",
             // 상세용 추가 필드
             capacity: "0명",
