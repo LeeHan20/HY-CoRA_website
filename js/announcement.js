@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 📌  웹사이트 제작 프로젝트 활동
 
 많은 참여 부탁드립니다!
-감사합니다.`
+감사합니다.`,
             date: "2025.09.09 ~ 2025.12.31",
             lastModified: "2025.09.04",
             // 상세용 추가 필드
@@ -28,8 +28,21 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             category: "recruitment",
             category_ko: "모집",
-            title: "2025년 2학기 신규 동아리원 모집",
-            summary: "HY-CoRA에서 열정적인 동아리원을 모집합니다.",
+            title: "2025년 2학기 스터디 신청",
+            summary: "스터디 수강신청을 오는 9.17까지 받습니다. ",
+            content: `스터디 신청은 9.17 (수)까지 받습니다! 
+스터디 수강을 원하시는 분들은 기한 내에 신청 부탁드립니다.
+
+데이터분석 기초반 신청 : https://forms.gle/yjjz4vZ4QwD9N6sq9
+
+c++ 기초반 신청 : https://forms.gle/uDKBSqKEvPQ4tkum8
+
+파이썬 백준반 신청 : https://forms.gle/xpo7GYQYzzs9T7nd9
+
+파이썬 교양반 신청 : https://forms.gle/EwwXDj2aHasgUNZR6
+
+자료구조반 신청 : https://forms.gle/Q9Xut5cRmmBaUe2a8
+`,
             date: "2025.09.12 ~ 2025.12.17",
             lastModified: "2025.09.12",
             // 상세용 추가 필드
