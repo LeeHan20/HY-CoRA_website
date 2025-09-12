@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
             desc: "데이터 분석 스터디",
             date: "매주 목요일",
             time: "18:00 ~ 20:00",
-            place: "1공학관 304호",
+            place: "학연산클러스터지원센터 506호",
             participants: "0명",
             // images: ["images/mt.jpg"],
             intro: "데이터분석에 주로 사용되는 python 패키지를 중심으로 한 데이터 분석 스터디입니다.",
