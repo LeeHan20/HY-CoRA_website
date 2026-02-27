@@ -4,51 +4,51 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             category: "recruitment",
             category_ko: "모집",
-            title: "2025년 2학기 신규 동아리원 모집",
+            title: "2026년 1학기 신규 동아리원 모집",
             summary: "HY-CoRA에서 열정적인 동아리원을 모집합니다.",
-            content: `# 2025-2 HY-CoRA 등록 안내
+            content: `# 2026-1 HY-CoRA 등록 안내
                 📌  회비: 20,000원
-        📌  총무 계좌: 3333340325822 카카오뱅크 (최재호)
+        📌  총무 계좌:3333364616010 카카오뱅크 (최관우)
 
-2학기에는 다음과 같은 활동이 예정되어 있습니다.
-📌  파이썬, 데이터분석, c/c++, 자료구조 스터디
-📌  asv 부스 활동
-📌  열공단 활동
-📌  회사 방문 프로그램
-📌  웹사이트 제작 프로젝트 활동
+1학기에는 다음과 같은 활동이 예정되어 있습니다.
+📌  파이썬, c/c++, 자바 스터디
+📌  야식 사업 활동
+📌  코라코라 열공단 활동
+📌  친해지기바라 활동
+📌  MT!
 
 많은 참여 부탁드립니다!
 감사합니다.`,
-            date: "2025.09.09 ~ 2025.12.31",
-            lastModified: "2025.09.04",
+            date: "2026.03.01 ~ 2026.06.30",
+           lastModified: "2026.02.28",
             // 상세용 추가 필드
             capacity: "0명",
-            link: "https://forms.gle/VNBfTQnM1K67MSbH8",
+            link: "https://forms.gle/Vghs8HVJj976smZDA",
         },
-        {
-            category: "recruitment",
-            category_ko: "모집",
-            title: "2025년 2학기 스터디 신청",
-            summary: "스터디 수강신청을 오는 9.17까지 받습니다. ",
-            content: `스터디 신청은 9.17 (수)까지 받습니다! 
-스터디 수강을 원하시는 분들은 기한 내에 신청 부탁드립니다.
+//         {
+//             category: "recruitment",
+//             category_ko: "모집",
+//             title: "2025년 2학기 스터디 신청",
+//             summary: "스터디 수강신청을 오는 9.17까지 받습니다. ",
+//             content: `스터디 신청은 9.17 (수)까지 받습니다! 
+// 스터디 수강을 원하시는 분들은 기한 내에 신청 부탁드립니다.
 
-데이터분석 기초반 신청 : https://forms.gle/yjjz4vZ4QwD9N6sq9
+// 데이터분석 기초반 신청 : https://forms.gle/yjjz4vZ4QwD9N6sq9
 
-c++ 기초반 신청 : https://forms.gle/uDKBSqKEvPQ4tkum8
+// c++ 기초반 신청 : https://forms.gle/uDKBSqKEvPQ4tkum8
 
-파이썬 백준반 신청 : https://forms.gle/xpo7GYQYzzs9T7nd9
+// 파이썬 백준반 신청 : https://forms.gle/xpo7GYQYzzs9T7nd9
 
-파이썬 교양반 신청 : https://forms.gle/EwwXDj2aHasgUNZR6
+// 파이썬 교양반 신청 : https://forms.gle/EwwXDj2aHasgUNZR6
 
-자료구조반 신청 : https://forms.gle/Q9Xut5cRmmBaUe2a8
-`,
-            date: "2025.09.12 ~ 2025.09.17",
-            lastModified: "2025.09.12",
-            // 상세용 추가 필드
-            capacity: "0명",
-            link: "공지글 참고",
-        },
+// 자료구조반 신청 : https://forms.gle/Q9Xut5cRmmBaUe2a8
+// `,
+//             date: "2025.09.12 ~ 2025.09.17",
+//             lastModified: "2025.09.12",
+//             // 상세용 추가 필드
+//             capacity: "0명",
+//             link: "공지글 참고",
+//         },
         // Design #21 일단 안 보이게 해놓음
         // {
         //     category: "event",

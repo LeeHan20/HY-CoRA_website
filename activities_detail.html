@@ -29,95 +29,100 @@
         <!-- 상단: JS가 제목/메타 채움 -->
         <div class="top-header">
             <div class="top-title">
-                    <h2>활동 상세</h2>
-                </div>
-                <div class="top-subtitle">
-                    <h5>
-                        시간
-                    </h5>
-                </div>
+                <h2>활동 상세</h2>
+            </div>
+            <div class="top-subtitle">
+                <h5>
+                    시간
+                </h5>
+            </div>
         </div>
 
         <section class="info-section">
-                <!-- ✅ 행사 사진 갤러리 (JS가 이 .info-card 안에 썸네일 주입) -->
-                <div class="info-box gallery">
-                    <h2>행사 사진</h2>
-                    <div class="info-card"></div>
+            <!-- ✅ 행사 사진 갤러리 (JS가 이 .info-card 안에 썸네일 주입) -->
+            <div class="info-box gallery">
+                <h2>행사 사진</h2>
+                <div class="info-card"></div>
+            </div>
+
+            <!-- ✅ 이하 3개 박스는 .info-grid 안에서 1)소개 2)일정 3)담당자 순서 -->
+            <div class="info-grid">
+
+                <!-- 1) 활동소개 -->
+                <div class="info-box">
+                    <h2>활동소개</h2>
+                    <div class="info-card">
+                        <p>웹 개발 스터디는 웹 개발 기초부터 ~~~.</p>
+                        <div class="info-subgrid">
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <!-- ✅ 이하 3개 박스는 .info-grid 안에서 1)소개 2)일정 3)담당자 순서 -->
-                <div class="info-grid">
+            <!-- 2) 진행일정 -->
+            <div class="info-box">
+                <h2>진행일정</h2>
+                <div class="info-card">
+                    <ol class="custom-list">
+                        <li>OT 스터디 목표 및 진행 방식 소개</li>
+                        <li>OT 스터디 목표 및 진행 방식 소개</li>
+                        <li>OT 스터디 목표 및 진행 방식 소개</li>
+                        <li>OT 스터디 목표 및 진행 방식 소개</li>
+                    </ol>
+                </div>
+            </div>
 
-                    <!-- 1) 활동소개 -->
-                    <div class="info-box">
-                        <h2>활동소개</h2>
-                        <div class="info-card">
-                            <p>웹 개발 스터디는 웹 개발 기초부터 ~~~.</p>
-                            <div class="info-subgrid">
-                                </div>
-                            </div>
+            <!-- 3) 담당자 정보 -->
+            <div class="info-box">
+                <h2>담당자 정보</h2>
+                <div class="info-card contact-card">
+                    <div class="contact-flex">
+                        <div class="avatar-mentor">
+                            <img src="images/detail-icon.png" alt="프로필">
+                        </div>
+                        <div class="avatar-1">
+                            <p><strong>이름</strong></p>
+                            <p>역할</p>
+                            <p>연락처</p>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <!-- 2) 진행일정 -->
-                    <div class="info-box">
-                        <h2>진행일정</h2>
-                        <div class="info-card">
-                            <ol class="custom-list">
-                                <li>OT 스터디 목표 및 진행 방식 소개</li>
-                                <li>OT 스터디 목표 및 진행 방식 소개</li>
-                                <li>OT 스터디 목표 및 진행 방식 소개</li>
-                                <li>OT 스터디 목표 및 진행 방식 소개</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <!-- 3) 담당자 정보 -->
-                    <div class="info-box">
-                        <h2>담당자 정보</h2>
-                        <div class="info-card contact-card">
-                            <div class="contact-flex">
-                                <div class="avatar-mentor">
-                                    <img src="images/detail-icon.png" alt="프로필">
-                                </div>
-                                <div class="avatar-1">
-                                    <p><strong>이름</strong></p>
-                                    <p>역할</p>
-                                    <p>연락처</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div><!-- /.info-grid -->
+            </div><!-- /.info-grid -->
         </section>
     </main>
 
     <footer class="footer">
         <div class="container footer-content">
+            <!-- Top: Copyright -->
             <div class="footer-top">
-                <p>Copyright 2025. HY-CoRA All rights reserved.</p>
+                <p>Copyright 2026. HY-CoRA All rights reserved.</p>
                 <a href="https://www.instagram.com/hycora_hanyang/" target="_blank" rel="noopener" class="social-icon">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
+
+            <!-- Divider -->
             <div class="footer-divider" aria-hidden="true"></div>
+
+            <!-- Bottom: 좌측 주소/메일 / 우측 회장·부회장 -->
             <div class="footer-bottom">
                 <p class="footer-detail">
                     <strong>Made by HY-CoRA</strong> <br />
-                    2025 ver. Create by <strong> 팀</strong> 이한, 최관우,
-                    김현준, 김혜윤, 박아진, 박강호, 최지민 <br /><br />
+                    2026 ver. Create by <strong> 팀</strong> 최관우,
+                    김한결, 강지원, 최지민, 최현우 <br /><br />
                     경기도 안산시 상록구 한양대학로 55 복지관 425호<br />
                     hycora369@gmail.com
                 </p>
                 <div class="contacts">
                     <div class="contact-block">
                         <h3>회장</h3>
-                        <p>이한 010-3552-2044</p>
+                        <p>최관우 010-3410-4697</p>
                     </div>
                     <div class="contact-block">
                         <h3>부회장</h3>
-                        <p>최관우 010-3410-4697</p>
+                        <p>김한결 010-2943-3985</p>
                     </div>
                 </div>
             </div>
